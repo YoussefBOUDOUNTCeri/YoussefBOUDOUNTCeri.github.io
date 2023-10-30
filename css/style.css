@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+section,
+footer {
+  margin: 20px;
+  padding: 20px;
+}
+
+.profile-image {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.project {
+  margin-bottom: 20px;
+}
+
+.project img {
+  width: 100%; /* Assurez-vous que les images de projet s'adaptent à la largeur du conteneur */
+  max-width: 600px; /* Vous pouvez ajuster ceci */
+  height: auto;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
