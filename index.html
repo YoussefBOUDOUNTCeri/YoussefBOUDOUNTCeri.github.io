@@ -3,50 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio de [Votre Nom]</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <img src="img/profile.png" alt="Profil" class="profile-image" />
-      <h1>[Votre Nom]</h1>
-      <p>Étudiant en informatique et développeur passionné</p>
+      <nav>
+        <ul>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-
-    <section id="projects">
-      <h2>Projets</h2>
-      <div class="project">
-        <img src="img/screenshot-project1.png" alt="Projet 1" />
-        <h3>Projet 1</h3>
-        <p>
-          Description du projet 1. Technologies utilisées: HTML, CSS,
-          JavaScript.
-        </p>
-        <a href="#" target="_blank">Voir le projet</a>
-      </div>
-      <!-- Répétez pour d'autres projets -->
-    </section>
-
     <section id="about">
-      <h2>À Propos de Moi</h2>
+      <h1>Bienvenue sur mon Portfolio</h1>
       <p>
-        Je suis un développeur avec une passion pour les technologies web
-        modernes...
+        Je suis [Votre nom], étudiant en informatique et développeur passionné.
       </p>
+      <!-- Ajoutez plus de contenu sur vous ici -->
     </section>
-
+    <section id="projects">
+      <h2>Mes Projets</h2>
+      <!-- Répétez ce bloc pour chaque projet -->
+      <div class="project-card">
+        <img
+          src="path-to-your-project-image.jpg"
+          alt="Description de l'image"
+        />
+        <h3>Projet 1</h3>
+        <p>Description du projet...</p>
+        <a href="lien-vers-le-code-source">Code Source</a>
+        <a href="lien-vers-la-demo">Démo en direct</a>
+      </div>
+    </section>
     <section id="contact">
-      <h2>Contact</h2>
+      <h2>Contactez-moi</h2>
       <p>
-        Vous pouvez me contacter via email:
-        <a href="mailto:votreemail@example.com">votreemail@example.com</a>
+        Vous pouvez me joindre sur [votre-email@example.com] ou via les réseaux
+        sociaux.
       </p>
+      <!-- Ajoutez ici un formulaire de contact ou des liens vers vos réseaux sociaux -->
     </section>
-
     <footer>
-      <p>© [Année] [Votre Nom]. Tous droits réservés.</p>
+      <p>&copy; [Année] - [Votre nom]</p>
     </footer>
-
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
