@@ -4,50 +4,107 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio de [Votre Nom]</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#projects">Projets</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="#">Portfolio de [Votre Nom]</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#about"
+                >À propos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="bg-light text-center py-5 mb-4">
+      <div class="container">
+        <h1 class="fw-light">Bienvenue sur le Portfolio de [Votre Nom]</h1>
+        <p class="lead">Un informaticien passionné par [Votre Spécialité]</p>
+      </div>
     </header>
 
-    <section id="about">
-      <h1>Bienvenue sur mon Portfolio</h1>
-      <p>
-        Je suis [Votre Nom], un informaticien spécialisé en [Votre Spécialité].
-      </p>
-      <!-- Ajouter une photo de profil, une description plus détaillée et un CV en téléchargement si désiré -->
-    </section>
-
-    <section id="projects">
-      <h2>Projets</h2>
-      <div class="project">
-        <h3>Projet 1</h3>
-        <p>Description du projet 1.</p>
-        <!-- Ajouter une image, des technologies utilisées et un lien vers le projet si disponible -->
+    <section id="about" class="container mb-5">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>À propos de moi</h2>
+          <p>Je suis [Votre Nom], expert en [Votre Spécialité]...</p>
+          <!-- Plus d'infos, compétences, et CV si nécessaire -->
+        </div>
       </div>
-      <!-- Répéter pour d'autres projets -->
     </section>
 
-    <section id="contact">
-      <h2>Contactez-moi</h2>
-      <p>
-        Si vous souhaitez discuter d'un projet ou simplement dire bonjour,
-        n'hésitez pas à m'envoyer un message.
-      </p>
-      <!-- Ajouter un formulaire de contact ou des informations de contact -->
+    <section id="projects" class="container mb-5">
+      <h2 class="text-center mb-4">Projets Récents</h2>
+      <div class="row g-4">
+        <!-- Exemple de projet -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card">
+            <img
+              src="chemin/vers/image-projet.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Projet 1</h5>
+              <p class="card-text">Description du projet 1.</p>
+              <a href="#" class="btn btn-primary">Voir le projet</a>
+            </div>
+          </div>
+        </div>
+        <!-- Répétez pour d'autres projets -->
+      </div>
     </section>
 
-    <footer>
-      <p>© [Année] [Votre Nom]. Tous droits réservés.</p>
+    <section id="contact" class="bg-light py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Contactez-moi</h2>
+        <!-- Formulaire de contact ou infos -->
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <form>
+              <!-- Form fields -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-primary text-white text-center py-3">
+      <div class="container">
+        <p>© [Année] [Votre Nom]. Tous droits réservés.</p>
+      </div>
     </footer>
 
+    <!-- Bootstrap JS et dépendances -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
