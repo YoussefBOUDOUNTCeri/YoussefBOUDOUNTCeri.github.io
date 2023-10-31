@@ -55,6 +55,13 @@ span {
 /*******************************************************
 Circle Progress Bar
 *******************************************************/
+.circles {
+  display: flex;
+  justify-content: space-between; /* ou space-around */
+  width: 90%; /* ajustez selon vos besoins */
+  margin: 0 auto; /* centre le conteneur sur la page */
+}
+
 @property --progress-value {
   syntax: "<integer>";
   inherits: false;
@@ -63,19 +70,55 @@ Circle Progress Bar
 
 @keyframes html-progress {
   to {
-    --progress-value: 92;
+    --progress-value: 99;
   }
 }
 
 @keyframes css-progress {
   to {
-    --progress-value: 87;
+    --progress-value: 95;
   }
 }
 
 @keyframes js-progress {
   to {
-    --progress-value: 73;
+    --progress-value: 90;
+  }
+}
+
+@keyframes php-progress {
+  to {
+    --progress-value: 75;
+  }
+}
+
+@keyframes sql-progress {
+  to {
+    --progress-value: 45;
+  }
+}
+
+@keyframes python-progress {
+  to {
+    --progress-value: 90;
+  }
+}
+
+@keyframes java-progress {
+  to {
+    --progress-value: 79;
+  }
+}
+
+@keyframes cpp-progress {
+  to {
+    --progress-value: 70;
+  }
+}
+
+@keyframes c-progress {
+  to {
+    --progress-value: 50;
   }
 }
 
@@ -97,7 +140,12 @@ Circle Progress Bar
 }
 
 .html {
-  background: radial-gradient(closest-side, black 79%, transparent 80% 100%),
+  background: radial-gradient(
+      closest-side,
+      black 79%,
+      transparent 80% 100%,
+      black 0
+    ),
     conic-gradient(white calc(var(--progress-value) * 1%), black 0);
   animation: html-progress 2s 1 forwards;
 }
@@ -114,11 +162,11 @@ Circle Progress Bar
       black 0
     ),
     conic-gradient(white calc(var(--progress-value) * 1%), black 0);
-  animation: js-progress 2s 1 forwards;
+  animation: css-progress 2s 1 forwards;
 }
 
 .css::before {
-  animation: js-progress 2s 1 forwards;
+  animation: css-progress 2s 1 forwards;
 }
 
 .js {
@@ -134,13 +182,6 @@ Circle Progress Bar
 
 .js::before {
   animation: js-progress 2s 1 forwards;
-}
-
-.circles {
-  display: flex;
-  justify-content: space-between; /* ou space-around */
-  width: 90%; /* ajustez selon vos besoins */
-  margin: 0 auto; /* centre le conteneur sur la page */
 }
 
 .php {
@@ -188,6 +229,51 @@ Circle Progress Bar
   animation: python-progress 2s 1 forwards;
 }
 
+.java {
+  background: radial-gradient(
+      closest-side,
+      black 79%,
+      transparent 80% 100%,
+      black 0
+    ),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: java-progress 2s 1 forwards;
+}
+
+.java::before {
+  animation: java-progress 2s 1 forwards;
+}
+
+.cpp {
+  background: radial-gradient(
+      closest-side,
+      black 79%,
+      transparent 80% 100%,
+      black 0
+    ),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: cpp-progress 2s 1 forwards;
+}
+
+.cpp::before {
+  animation: cpp-progress 2s 1 forwards;
+}
+
+.c {
+  background: radial-gradient(
+      closest-side,
+      black 79%,
+      transparent 80% 100%,
+      black 0
+    ),
+    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
+  animation: c-progress 2s 1 forwards;
+}
+
+.c::before {
+  animation: c-progress 2s 1 forwards;
+}
+
 h2 {
   text-align: center;
 }
@@ -196,4 +282,25 @@ progress {
   visibility: hidden;
   width: 0;
   height: 0;
+}
+
+.faicons {
+  font-size: 2em; /* Ajout de cette ligne pour une taille fixe */
+  width: 2em; /* Ajout de cette ligne pour une largeur fixe */
+  height: 2em; /* Ajout de cette ligne pour une hauteur fixe */
+  line-height: 2em; /* Pour centrer verticalement l'icône */
+  text-align: center; /* Pour centrer horizontalement l'icône */
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.fabicons {
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 2em; /* Ajout de cette ligne pour une largeur fixe */
+  height: 2em; /* Ajout de cette ligne pour une hauteur fixe */
+  line-height: 2em; /* Pour centrer verticalement l'icône */
+  text-align: center; /* Pour centrer horizontalement l'icône */
 }

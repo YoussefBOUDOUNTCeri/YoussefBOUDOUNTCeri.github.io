@@ -11,14 +11,25 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styleIndex.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body class="w3-black">
@@ -42,14 +53,22 @@
         class="w3-bar-item w3-button w3-padding-large w3-hover-black"
       >
         <i class="fa fa-eye w3-xxlarge"></i>
-        <p>PHOTOS</p>
+        <p>PROJETS</p>
       </a>
+
       <a
         href="#contact"
         class="w3-bar-item w3-button w3-padding-large w3-hover-black"
       >
         <i class="fa fa-envelope w3-xxlarge"></i>
         <p>CONTACT</p>
+      </a>
+      <a
+        href="pages/CV.html"
+        class="w3-bar-item w3-button w3-padding-large w3-hover-black"
+      >
+        <i class="fa fa-address-card w3-xxlarge"></i>
+        <p>CV</p>
       </a>
     </nav>
 
@@ -58,26 +77,32 @@
       <div
         class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small"
       >
-        <a href="#" class="w3-bar-item w3-button" style="width: 25% !important"
+        <a href="#" class="w3-bar-item w3-button" style="width: 20% !important"
           >HOME</a
         >
         <a
           href="#about"
           class="w3-bar-item w3-button"
-          style="width: 25% !important"
+          style="width: 20% !important"
           >ABOUT</a
         >
         <a
           href="#photos"
           class="w3-bar-item w3-button"
-          style="width: 25% !important"
-          >PHOTOS</a
+          style="width: 20% !important"
+          >PROJETS</a
         >
         <a
           href="#contact"
           class="w3-bar-item w3-button"
-          style="width: 25% !important"
+          style="width: 20% !important"
           >CONTACT</a
+        >
+        <a
+          href="pages/CV.html"
+          class="w3-bar-item w3-button"
+          style="width: 20% !important"
+          >CV</a
         >
       </div>
     </div>
@@ -90,6 +115,32 @@
           <span class="w3-hide-small">BOUDOUNT Youssef</span>
         </h1>
         <p>Etudiant en informatique.</p>
+
+        <hr style="width: 100%" class="w3-opacity w3-center" />
+        <div>
+          <a href="https://github.com/YoussefBOUDOUNTCeri" target="_blank"
+            ><i class="fa fa-github faicons w3-hover-opacity"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/youssefb14" target="_blank"
+            ><i class="fa fa-linkedin faicons w3-hover-opacity"></i
+          ></a>
+          <a href="https://discord.com/users/youssefb14" target="_blank"
+            ><i class="fab fa-discord fabicons"></i
+          ></a>
+          <a href="https://www.facebook.com/YoussefBOUDOUNTCeri" target="_blank"
+            ><i class="fa fa-facebook faicons w3-hover-opacity"></i
+          ></a>
+          <a href="https://www.instagram.com/you2sb" target="_blank"
+            ><i class="fa fa-instagram faicons w3-hover-opacity"></i
+          ></a>
+          <a href="https://www.snapchat.com/add/youssefb14" target="_blank"
+            ><i class="fa fa-snapchat faicons w3-hover-opacity"></i
+          ></a>
+          <a href="https://twitter.com/yousefb14" target="_blank"
+            ><i class="fa fa-twitter faicons w3-hover-opacity"></i
+          ></a>
+        </div>
+        <hr style="width: 100%" class="w3-opacity w3-center" />
       </header>
 
       <!-- About Section -->
@@ -97,7 +148,7 @@
         <div>
           <!--Preentation  -->
           <h2 class="w3-text-light-grey">Qui suis-je ?</h2>
-          <hr style="width: 200px" class="w3-opacity" />
+          <hr style="width: 100%" class="w3-opacity w3-center" />
           <p>
             Bienvenue sur mon portfolio ! Actuellement en troiseme année de
             Licence Informatique, je suis un jeune passionné de technologie et
@@ -121,100 +172,142 @@
         </div>
 
         <div>
-          <h3 class="w3-padding-16 w3-text-light-grey">Mes Skills</h3>
+          <br />
+          <h3 class="w3-padding-16 w3-text-light-grey w3-center">Mes Skills</h3>
+          <hr style="width: 100%" class="w3-opacity w3-center" />
+          <br />
         </div>
 
-        <div class="circles">
+        <div class="circles w3-center">
           <!-- HTML Progress Bar -->
-          <div class="progress-bar-container">
+          <div class="progress-bar-container w3-center">
             <h2 class="skill-label">
               <label for="html">HTML</label>
             </h2>
             <div class="progress-bar html">
-              <progress id="html" min="0" max="100" value="92"></progress>
-            </div>
-          </div>
-
-          <!-- CSS Progress Bar -->
-          <div class="progress-bar-container">
-            <h2 class="skill-label">
-              <label for="html">CSS</label>
-            </h2>
-            <div class="progress-bar css">
               <progress id="html" min="0" max="100" value="100"></progress>
             </div>
           </div>
 
-          <!-- JSS Progress Bar -->
-          <div class="progress-bar-container">
+          <!-- CSS Progress Bar -->
+          <div class="progress-bar-container w3-center">
             <h2 class="skill-label">
-              <label for="js">JavaScript</label>
+              <label for="css">CSS</label>
             </h2>
-            <div class="progress-bar js">
-              <progress id="js" min="0" max="100" value="73"></progress>
+            <div class="progress-bar css">
+              <progress id="css" min="0" max="100" value="100"></progress>
+            </div>
+          </div>
+
+          <!-- JSS Progress Bar -->
+          <div class="progress-bar-container w3-center">
+            <h2 class="skill-label w3-center">
+              <label for="js">JS</label>
+            </h2>
+            <div class="progress-bar js w3-center">
+              <progress id="js" min="0" max="100" value="100"></progress>
             </div>
           </div>
         </div>
         <br />
-        <div class="circles">
+        <div class="circles w3-center">
           <!-- PHP Progress Bar -->
-          <div class="progress-bar-container">
+          <div class="progress-bar-container w3-center">
             <h2 class="skill-label">
-              <label for="html">PHP</label>
+              <label for="php">PHP</label>
             </h2>
-            <div class="progress-bar js">
-              <progress id="html" min="0" max="100" value="92"></progress>
+            <div class="progress-bar php">
+              <progress id="php" min="0" max="100" value="100"></progress>
             </div>
           </div>
 
           <!-- SQL Progress Bar -->
-          <div class="progress-bar-container">
+          <div class="progress-bar-container w3-center">
             <h2 class="skill-label">
-              <label for="html">SQL</label>
+              <label for="sql">SQL</label>
             </h2>
-            <div class="progress-bar html">
-              <progress id="html" min="0" max="100" value="92"></progress>
+            <div class="progress-bar sql">
+              <progress id="sql" min="0" max="100" value="100"></progress>
             </div>
           </div>
 
           <!-- Python Progress Bar -->
+          <div class="progress-bar-container w3-center">
+            <h2 class="skill-label">
+              <label for="python">Python</label>
+            </h2>
+            <div class="progress-bar python">
+              <progress id="python" min="0" max="100" value="100"></progress>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="circles w3-center">
+          <!-- Java Progress Bar -->
           <div class="progress-bar-container">
             <h2 class="skill-label">
-              <label for="js">Python</label>
+              <label for="java">Java</label>
             </h2>
-            <div class="progress-bar js">
-              <progress id="js" min="0" max="100" value="73"></progress>
+            <div class="progress-bar java">
+              <progress id="java" min="0" max="100" value="100"></progress>
+            </div>
+          </div>
+
+          <!-- CPP Progress Bar -->
+          <div class="progress-bar-container">
+            <h2 class="skill-label">
+              <label for="cpp">C++</label>
+            </h2>
+            <div class="progress-bar cpp">
+              <progress id="cpp" min="0" max="100" value="100"></progress>
+            </div>
+          </div>
+
+          <!-- C Progress Bar -->
+          <div class="progress-bar-container">
+            <h2 class="skill-label">
+              <label for="c">C</label>
+            </h2>
+            <div class="progress-bar c">
+              <progress id="c" min="0" max="100" value="100"></progress>
             </div>
           </div>
         </div>
         <br />
         <br />
+
+        <div>
+          <br />
+          <h3 class="w3-padding-16 w3-text-light-grey w3-center">Mes Stats</h3>
+          <hr style="width: 100%" class="w3-opacity w3-center" />
+        </div>
+
         <div class="w3-row w3-center w3-padding-16 w3-section w3-black">
           <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">11+</span><br />
-            Partners
+            <span class="w3-xlarge">2+</span><br />
+            Stages
           </div>
           <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">55+</span><br />
-            Projects Done
+            <span class="w3-xlarge">20+</span><br />
+            Projets Réalisés
           </div>
           <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">89+</span><br />
-            Happy Clients
+            <span class="w3-xlarge">3+</span><br />
+            Concours Gagnés
           </div>
           <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">150+</span><br />
-            Meetings
+            <span class="w3-xlarge">10+</span><br />
+            Ateliers
           </div>
         </div>
       </div>
 
-      <!-- Portfolio Section -->
+      <!-- Projects Section -->
       <div class="w3-padding-64 w3-content" id="photos">
-        <h2 class="w3-text-light-grey">My Projects</h2>
-        <hr style="width: 200px" class="w3-opacity" />
+        <h2 class="w3-text-light-grey">Mes Projets</h2>
+        <hr style="width: 100%" class="w3-opacity w3-center" />
 
-        <!-- Grid for photos -->
+        <!-- Grid Projects-->
         <div class="w3-row-padding" style="margin: 0 -16px">
           <div class="w3-half">
             <div class="card" style="width: 400px">
@@ -254,8 +347,8 @@
 
       <!-- Contact Section -->
       <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-        <h2 class="w3-text-light-grey">Contact Me</h2>
-        <hr style="width: 200px" class="w3-opacity" />
+        <h2 class="w3-text-light-grey">Contact</h2>
+        <hr style="width: 100%" class="w3-opacity w3-center" />
 
         <div class="w3-section">
           <p>
@@ -268,7 +361,7 @@
             <i
               class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"
             ></i>
-            Phone: +33 6 95 78 50 92
+            Téléphone : +33 6 95 78 50 92
           </p>
           <p>
             <i
@@ -279,14 +372,14 @@
           </p>
         </div>
         <br />
-        <p>Let's get in touch. Send me a message:</p>
+        <p>Laissez moi un message.</p>
 
         <form action="/action_page.php" target="_blank">
           <p>
             <input
               class="w3-input w3-padding-16"
               type="text"
-              placeholder="Name"
+              placeholder="Nom"
               required
               name="Name"
             />
@@ -304,7 +397,7 @@
             <input
               class="w3-input w3-padding-16"
               type="text"
-              placeholder="Subject"
+              placeholder="Object"
               required
               name="Subject"
             />
@@ -323,32 +416,29 @@
               class="w3-button w3-light-grey w3-padding-large"
               type="submit"
             >
-              <i class="fa fa-paper-plane"></i> SEND MESSAGE
+              <i class="fa fa-paper-plane"></i> EVOYER MESSAGE
             </button>
           </p>
         </form>
         <!-- End Contact Section -->
+        <br />
       </div>
 
       <!-- Footer -->
+      <hr style="width: 100%" class="w3-opacity w3-center" />
       <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
         <p class="w3-medium">
-          Powered by
+          Réalisé par
           <a
-            href="https://www.w3schools.com/w3css/default.asp"
+            href="https://github.com/YoussefBOUDOUNTCeri"
             target="_blank"
             class="w3-hover-text-green"
-            >Youssef</a
+            >Youssef Boudount</a
           >
         </p>
         <!-- End footer -->
       </footer>
+      <hr style="width: 100%" class="w3-opacity w3-center" />
 
       <!-- END PAGE CONTENT -->
     </div>
