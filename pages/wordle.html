@@ -1,233 +1,329 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Projet Wordle en Java</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f1f1f1;
-            margin: 0;
-            padding: 0;
-        }
+    <head>
+        <title>Projet Wordle en Java</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body>
 
-        .header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        .project-info {
-            background-color: white;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-
-        .project-title {
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .btn-back {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        .btn-back:hover {
-            background-color: #555;
-        }
-
-        .image-gallery {
-            margin-top: 20px;
-        }
-
-        .image-gallery img {
-            width: 100%;
-            padding: 5px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .button-icon {
-            display: flex;
-            border: 3px #fff solid;
-            width: fit-content;
-            height: fit-content;
-            cursor: pointer;
-            }
-
-        .icon {
-            background-color: #fff;
-            padding: 10px 10px 5px 10px;
-            }
-
-            .icon svg {
-            width: 25px;
-            height: 25px;
-        }
-
-        .cube {
-            transition: all 0.4s;
-            transform-style: preserve-3d;
-            width: 200px;
-            height: 20px;
-        }
-
-        .button-icon:hover {
-            border-color: #ff98a2;
-        }
-
-        .button-icon:hover .cube {
-            transform: rotateX(90deg);
-        }
-
-        .side {
-            position: absolute;
-            height: 47px;
-            width: 200px;
-            display: flex;
-            font-size: 0.8em;
-            justify-content: center;
-            align-items: center;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-weight: bold;
-        }
-
-        .top {
-            background: #ff98a2;
-            color: #fff;
-            transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
-        }
-
-        .front {
-            background: #222229;
-            color: #fff;
-            transform: translate3d(0, 0, 1em);
-        }
-
-    </style>
-</head>
-<body>
-
-    <div class="header">
-        <h1>Projet Wordle en Java</h1>
-    </div>
-
-    <!-- TODO : Changer le rapport : rapport de groupe -> raport perso  -->
-    <div class="w3-container project-info">
-
-        <div class="w3-row">
-            <div class="w3-quarter w3-container"></div>
-            <div class="w3-quarter w3-container w3-center">
-                <a href="https://gitlab.com/ceri-projet-programmation-2023/groupe-3/-/tree/main/project?ref_type=heads" target="_blank" class="button-link">
-                    <div class="button-icon">
-                        <div class="icon">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M23.955 13.587l-1.342-4.135-2.664-8.21c-.12-.364-.595-.364-.713 0l-2.664 8.21h-5.144l-2.664-8.21c-.12-.364-.594-.364-.713 0l-2.664 8.21-1.342 4.135c-.06.181-.06.378 0 .56l9.293 10.48c.18.202.502.202.682 0l9.293-10.48c.06-.182.06-.379 0-.56zm-2.164.339l-7.262 8.192-.419.472-.42-.472-7.261-8.192-1.172-3.609h3.327l3.105 9.541c.06.182.234.303.42.303s.36-.121.42-.303l3.105-9.541h3.327l-1.171 3.609z" fill="#fc6d26"/>
-                                <path d="M4.831 13.926h3.327l3.105 9.541c.06.182.234.303.42.303s.36-.121.42-.303l3.105-9.541h3.327l-1.171-3.609-7.261 8.192-.419.472-.42-.472-7.262-8.192z" fill="#e24329"/>
-                                <path d="M12 14.292l3.105 9.541c.06.182.234.303.42.303s.36-.121.42-.303l3.105-9.541h3.327l-9.292 10.48c-.18.202-.502.202-.682 0l-9.293-10.48h3.328l3.105 9.541c.06.182.234.303.42.303s.36-.121.42-.303l3.105-9.541z" fill="#fc6d26"/>
-                                <path d="M0 14.146l9.293 10.48c.18.202.502.202.682 0l9.293-10.48-1.171-3.609h-3.327l-3.105 9.541c-.06.182-.234.303-.42.303s-.36-.121-.42-.303l-3.105-9.541h-3.327l-1.171 3.609z" fill="#fca326"/>
-                                <path d="M12 23.876c-.186 0-.36-.121-.42-.303l-3.105-9.541h-3.327l9.292 10.48c.18.202.502.202.682 0l9.293-10.48h-3.328l-3.105 9.541c-.06.182-.234.303-.42.303s-.36-.121-.42-.303l-3.105-9.541h-3.327l3.105 9.541c.06.182.234.303.42.303s.36-.121.42-.303l3.105-9.541h3.327l1.171-3.609-9.293 10.48c-.18.202-.502.202-.682 0l-9.293-10.48 1.171 3.609h3.327l3.105 9.541c.06.182.234.303.42.303z" fill="#e24329"/>
-                            </svg>
-                        </div>
-                        <div class="cube">
-                            <span class="side front">VOIR CODE</span>
-                            <span class="side top">Code sur GitLab</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="w3-quarter w3-container w3-center">
-                <a href="../data/rapportWordle.pdf" target="_blank" class="button-link">
-                    <div class="button-icon">
-                        <div class="icon">
-                            <svg class="svg-icon" viewBox="0 0 20 20">
-                                <path d="M15.475,6.692l-4.084-4.083C11.32,2.538,11.223,2.5,11.125,2.5h-6c-0.413,0-0.75,0.337-0.75,0.75v13.5c0,0.412,0.337,0.75,0.75,0.75h9.75c0.412,0,0.75-0.338,0.75-0.75V6.94C15.609,6.839,15.554,6.771,15.475,6.692 M11.5,3.779l2.843,2.846H11.5V3.779z M14.875,16.75h-9.75V3.25h5.625V7c0,0.206,0.168,0.375,0.375,0.375h3.75V16.75z"></path>
-                            </svg>
-                        </div>
-                        <div class="cube">
-                            <span class="side front">VOIR PDF</span>
-                            <span class="side top">RAPPORT COMPLET</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="w3-quarter w3-container"></div>
+        <div class="header">
+            <h1>Projet Wordle en Java</h1>
         </div>
 
-        <h3 class="project-title">Introduction</h3>
-        <p>Wordle est un jeu de réflexion basé sur les mots où le but est de deviner un mot cible à l’aide d’indices basés sur la couleur. Chaque guess correct rapproche le joueur du mot cible grâce à un système de feedback intuitif.</p>
+        <!-- TODO : Changer le rapport : rapport de groupe -> raport perso  -->
+        <div class="w3-container project-info">
 
-        <h3>Règles du Jeu</h3>
-        <ul class="w3-ul">
-            <li>Le joueur doit trouver un mot de x lettres en 5 essais au plus.</li>
-            <li>Chaque lettre du mot proposé reçoit un retour coloré : Une lettre colorée en vert est correcte et bien placée. Une lettre colorée en orange est correcte mais mal placée. Une lettre colorée en rouge n’est pas dans le mot.</li>
-            <li>Le joueur peut demander un indice qui lui donne une lettre du mot cible.</li>
-            <li>Le joueur peut choisir la difficulté du jeu : facile (4 lettres), moyen (5 lettres) ou difficile (6 lettres).</li>
-            <li>Le joueur peut consulter les instructions du jeu.</li>
-            <li>Le joueur peut consulter le classement des meilleurs joueurs.</li>
-        </ul>
-
-        <h3>Déroulement d’une Partie</h3>
-        <p>Une partie typique de Wordle se déroule en plusieurs étapes, de la saisie des mots à l'utilisation des indices pour trouver le mot cible.</p>
-
-        <h3 class="project-title">Contexte et Objectifs</h3>
-        <p>L’engouement pour les jeux de mots et l’apprentissage de la langue a encouragé le développement d’applications ludiques stimulant l’esprit. Mon projet s’inscrit dans cette tendance, en proposant un défi linguistique quotidien qui est à la fois éducatif et divertissant. L’objectif principal est de créer une application qui non seulement teste le vocabulaire des utilisateurs mais les aide également à l’élargir grâce à des indices générés par intelligence artificielle, offrant ainsi une expérience d’apprentissage enrichissante.</p>
-
-        <h3 class="project-title">Conception</h3>
-        <h3>Architecture générale du logiciel</h3>
-        <p>Mon projet s’appuie sur une architecture Modèle-Vue-Contrôleur (MVC) qui divise l’application en trois composants interconnectés. Cette séparation permet de gérer les responsabilités de manière efficace, en isolant la logique métier de l’interface utilisateur et du contrôle de l’application.</p>
-
-        <h3>Interface utilisateur et expérience utilisateur</h3>
-        <p>L’interface utilisateur a été conçue pour être intuitive et réactive. L’application offre une expérience utilisateur fluide et agréable en minimisant la complexité visuelle et en fournissant des retours clairs à l’utilisateur après chaque interaction. L’esthétique visuelle s’aligne avec la simplicité du jeu Wordle, permettant aux utilisateurs de se concentrer sur le gameplay sans distraction.</p>
-
-
-        <h3>Galerie d'Images</h3>
-        <div class="image-gallery w3-row">
-            <div class="w3-third w3-container">
-                <h3> Le portail du jeu <br> </h3>
-                <img src="../img/pages/wordle/w1.PNG">
+            <div class="w3-row">
+                <div class="w3-quarter w3-container"></div>
+                <div class="w3-quarter w3-container w3-center">
+                    <a href="https://gitlab.com/ceri-projet-programmation-2023/groupe-3/-/tree/main/project?ref_type=heads" target="_blank" class="button-link">
+                        <div class="button-icon">
+                            <div class="icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M23.955 13.587l-1.342-4.135-2.664-8.21c-.12-.364-.595-.364-.713 0l-2.664 8.21h-5.144l-2.664-8.21c-.12-.364-.594-.364-.713 0l-2.664 8.21-1.342 4.135c-.06.181-.06.378 0 .56l9.293 10.48c.18.202.502.202.682 0l9.293-10.48c.06-.182.06-.379 0-.56zm-2.164.339l-7.262 8.192-.419.472-.42-.472-7.261-8.192-1.172-3.609h3.327l3.105 9.541c.06.182.234.303.42.303s.36-.121.42-.303l3.105-9.541h3.327l-1.171 3.609z" fill="#fc6d26"/>
+                                    <path d="M4.831 13.926h3.327l3.105 9.541c.06.182.234.303.42.303s.36-.121.42-.303l3.105-9.541h3.327l-1.171-3.609-7.261 8.192-.419.472-.42-.472-7.262-8.192z" fill="#e24329"/>
+                                    <path d="M12 14.292l3.105 9.541c.06.182.234.303.42.303s.36-.121.42-.303l3.105-9.541h3.327l-9.292 10.48c-.18.202-.502.202-.682 0l-9.293-10.48h3.328l3.105 9.541c.06.182.234.303.42.303s.36-.121.42-.303l3.105-9.541z" fill="#fc6d26"/>
+                                    <path d="M0 14.146l9.293 10.48c.18.202.502.202.682 0l9.293-10.48-1.171-3.609h-3.327l-3.105 9.541c-.06.182-.234.303-.42.303s-.36-.121-.42-.303l-3.105-9.541h-3.327l-1.171 3.609z" fill="#fca326"/>
+                                    <path d="M12 23.876c-.186 0-.36-.121-.42-.303l-3.105-9.541h-3.327l9.292 10.48c.18.202.502.202.682 0l9.293-10.48h-3.328l-3.105 9.541c-.06.182-.234.303-.42.303s-.36-.121-.42-.303l-3.105-9.541h-3.327l3.105 9.541c.06.182.234.303.42.303s.36-.121.42-.303l3.105-9.541h3.327l1.171-3.609-9.293 10.48c-.18.202-.502.202-.682 0l-9.293-10.48 1.171 3.609h3.327l3.105 9.541c.06.182.234.303.42.303z" fill="#e24329"/>
+                                </svg>
+                            </div>
+                            <div class="cube">
+                                <span class="side front">VOIR CODE</span>
+                                <span class="side top">Code sur GitLab</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="w3-quarter w3-container w3-center">
+                    <a href="../data/rapportWordle.pdf" target="_blank" class="button-link">
+                        <div class="button-icon">
+                            <div class="icon">
+                                <svg class="svg-icon" viewBox="0 0 20 20">
+                                    <path d="M15.475,6.692l-4.084-4.083C11.32,2.538,11.223,2.5,11.125,2.5h-6c-0.413,0-0.75,0.337-0.75,0.75v13.5c0,0.412,0.337,0.75,0.75,0.75h9.75c0.412,0,0.75-0.338,0.75-0.75V6.94C15.609,6.839,15.554,6.771,15.475,6.692 M11.5,3.779l2.843,2.846H11.5V3.779z M14.875,16.75h-9.75V3.25h5.625V7c0,0.206,0.168,0.375,0.375,0.375h3.75V16.75z"></path>
+                                </svg>
+                            </div>
+                            <div class="cube">
+                                <span class="side front">VOIR PDF</span>
+                                <span class="side top">RAPPORT COMPLET</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="w3-quarter w3-container"></div>
             </div>
 
-            <div class="w3-third w3-container">
-                <h3>La grille de jeu <br> </h3>
-                <img src="../img/pages/wordle/w2.PNG">
+            <h3 class="project-title">Introduction</h3>
+            <p>Wordle est un jeu de réflexion basé sur les mots où le but est de deviner un mot cible à l’aide d’indices basés sur la couleur. Chaque guess correct rapproche le joueur du mot cible grâce à un système de feedback intuitif.</p>
+
+            <h3>Règles du Jeu</h3>
+            <ul class="w3-ul">
+                <li>Le joueur doit trouver un mot de x lettres en 5 essais au plus.</li>
+                <li>Chaque lettre du mot proposé reçoit un retour coloré : Une lettre colorée en vert est correcte et bien placée. Une lettre colorée en orange est correcte mais mal placée. Une lettre colorée en rouge n’est pas dans le mot.</li>
+                <li>Le joueur peut demander un indice qui lui donne une lettre du mot cible.</li>
+                <li>Le joueur peut choisir la difficulté du jeu : facile (4 lettres), moyen (5 lettres) ou difficile (6 lettres).</li>
+                <li>Le joueur peut consulter les instructions du jeu.</li>
+                <li>Le joueur peut consulter le classement des meilleurs joueurs.</li>
+            </ul>
+
+            <h3>Déroulement d’une Partie</h3>
+            <p>Une partie typique de Wordle se déroule en plusieurs étapes, de la saisie des mots à l'utilisation des indices pour trouver le mot cible.</p>
+
+            <h3 class="project-title">Contexte et Objectifs</h3>
+            <p>L’engouement pour les jeux de mots et l’apprentissage de la langue a encouragé le développement d’applications ludiques stimulant l’esprit. Mon projet s’inscrit dans cette tendance, en proposant un défi linguistique quotidien qui est à la fois éducatif et divertissant. L’objectif principal est de créer une application qui non seulement teste le vocabulaire des utilisateurs mais les aide également à l’élargir grâce à des indices générés par intelligence artificielle, offrant ainsi une expérience d’apprentissage enrichissante.</p>
+
+            <h3 class="project-title">Conception</h3>
+            <h3>Architecture générale du logiciel</h3>
+            <p>Mon projet s’appuie sur une architecture Modèle-Vue-Contrôleur (MVC) qui divise l’application en trois composants interconnectés. Cette séparation permet de gérer les responsabilités de manière efficace, en isolant la logique métier de l’interface utilisateur et du contrôle de l’application.</p>
+
+            <h3>Interface utilisateur et expérience utilisateur</h3>
+            <p>L’interface utilisateur a été conçue pour être intuitive et réactive. L’application offre une expérience utilisateur fluide et agréable en minimisant la complexité visuelle et en fournissant des retours clairs à l’utilisateur après chaque interaction. L’esthétique visuelle s’aligne avec la simplicité du jeu Wordle, permettant aux utilisateurs de se concentrer sur le gameplay sans distraction.</p>
+
+
+            <h3>Galerie d'Images</h3>
+            <div class="image-gallery w3-row">
+                <div class="w3-third w3-container">
+                    <h3> Le portail du jeu <br> </h3>
+                    <a href="#img1">
+                        <img src="../img/pages/wordle/w1.PNG">
+                    </a>
+                </div>
+
+                <div class="w3-third w3-container">
+                    <h3>La grille de jeu <br> </h3>
+                    <a href="#img2">
+                        <img src="../img/pages/wordle/w2.PNG">
+                    </a>
+                </div>
+                <div class="w3-third w3-container">
+                    <h3> Partie en cours <br> </h3>
+                    <a href="#img3">
+                        <img src="../img/pages/wordle/w3.PNG">
+                    </a>
+                </div>
             </div>
-            <div class="w3-third w3-container">
-                <h3> Partie en cours <br> </h3>
-                <img src="../img/pages/wordle/w3.PNG">
+
+            <div class="image-gallery w3-row">
+                <div class="w3-third w3-container">
+                    <h3> Fenêtre indice <br> </h3>
+                    <a href="#img4">
+                        <img src="../img/pages/wordle/w4.PNG">
+                    </a>
+                </div>
+
+                <div class="w3-third w3-container">
+                    <h3> Choix de la difficulté <br> </h3>
+                    <a href="#img5">
+                        <img src="../img/pages/wordle/w5.PNG">
+                    </a>
+                </div>
+
+                <div class="w3-third w3-container">
+                    <h3> Instructions <br> </h3>
+                    <a href="#img6">
+                        <img src="../img/pages/wordle/w6.PNG">
+                    </a>
+                </div>
             </div>
+
+            <a href="../index.html" class="btn-back">Retour</a>
+
+            <div id="img1" class="lightbox">
+                <a href="#" class="close">&times;</a>
+                <img src="../img/pages/wordle/w1.PNG" alt="Page d'accueil">
+            </div>
+            <div id="img2" class="lightbox">
+                <a href="#" class="close">&times;</a>
+                <img src="../img/pages/wordle/w2.PNG" alt="Page de connexion">
+            </div>
+            <div id="img3" class="lightbox">
+                <a href="#" class="close">&times;</a>
+                <img src="../img/pages/wordle/w3.PNG" alt="Page d'inscription">
+            </div>
+            <div id="img4" class="lightbox">
+                <a href="#" class="close">&times;</a>
+                <img src="../img/pages/wordle/w4.PNG" alt="Page d'inscription">
+            </div>
+            <div id="img5" class="lightbox">
+                <a href="#" class="close">&times;</a>
+                <img src="../img/pages/wordle/w5.PNG" alt="Page d'inscription">
+            </div>
+            <div id="img6" class="lightbox">
+                <a href="#" class="close">&times;</a>
+                <img src="../img/pages/wordle/w6.PNG" alt="Page d'inscription">
+            </div>
+
+            <script>
+                document.addEventListener('keydown', function(event) {
+                    let currentLightbox = document.querySelector('.lightbox:target');
+                    if (!currentLightbox) return;
+        
+                    let newTargetId;
+                    switch (event.key) {
+                        case "ArrowLeft":
+                            newTargetId = currentLightbox.previousElementSibling?.id;
+                            break;
+                        case "ArrowRight":
+                            newTargetId = currentLightbox.nextElementSibling?.id;
+                            break;
+                        case "Escape":
+                            currentLightbox.querySelector('.close').click();
+                            return;
+                    }
+        
+                    if (newTargetId) {
+                        window.location = '#' + newTargetId;
+                    }
+                });
+            </script>
+
         </div>
 
-        <div class="image-gallery w3-row">
-            <div class="w3-third w3-container">
-                <h3> Fenêtre indice <br> </h3>
-                <img src="../img/pages/wordle/w4.PNG">
-            </div>
 
-            <div class="w3-third w3-container">
-                <h3> Choix de la difficulté <br> </h3>
-                <img src="../img/pages/wordle/w5.PNG">
-            </div>
-
-            <div class="w3-third w3-container">
-                <h3> Instructions <br> </h3>
-                <img src="../img/pages/wordle/w6.PNG">
-            </div>
-        </div>
-
-        <a href="javascript:history.back()" class="btn-back">Retour</a>
-    </div>
-
-
-</body>
+    </body>
 </html>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f1f1f1;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        background-color: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .project-info {
+        background-color: white;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .project-title {
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .btn-back {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .btn-back:hover {
+        background-color: #555;
+    }
+
+    .image-gallery {
+        margin-top: 20px;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .button-icon {
+        display: flex;
+        border: 3px #fff solid;
+        width: fit-content;
+        height: fit-content;
+        cursor: pointer;
+        }
+
+    .icon {
+        background-color: #fff;
+        padding: 10px 10px 5px 10px;
+        }
+
+        .icon svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .cube {
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        width: 200px;
+        height: 20px;
+    }
+
+    .button-icon:hover {
+        border-color: #ff98a2;
+    }
+
+    .button-icon:hover .cube {
+        transform: rotateX(90deg);
+    }
+
+    .side {
+        position: absolute;
+        height: 47px;
+        width: 200px;
+        display: flex;
+        font-size: 0.8em;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: bold;
+    }
+
+    .top {
+        background: #ff98a2;
+        color: #fff;
+        transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
+    }
+
+    .front {
+        background: #222229;
+        color: #fff;
+        transform: translate3d(0, 0, 1em);
+    }
+
+    .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        margin: auto;
+    }
+
+    .lightbox:target {
+        display: flex;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+
+</style>

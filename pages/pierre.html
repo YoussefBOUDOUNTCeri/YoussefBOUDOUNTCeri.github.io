@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projet Wordle en Java</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+
+    <body>
+
+        <html>
+    <head>
+        <title>Projet Site Vitrine - Commerce de Pierres Précieuses</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+            /* Votre CSS personnalisé ici */
+        </style>
+    </head>
+
+    <body>
+
+        <div class="header">
+            <h1>Projet Site Vitrine - Commerce de Pierres Précieuses</h1>
+        </div>
+
+        <div class="w3-container project-info">
+
+            <h3 class="project-title">Introduction</h3>
+            <p>Un site vitrine pour un commerce de pierres précieuses, permettant la présentation et la gestion des produits. Ce projet intègre des fonctionnalités de création, modification et suppression de produits, sans nécessiter un système d'authentification.</p>
+
+            <h3 class="project-title">Objectifs et Fonctionnalités</h3>
+            <p>Le site vise à offrir une plateforme facile à utiliser pour les commerçants, avec des fonctionnalités telles que l'ajout de nouveaux produits, la modification des produits existants et la suppression des produits en vente.</p>
+
+            <h3 class="project-title">Technologies et Architecture</h3>
+            <p>Utilisation de PHP pour la logique côté serveur, interaction avec une base de données simple (fichiers texte), et intégration de JavaScript pour la validation des formulaires. Le site est structuré selon le modèle MVC simplifié.</p>
+
+            <h3>Galerie d'Images</h3>
+            <div class="image-gallery w3-row">
+                <div class="w3-third w3-container w3-panel w3-border w3-round-xlarge">
+                    <h3>Page d'accueil</h3>
+                    <a href="#img1" >
+                        <img src="../img/pages/pierre/p1.png" alt="Page d'accueil">
+                    </a>
+                    <p>La page d'acceuil du site avec une brieve description de l'entreprise et du service proposé.</p>
+                </div>
+
+                <div class="w3-third w3-container w3-panel w3-border w3-round-xlarge">
+                    <h3>Formulaire d'ajout d'un produit</h3>
+                    <a href="#img2" >
+                        <img src="../img/pages/pierre/p2.png" alt="Formulaire d'ajout d'un produit">
+                    </a>
+                    <p>Cete page permet d'ajouter un nouveau produit à la base de données.</p>
+                </div>
+
+                <div class="w3-third w3-container w3-panel w3-border w3-round-xlarge">
+                    <h3>Page de produit en vente</h3>
+                    <a href="#img3" >
+                        <img src="../img/pages/pierre/p3.png" alt="Résultats de recherche">
+                    </a>
+                    <p>La page de produit en vente, avec une description détaillée du produit et un bouton pour le supprimer.</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="../index.html" class="btn-back">Retour</a>
+
+        <div id="img1" class="lightbox">
+            <a href="#" class="close">&times;</a>s
+            <img src="../img/pages/pierre/p1.png" alt="Page d'accueil">
+        </div>
+        <div id="img2" class="lightbox">
+            <a href="#" class="close">&times;</a>
+            <img src="../img/pages/pierre/p2.png" alt="Formulaire d'ajout d'un produit">
+        </div>
+        <div id="img3" class="lightbox">
+            <a href="#" class="close">&times;</a>
+            <img src="../img/pages/pierre/p3.png" alt="Résultats de recherche">
+        </div>
+
+    </body>
+
+    <script>
+        document.addEventListener('keydown', function(event) {
+            let currentLightbox = document.querySelector('.lightbox:target');
+            if (!currentLightbox) return;
+
+            let newTargetId;
+            switch (event.key) {
+                case "ArrowLeft":
+                    newTargetId = currentLightbox.previousElementSibling?.id;
+                    break;
+                case "ArrowRight":
+                    newTargetId = currentLightbox.nextElementSibling?.id;
+                    break;
+                case "Escape":
+                    currentLightbox.querySelector('.close').click();
+                    return;
+            }
+
+            if (newTargetId) {
+                window.location = '#' + newTargetId;
+            }
+        });
+    </script>
+
+</html>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f1f1f1;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        background-color: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .project-info {
+        background-color: white;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .project-title {
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .btn-back {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .btn-back:hover {
+        background-color: #555;
+    }
+
+    .image-gallery {
+        margin-top: 20px;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .button-icon {
+        display: flex;
+        border: 3px #fff solid;
+        width: fit-content;
+        height: fit-content;
+        cursor: pointer;
+        }
+
+    .icon {
+        background-color: #fff;
+        padding: 10px 10px 5px 10px;
+        }
+
+    .icon svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .cube {
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        width: 200px;
+        height: 20px;
+    }
+
+    .button-icon:hover {
+        border-color: #ff98a2;
+    }
+
+    .button-icon:hover .cube {
+        transform: rotateX(90deg);
+    }
+
+    .side {
+        position: absolute;
+        height: 47px;
+        width: 200px;
+        display: flex;
+        font-size: 0.8em;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: bold;
+    }
+
+    .top {
+        background: #ff98a2;
+        color: #fff;
+        transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
+    }
+
+    .front {
+        background: #222229;
+        color: #fff;
+        transform: translate3d(0, 0, 1em);
+    }
+
+    .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        margin: auto;
+    }
+
+    .lightbox:target {
+        display: flex;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+</style>

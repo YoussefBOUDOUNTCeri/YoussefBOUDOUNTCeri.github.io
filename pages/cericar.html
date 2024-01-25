@@ -3,149 +3,6 @@
     <head>
         <title>Projet Wordle en Java</title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <style>
-            body {
-                font-family: 'Arial', sans-serif;
-                background-color: #f1f1f1;
-                margin: 0;
-                padding: 0;
-            }
-
-            .header {
-                background-color: #333;
-                color: white;
-                padding: 10px 0;
-                text-align: center;
-            }
-
-            .project-info {
-                background-color: white;
-                margin: 20px;
-                padding: 20px;
-                border-radius: 5px;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            }
-
-            .project-title {
-                color: #333;
-                margin-bottom: 15px;
-            }
-
-            .btn-back {
-                background-color: #333;
-                color: white;
-                padding: 10px 20px;
-                text-decoration: none;
-                border-radius: 5px;
-                display: inline-block;
-                margin-top: 20px;
-            }
-
-            .btn-back:hover {
-                background-color: #555;
-            }
-
-            .image-gallery {
-                margin-top: 20px;
-            }
-
-            .image-gallery img {
-                width: 100%;
-                padding: 5px;
-                border-radius: 5px;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            }
-
-            .button-icon {
-                display: flex;
-                border: 3px #fff solid;
-                width: fit-content;
-                height: fit-content;
-                cursor: pointer;
-                }
-
-            .icon {
-                background-color: #fff;
-                padding: 10px 10px 5px 10px;
-                }
-
-            .icon svg {
-                width: 25px;
-                height: 25px;
-            }
-
-            .cube {
-                transition: all 0.4s;
-                transform-style: preserve-3d;
-                width: 200px;
-                height: 20px;
-            }
-
-            .button-icon:hover {
-                border-color: #ff98a2;
-            }
-
-            .button-icon:hover .cube {
-                transform: rotateX(90deg);
-            }
-
-            .side {
-                position: absolute;
-                height: 47px;
-                width: 200px;
-                display: flex;
-                font-size: 0.8em;
-                justify-content: center;
-                align-items: center;
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
-                font-weight: bold;
-            }
-
-            .top {
-                background: #ff98a2;
-                color: #fff;
-                transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
-            }
-
-            .front {
-                background: #222229;
-                color: #fff;
-                transform: translate3d(0, 0, 1em);
-            }
-
-            .lightbox {
-                display: none;
-                position: fixed;
-                z-index: 1000;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.8);
-                align-items: center;
-                justify-content: center;
-            }
-
-            .lightbox img {
-                max-width: 90%;
-                max-height: 90%;
-                margin: auto;
-            }
-
-            .lightbox:target {
-                display: flex;
-            }
-
-            .close {
-                position: absolute;
-                top: 20px;
-                right: 40px;
-                font-size: 30px;
-                color: white;
-                cursor: pointer;
-            }
-        </style>
     </head>
 
     <body>
@@ -223,39 +80,33 @@
                     <p>Le profil utilisateur montre les détails du compte, les voyages réservés et proposés, offrant une gestion complète des activités de covoiturage.</p>
                 </div>
             </div>
-            <a href="javascript:history.back()" class="btn-back">Retour</a>
+            <a href="../index.html" class="btn-back">Retour</a>
         </div>
 
         <div id="img1" class="lightbox">
             <a href="#" class="close">&times;</a>
             <img src="../img/pages/cericar/c1.png" alt="Page d'accueil">
         </div>
-
         <div id="img2" class="lightbox">
             <a href="#" class="close">&times;</a>
             <img src="../img/pages/cericar/c2.png" alt="Page de connexion">
         </div>
-
         <div id="img3" class="lightbox">
             <a href="#" class="close">&times;</a>
             <img src="../img/pages/cericar/c3.png" alt="Page d'inscription">
         </div>
-
         <div id="img4" class="lightbox">
             <a href="#" class="close">&times;</a>
             <img src="../img/pages/cericar/c4.png" alt="Proposer un voyage">
         </div>
-
         <div id="img5" class="lightbox">
             <a href="#" class="close">&times;</a>
             <img src="../img/pages/cericar/c5.png" alt="Recherche de voyage">
         </div>
-
         <div id="img6" class="lightbox">
             <a href="#" class="close">&times;</a>
             <img src="../img/pages/cericar/c6.png" alt="Résultats de recherche">
         </div>
-
         <div id="img7" class="lightbox">
             <a href="#" class="close">&times;</a>
             <img src="../img/pages/cericar/c7.png" alt="Profil utilisateur">
@@ -288,3 +139,147 @@
     </script>
 
 </html>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f1f1f1;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        background-color: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .project-info {
+        background-color: white;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .project-title {
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .btn-back {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .btn-back:hover {
+        background-color: #555;
+    }
+
+    .image-gallery {
+        margin-top: 20px;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .button-icon {
+        display: flex;
+        border: 3px #fff solid;
+        width: fit-content;
+        height: fit-content;
+        cursor: pointer;
+        }
+
+    .icon {
+        background-color: #fff;
+        padding: 10px 10px 5px 10px;
+        }
+
+    .icon svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .cube {
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        width: 200px;
+        height: 20px;
+    }
+
+    .button-icon:hover {
+        border-color: #ff98a2;
+    }
+
+    .button-icon:hover .cube {
+        transform: rotateX(90deg);
+    }
+
+    .side {
+        position: absolute;
+        height: 47px;
+        width: 200px;
+        display: flex;
+        font-size: 0.8em;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: bold;
+    }
+
+    .top {
+        background: #ff98a2;
+        color: #fff;
+        transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
+    }
+
+    .front {
+        background: #222229;
+        color: #fff;
+        transform: translate3d(0, 0, 1em);
+    }
+
+    .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        margin: auto;
+    }
+
+    .lightbox:target {
+        display: flex;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+</style>
