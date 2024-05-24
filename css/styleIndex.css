@@ -304,3 +304,158 @@ progress {
   line-height: 2em; /* Pour centrer verticalement l'icône */
   text-align: center; /* Pour centrer horizontalement l'icône */
 }
+
+
+a, button {
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover, button:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.5s forwards;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.card {
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.card img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.faicons:hover, .fabicons:hover {
+  animation: bounce 1s;
+}
+
+
+h1, h2, h3, a, button {
+  position: relative;
+  display: inline-block;
+}
+
+h1::after, h2::after, h3::after, a::after, button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+h1:hover::after, h2:hover::after, h3:hover::after, a:hover::after, button:hover::after {
+  width: 100%;
+}
+
+
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid white; /* pour ajouter un contour blanc */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+}
+
+
+.text-animate {
+  display: inline-block;
+  position: relative;
+}
+
+.text-animate::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.text-animate:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.parallax:hover {
+  background-position: center;
+}
+
+.faicons,
+.fabicons {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.faicons:hover,
+.fabicons:hover {
+  transform: translateY(-10px) rotate(10deg);
+}

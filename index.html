@@ -35,6 +35,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Montserrat"
@@ -152,29 +154,29 @@
       <!-- Header/Home -->
       <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
         <h1 class="w3-jumbo">
-          <span class="w3-hide-small">BOUDOUNT Youssef</span>
-        </h1>
-        <p>Etudiant en informatique.</p>
+          <span class="text-animate">BOUDOUNT</span> <span class="text-animate">Youssef</span>
+        </h1> <br /> <br />
+        <p>Etudiant en informatique</p>
 
         <hr style="width: 100%" class="w3-opacity w3-center" />
         <div>
           <a href="https://github.com/YoussefBOUDOUNTCeri" target="_blank"
-            ><i class="fa fa-github faicons w3-hover-opacity"></i
+            ><i class="fa fa-github faicons w3-hover-opacity animate__animated animate__bounce"></i
           ></a>
           <a href="https://www.linkedin.com/in/youssefb14" target="_blank"
-            ><i class="fa fa-linkedin faicons w3-hover-opacity"></i
+            ><i class="fa fa-linkedin faicons w3-hover-opacity animate__animated animate__bounce"></i
           ></a>
           <a href="https://discord.com/users/youssefb14" target="_blank"
-            ><i class="fab fa-discord fabicons"></i
+            ><i class="fab fa-discord fabicons animate__animated animate__bounce"></i
           ></a>
           <a href="https://www.facebook.com/YoussefBOUDOUNTCeri" target="_blank"
-            ><i class="fa fa-facebook faicons w3-hover-opacity"></i
+            ><i class="fa fa-facebook faicons w3-hover-opacity animate__animated animate__bounce"></i
           ></a>
           <a href="https://www.instagram.com/you2sb" target="_blank"
-            ><i class="fa fa-instagram faicons w3-hover-opacity"></i
+            ><i class="fa fa-instagram faicons w3-hover-opacity animate__animated animate__bounce"></i
           ></a>
           <a href="https://twitter.com/you2sefb14" target="_blank"
-            ><i class="fa fa-twitter faicons w3-hover-opacity"></i
+            ><i class="fa fa-twitter faicons w3-hover-opacity animate__animated animate__bounce"></i
           ></a>
         </div>
         <hr style="width: 100%" class="w3-opacity w3-center" />
@@ -329,11 +331,11 @@
             Projets Réalisés
           </div>
           <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">3+</span><br />
+            <span class="w3-xlarge">1+</span><br />
             Concours Gagnés
           </div>
           <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">10+</span><br />
+            <span class="w3-xlarge">3+</span><br />
             Ateliers
           </div>
         </div>
@@ -348,7 +350,7 @@
           <div class="w3-third">
             <div class="card">
               <img
-                class="card-img-top"
+                class="card-img-top parallax"
                 src="img/GridProjects/tictactoe.png"
                 alt="Card image"
                 style="width: 100%"
@@ -368,7 +370,7 @@
           <div class="w3-third">
             <div class="card">
               <img
-                class="card-img-top"
+                class="card-img-top parallax"
                 src="img/GridProjects/snake.png"
                 alt="Card image"
                 style="width: 100%"
@@ -388,7 +390,7 @@
           <div class="w3-third">
             <div class="card">
               <img
-                class="card-img-top"
+                class="card-img-top parallax"
                 src="img/GridProjects/pierre.png"
                 alt="Card image"
                 style="width: 100%"
@@ -407,12 +409,12 @@
           <div class="w3-third">
             <div class="card">
               <img
-                class="card-img-top"
+                class="card-img-top parallax"
                 src="img/GridProjects/wordle.png"
                 alt="Card image"
                 style="width: 100%"
               />
-              <div class="card-body">
+              <div class="card-body parallax">
                 <h4 class="card-title">Wordle</h4>
                 <p class="card-text w3-text-black">Java/JavaFx</p>
                 <a
@@ -427,7 +429,7 @@
           <div class="w3-third">
             <div class="card">
               <img
-                class="card-img-top"
+                class="card-img-top parallax"
                 src="img/GridProjects/cericar.png"
                 alt="Card image"
                 style="width: 100%"
@@ -444,7 +446,7 @@
           <div class="w3-third">
             <div class="card">
               <img
-                class="card-img-top"
+                class="card-img-top parallax"
                 src="img/GridProjects/parser.png"
                 alt="Card image"
                 style="width: 100%"
@@ -468,7 +470,7 @@
                 alt="Card image"
                 style="width: 100%"
               />
-              <div class="card-body">
+              <div class="card-body parallax">
                 <h4 class="card-title">Tic Tac Toe (v2)</h4>
                 <p class="card-text w3-text-black">Java FX</p>
                 <!-- <a
@@ -582,5 +584,21 @@
       </footer>
 
     </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const progressBars = document.querySelectorAll('.w3-light-grey .w3-container');
+    
+        progressBars.forEach((bar, index) => {
+          const width = bar.style.width;
+          bar.style.width = '0';
+          setTimeout(() => {
+            bar.style.transition = 'width 1.5s ease-in-out';
+            bar.style.width = width;
+          }, index * 200); // Delay each bar by 200ms
+        });
+      });
+    </script>
+    
   </body>
 </html>

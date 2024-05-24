@@ -17,3 +17,56 @@ h6 {
 .download-button {
   width: 100%;
 }
+
+.w3-button:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #fff;
+  background-color: #000;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.w3-card:hover {
+  background-color: #333;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.skill-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-icon:hover {
+  transform: rotate(360deg);
+}
+
+.section-header {
+  position: relative;
+  display: inline-block;
+}
+
+.section-header:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.section-header:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+html {
+  scroll-behavior: smooth;
+}
