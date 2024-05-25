@@ -1,33 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Projet Wordle en Java</title>
+        <title>Projet Parseur d'Articles Scientifiques</title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     </head>
-
-    <body>
-
-        <html>
-    <head>
-        <title>Projet Site Vitrine - Commerce de Pierres Précieuses</title>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <style>
-            /* Votre CSS personnalisé ici */
-        </style>
-    </head>
-
     <body>
 
         <div class="header">
-            <h1>Projet Site Vitrine - Commerce de Pierres Précieuses</h1>
+            <h1>Projet Parseur d'Articles Scientifiques</h1>
         </div>
 
         <div class="w3-container project-info">
 
             <div class="w3-row">
                 <div class="w3-third w3-container"></div>
+
                 <div class="w3-third w3-container w3-center">
-                    <a href="https://github.com/youssefb14/PIERRES-YOUSSS" target="_blank" class="button-link">
+                    <a href="https://github.com/youssefb14/ParserPDF" target="_blank" class="button-link">
                         <div class="button-icon">
                             <div class="icon">
                                 <svg viewBox="0 0 24 24">
@@ -39,7 +28,7 @@
                             </div>
                             <div class="cube">
                                 <span class="side front">VOIR CODE</span>
-                                <span class="side top">Code sur Github</span>
+                                <span class="side top">Code sur GitHub</span>
                             </div>
                         </div>
                     </a>
@@ -48,83 +37,41 @@
             </div>
 
             <h3 class="project-title">Introduction</h3>
-            <p>Un site vitrine pour un commerce de pierres précieuses, permettant la présentation et la gestion des produits. Ce projet intègre des fonctionnalités de création, modification et suppression de produits, sans nécessiter un système d'authentification.</p>
+            <p>Le projet Parseur d'Articles Scientifiques vise à extraire et analyser des textes à partir de fichiers PDF d'articles scientifiques. Il utilise des outils de traitement de texte et des scripts pour automatiser le processus de conversion et d'analyse des données textuelles.</p>
 
-            <h3 class="project-title">Objectifs et Fonctionnalités</h3>
-            <p>Le site vise à offrir une plateforme facile à utiliser pour les commerçants, avec des fonctionnalités telles que l'ajout de nouveaux produits, la modification des produits existants et la suppression des produits en vente.</p>
+            <h3>Fonctionnalités</h3>
+            <ul class="w3-ul">
+                <li>Extraction de texte à partir de fichiers PDF.</li>
+                <li>Analyse des données textuelles pour extraire des informations clés.</li>
+                <li>Conversion automatique des fichiers PDF en fichiers texte.</li>
+                <li>Utilisation de scripts Bash pour automatiser le flux de travail.</li>
+                <li>Possibilité de traiter plusieurs fichiers PDF en une seule exécution.</li>
+            </ul>
 
-            <h3 class="project-title">Technologies et Architecture</h3>
-            <p>Utilisation de PHP pour la logique côté serveur, interaction avec une base de données simple (fichiers texte), et intégration de JavaScript pour la validation des formulaires. Le site est structuré selon le modèle MVC simplifié.</p>
+            <h3>Technologies Utilisées</h3>
+            <p>Le projet utilise plusieurs technologies et outils pour accomplir ses objectifs, notamment :</p>
+            <ul class="w3-ul">
+                <li>Python pour l'analyse de texte et le traitement des données.</li>
+                <li>Shell scripting (Bash) pour l'automatisation des tâches.</li>
+                <li>pdftotext pour la conversion des fichiers PDF en texte brut.</li>
+                <li>Git pour le contrôle de version.</li>
+            </ul>
 
-            <h3>Galerie d'Images</h3>
-            <div class="image-gallery w3-row">
-                <div class="w3-third w3-container w3-panel w3-border w3-round-xlarge">
-                    <h3>Page d'accueil</h3>
-                    <a href="#img1" >
-                        <img src="../img/pages/pierre/p1.png" alt="Page d'accueil">
-                    </a>
-                    <p>La page d'acceuil du site avec une brieve description de l'entreprise et du service proposé.</p>
-                </div>
+            <h3 class="project-title">Contexte et Objectifs</h3>
+            <p>Avec l'augmentation de la production d'articles scientifiques, il devient crucial de disposer d'outils permettant d'extraire et d'analyser efficacement les informations contenues dans ces documents. Le projet Parseur d'Articles Scientifiques s'inscrit dans cette perspective, offrant une solution automatisée pour traiter un grand nombre de documents PDF et en extraire des données textuelles pour une analyse plus approfondie.</p>
 
-                <div class="w3-third w3-container w3-panel w3-border w3-round-xlarge">
-                    <h3>Formulaire d'ajout d'un produit</h3>
-                    <a href="#img2" >
-                        <img src="../img/pages/pierre/p2.png" alt="Formulaire d'ajout d'un produit">
-                    </a>
-                    <p>Cete page permet d'ajouter un nouveau produit à la base de données.</p>
-                </div>
+            <h3>Architecture générale du logiciel</h3>
+            <p>Le projet est structuré autour de plusieurs scripts et modules, chaque composant ayant une fonction spécifique dans le processus d'extraction et d'analyse :</p>
+            <ul class="w3-ul">
+                <li><strong>pdfToText.sh :</strong> Un script Bash qui convertit les fichiers PDF en fichiers texte.</li>
+                <li><strong>main.py :</strong> Un script Python qui analyse les fichiers texte et extrait les informations clés.</li>
+                <li><strong>README.md :</strong> Contient la documentation et les instructions pour utiliser le projet.</li>
+            </ul>
 
-                <div class="w3-third w3-container w3-panel w3-border w3-round-xlarge">
-                    <h3>Page de produit en vente</h3>
-                    <a href="#img3" >
-                        <img src="../img/pages/pierre/p3.png" alt="Résultats de recherche">
-                    </a>
-                    <p>La page de produit en vente, avec une description détaillée du produit et un bouton pour le supprimer.</p>
-                </div>
-            </div>
-
-            <a href="../index.html" class="btn-back">Retour</a>
+            <h3>Interface utilisateur et expérience utilisateur</h3>
+            <p>L'interface utilisateur se compose principalement de scripts en ligne de commande, offrant une interface simple et efficace pour les utilisateurs avancés. Le projet met l'accent sur la facilité d'utilisation et l'automatisation des tâches répétitives.</p>
         </div>
-
-        <div id="img1" class="lightbox">
-            <a href="#" class="close">&times;</a>s
-            <img src="../img/pages/pierre/p1.png" alt="Page d'accueil">
-        </div>
-        <div id="img2" class="lightbox">
-            <a href="#" class="close">&times;</a>
-            <img src="../img/pages/pierre/p2.png" alt="Formulaire d'ajout d'un produit">
-        </div>
-        <div id="img3" class="lightbox">
-            <a href="#" class="close">&times;</a>
-            <img src="../img/pages/pierre/p3.png" alt="Résultats de recherche">
-        </div>
-
     </body>
-
-    <script>
-        document.addEventListener('keydown', function(event) {
-            let currentLightbox = document.querySelector('.lightbox:target');
-            if (!currentLightbox) return;
-
-            let newTargetId;
-            switch (event.key) {
-                case "ArrowLeft":
-                    newTargetId = currentLightbox.previousElementSibling?.id;
-                    break;
-                case "ArrowRight":
-                    newTargetId = currentLightbox.nextElementSibling?.id;
-                    break;
-                case "Escape":
-                    currentLightbox.querySelector('.close').click();
-                    return;
-            }
-
-            if (newTargetId) {
-                window.location = '#' + newTargetId;
-            }
-        });
-    </script>
-
 </html>
 
 <style>
@@ -193,7 +140,7 @@
         padding: 10px 10px 5px 10px;
         }
 
-    .icon svg {
+        .icon svg {
         width: 25px;
         height: 25px;
     }
@@ -269,4 +216,5 @@
         color: white;
         cursor: pointer;
     }
+
 </style>
