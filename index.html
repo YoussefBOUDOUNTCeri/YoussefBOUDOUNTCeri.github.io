@@ -355,9 +355,15 @@
           <option value="">Tous les langages</option>
           <option value="cpp">C++</option>
           <option value="python">Python</option>
-          <option value="html css php">HTML/CSS/PHP</option>
+          <option value="html css js">HTML/CSS/JS</option>
+          <option value="php">PHP</option>
           <option value="java javafx">Java/JavaFX</option>
-          <option value="html css php js sql">HTML/CSS/PHP/JS/SQL</option>
+          <option value="sql">SQL</option>
+          <option value="pgsql">PostgreSQL</option>
+          <option value="plsql">PL/SQL</option>
+          <option value="bash">Bash</option>
+          <option value="assembly">Assembly</option>
+          <option value="pascal">Pascal</option>
         </select>
         <select id="typeDropdown" class="w3-input w3-margin-bottom filter-dropdown" onchange="filterProjects()">
           <option value="">Tous les types</option>
@@ -366,6 +372,8 @@
           <option value="console">Terminal</option>
           <option value="mobile">Mobile</option>
         </select>
+        <button onclick="resetFilters()" class="renButton">Réinitialiser le filtre</button>
+
         <br />
         <div id="projectContainer" class="project-container">
 
@@ -391,7 +399,29 @@
             </div>
           </div>
 
-          <div class="w3-third project-card" data-lang="html css php" data-type="web">
+          <div class="w3-third project-card" data-lang="html css js bash" data-type="web console">
+            <div class="card">
+              <img class="card-img-top parallax" src="img/GridProjects/monitoringbash.png" alt="Card image" style="width: 100%" />
+              <div class="card-body">
+                <h4 class="card-title"> Monitoring Serv Linux</h4>
+                <p class="card-text w3-text-black">Bash</p>
+                <a href="pages/monitoring.html" class="btn btn-primary w3-black">Bientôt disponible ...</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="w3-third project-card" data-lang="cpp assembly pascal" data-type="console">
+            <div class="card">
+              <img class="card-img-top parallax" src="img/GridProjects/llk.png" alt="Card image" style="width: 100%" />
+              <div class="card-body">
+                <h4 class="card-title">LL(k) to x86_64</h4>
+                <p class="card-text w3-text-black">C++</p>
+                <a href="pages/llk.html" class="btn btn-primary w3-black">Bientôt disponible ...</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="w3-third project-card" data-lang="html css js php" data-type="web">
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/pierre.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
@@ -414,7 +444,7 @@
             </div>
           </div>
 
-          <div class="w3-third project-card" data-lang="html css php js sql" data-type="web">
+          <div class="w3-third project-card" data-lang="html css js php plsql pgsql sql" data-type="web">
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/cericar.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
@@ -599,6 +629,13 @@
           card.style.display = 'block';
         });
       }
+
+      function resetFilters() {
+        document.getElementById('languageDropdown').value = '';
+        document.getElementById('typeDropdown').value = '';
+        filterProjects();
+      }
+
     </script>
 
   </body>
