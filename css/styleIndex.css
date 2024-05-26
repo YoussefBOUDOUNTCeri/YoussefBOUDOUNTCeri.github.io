@@ -274,6 +274,8 @@ Circle Progress Bar
   animation: c-progress 2s 1 forwards;
 }
 
+/* ------------------------------*/
+
 h2 {
   text-align: center;
 }
@@ -454,4 +456,39 @@ button:hover::after  {
 .faicons:hover,
 .fabicons:hover {
   transform: translateY(-10px) rotate(10deg);
+}
+
+
+/* ------------------------------*/
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.project-card {
+  width: calc(33.333% - 16px); /* Ajustez la largeur de chaque carte pour qu'elle prenne un tiers de la ligne */
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .project-card {
+    width: calc(50% - 16px); /* Ajustez la largeur de chaque carte pour qu'elle prenne la moitié de la ligne sur les petits écrans */
+  }
+}
+@media (max-width: 480px) {
+  .project-card {
+    width: 100%; /* Ajustez la largeur de chaque carte pour qu'elle prenne toute la ligne sur les très petits écrans */
+  }
+}
+
+/* ------------------------------*/
+.filter-dropdown {
+  background-color: black;
+  color: white;
+  padding: 8px 16px;
+  border: white 1px solid;
+  border-radius: 4px;
+  width: 32%; /* Ajustez ce pourcentage selon vos besoins */
+  display: inline-block; /* Pour qu'ils s'affichent côte à côte */
+  margin-right: 9px; /* Pour un peu d'espace entre les deux éléments */
 }
