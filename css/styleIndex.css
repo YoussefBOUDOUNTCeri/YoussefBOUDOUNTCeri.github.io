@@ -488,7 +488,7 @@ button:hover::after  {
   padding: 8px 16px;
   border: white 1px solid;
   border-radius: 4px;
-  width: 32%; /* Ajustez ce pourcentage selon vos besoins */
+  width: 100%; /* Ajustez ce pourcentage selon vos besoins */
   display: inline-block; /* Pour qu'ils s'affichent côte à côte */
   margin-right: 9px; /* Pour un peu d'espace entre les deux éléments */
 }
@@ -499,7 +499,7 @@ button:hover::after  {
   padding: 8px 16px;
   border: white 1px solid;
   border-radius: 4px;
-  width: 32%; /* Ajustez ce pourcentage selon vos besoins */
+  width: 100%; /* Ajustez ce pourcentage selon vos besoins */
   display: inline-block; /* Pour qu'ils s'affichent côte à côte */
   margin-right: 9px; /* Pour un peu d'espace entre les deux éléments */
 }

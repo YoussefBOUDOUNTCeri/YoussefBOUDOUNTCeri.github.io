@@ -351,30 +351,37 @@
         <hr style="width: 100%" class="w3-opacity w3-center" />
 
         <!-- Dropdown Menu -->
-        <select id="languageDropdown" class="w3-input w3-margin-bottom filter-dropdown" onchange="filterProjects()">
-          <option value="">Tous les langages</option>
-          <option value="cpp">C++</option>
-          <option value="python">Python</option>
-          <option value="html css js">HTML/CSS/JS</option>
-          <option value="php">PHP</option>
-          <option value="java javafx">Java/JavaFX</option>
-          <option value="sql">SQL</option>
-          <option value="pgsql">PostgreSQL</option>
-          <option value="plsql">PL/SQL</option>
-          <option value="bash">Bash</option>
-          <option value="assembly">Assembly</option>
-          <option value="pascal">Pascal</option>
-        </select>
-        <select id="typeDropdown" class="w3-input w3-margin-bottom filter-dropdown" onchange="filterProjects()">
-          <option value="">Tous les types</option>
-          <option value="web">Web</option>
-          <option value="desktop">Desktop</option>
-          <option value="console">Terminal</option>
-          <option value="mobile">Mobile</option>
-        </select>
-        <button onclick="resetFilters()" class="renButton">Réinitialiser le filtre</button>
+        <div class="w3-row">
+          <div class="w3-third w3-container">
+            <select id="languageDropdown" class="w3-input w3-margin-bottom filter-dropdown" onchange="filterProjects()">
+              <option value="">Tous les langages</option>
+              <option value="cpp">C++</option>
+              <option value="python">Python</option>
+              <option value="html css js">HTML/CSS/JS</option>
+              <option value="php">PHP</option>
+              <option value="java javafx">Java/JavaFX</option>
+              <option value="sql">SQL</option>
+              <option value="pgsql">PostgreSQL</option>
+              <option value="plsql">PL/SQL</option>
+              <option value="bash">Bash</option>
+              <option value="assembly">Assembly</option>
+              <option value="pascal">Pascal</option>
+            </select>
+          </div>
+          <div class="w3-third w3-container">
+            <select id="typeDropdown" class="w3-input w3-margin-bottom filter-dropdown" onchange="filterProjects()">
+              <option value="">Tous les types</option>
+              <option value="web">Web</option>
+              <option value="desktop">Desktop</option>
+              <option value="console">Terminal</option>
+              <option value="mobile">Mobile</option>
+            </select>
+          </div>
+          <div class="w3-third w3-container">
+            <button onclick="resetFilters()" class="renButton">Réinitialiser le filtre</button>
+          </div>
+        </div>
 
-        <br />
         <div id="projectContainer" class="project-container">
 
           <div class="w3-third project-card" data-lang="cpp" data-type="console">
@@ -449,13 +456,24 @@
               <img class="card-img-top parallax" src="img/GridProjects/cericar.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
                 <h4 class="card-title">CERICar</h4>
-                <p class="card-text w3-text-black">(Re-conception BlaBlaCar pour le CERI)</p>
+                <p class="card-text w3-text-black">(Re-conception BlaBlaCar)</p>
                 <p class="card-text w3-text-black">HTML/CSS/PHP/JS/SQL</p>
                 <a href="pages/cericar.html" class="btn btn-primary w3-black">Voir</a>
               </div>
             </div>
           </div>
 
+          <div class="w3-third project-card" data-lang="java android" data-type="mobile">
+            <div class="card">
+                <img class="card-img-top" src="img/GridProjects/meteoApp.webp" alt="Card image" style="width: 100%" />
+                <div class="card-body parallax">
+                    <h4 class="card-title">Application Météo</h4>
+                    <p class="card-text w3-text-black">Android, Java</p>
+                    <a href="pages/meteoApp.html" class="btn btn-primary w3-black">Bientôt disponible ...</a>
+                </div>
+            </div>
+          </div>
+          
           <div class="w3-third project-card" data-lang="python" data-type="console">
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/parser.png" alt="Card image" style="width: 100%" />
@@ -478,11 +496,19 @@
             </div>
           </div>
 
+          <div class="w3-third project-card" data-lang="java android" data-type="mobile">
+            <div class="card">
+                <img class="card-img-top" src="img/GridProjects/rappelProduitApp.webp" alt="Card image" style="width: 100%" />
+                <div class="card-body parallax">
+                    <h4 class="card-title">Application Produits</h4>
+                    <p class="card-text w3-text-black">Android, Java</p>
+                    <a href="pages/rappelProduitApp.html" class="btn btn-primary w3-black">Bientôt disponible ...</a>
+                </div>
+            </div>
+          </div>
         </div>
         <br/>
       </div>
-
-
 
       <!-- Contact Section -->
       <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
