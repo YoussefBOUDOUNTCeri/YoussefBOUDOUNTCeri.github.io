@@ -515,3 +515,111 @@ button:hover::after  {
   background-color: rgba(0, 0, 0, 0.8); /* Ajoute un fond noir légèrement transparent */
   border-radius: 5px; /* Ajoute des coins arrondis */
 }
+
+
+/* ------------------------------
+Button mode sombre
+------------------------------ */
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(75, 73, 74);
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: black;
+  box-shadow: inset 8px -4px 0 0 white;
+  transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+  background-color: #2196f3;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+  background-color: yellow;
+  box-shadow: none;
+}
+
+/****************************************************
+ *  Light Mode
+ ****************************************************/
+ .light-mode {
+  background-color: white;
+  color: black;
+}
+
+.light-mode .w3-bar, .light-mode .w3-sidebar {
+  background: #f1f1f1;
+}
+
+.light-mode .progress-bar {
+  border: 2px solid black;
+}
+
+.light-mode .faicons,
+.light-mode .fabicons {
+  color: black;
+}
+
+.light-mode .filter-dropdown,
+.light-mode .renButton {
+  background-color: white;
+  color: black;
+  border: black 1px solid;
+}
+
+.light-mode #noProjectsMessage {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.light-mode .switch .slider {
+  background-color: #ccc;
+}
+
+.light-mode .switch .slider:before {
+  background-color: yellow;
+  box-shadow: none;
+}
+
+.light-mode .switch input:checked + .slider {
+  background-color: #2196f3;
+}
+
+.light-mode .switch input:checked + .slider:before {
+  background-color: black;
+}
+
+/* ------------------------------*/
