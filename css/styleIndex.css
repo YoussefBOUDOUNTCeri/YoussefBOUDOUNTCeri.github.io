@@ -503,3 +503,15 @@ button:hover::after  {
   display: inline-block; /* Pour qu'ils s'affichent côte à côte */
   margin-right: 9px; /* Pour un peu d'espace entre les deux éléments */
 }
+
+
+#noProjectsMessage {
+  display: none; /* This is correct, it will be shown by JavaScript */
+  margin-top: 20px;
+  color: white; /* Change this to white for visibility */
+  text-align: center;
+  font-size: 1.2em; /* Agrandit le texte pour une meilleure lisibilité */
+  padding: 10px; /* Ajoute du padding autour du texte */
+  background-color: rgba(0, 0, 0, 0.8); /* Ajoute un fond noir légèrement transparent */
+  border-radius: 5px; /* Ajoute des coins arrondis */
+}

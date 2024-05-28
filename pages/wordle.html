@@ -209,6 +209,18 @@
                         window.location = '#' + newTargetId;
                     }
                 });
+
+                
+                document.querySelectorAll('.close').forEach(closeBtn => {
+                    closeBtn.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        const lightbox = this.closest('.lightbox');
+                        if (lightbox) {
+                            lightbox.style.display = 'none';
+                            history.pushState("", document.title, window.location.pathname + window.location.search);
+                        }
+                    });
+                });
             </script>
 
         </div>

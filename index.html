@@ -369,6 +369,7 @@
               <option value="pascal">Pascal</option>
             </select>
           </div>
+
           <div class="w3-third w3-container">
             <select id="typeDropdown" class="w3-input w3-margin-bottom filter-dropdown" onchange="filterProjects()">
               <option value="">Tous les types</option>
@@ -378,14 +379,25 @@
               <option value="mobile">Mobile</option>
             </select>
           </div>
+
           <div class="w3-third w3-container">
-            <button onclick="resetFilters()" class="renButton">Réinitialiser le filtre</button>
+            <select id="projectTypeDropdown" class="w3-input w3-margin-bottom filter-dropdown" onchange="filterProjects()">
+              <option value="">Tous les projets</option>
+              <option value="personnel">Personnel</option>
+              <option value="academique">Academique</option>
+            </select>
+          </div>
+
+          <div class="w3-third w3-container">
+            <button onclick="resetFilters()" class="renButton">Réinitialiser les filtres</button>
           </div>
         </div>
 
+        <br />
+
         <div id="projectContainer" class="project-container">
 
-          <div class="w3-third project-card" data-lang="cpp" data-type="console">
+          <div class="w3-third project-card" data-lang="cpp" data-type="console" data-project-type="personnel">
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/tictactoe.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
@@ -396,7 +408,7 @@
             </div>
           </div>
 
-          <div class="w3-third project-card" data-lang="python" data-type="desktop">
+          <div class="w3-third project-card" data-lang="python" data-type="desktop" data-project-type="personnel">
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/snake.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
@@ -407,7 +419,7 @@
             </div>
           </div>
 
-          <div class="w3-third project-card" data-lang="html css js bash" data-type="web console">
+          <div class="w3-third project-card" data-lang="html css js bash" data-type="web console" data-project-type="academique">
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/monitoringbash.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
@@ -418,7 +430,7 @@
             </div>
           </div>
 
-          <div class="w3-third project-card" data-lang="cpp assembly pascal" data-type="console">
+          <div class="w3-third project-card" data-lang="cpp assembly pascal" data-type="console" data-project-type="academique">
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/llk.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
@@ -429,7 +441,7 @@
             </div>
           </div>
 
-          <div class="w3-third project-card" data-lang="html css js php" data-type="web">
+          <div class="w3-third project-card" data-lang="html css js php" data-type="web" data-project-type="personnel">
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/pierre.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
@@ -441,7 +453,7 @@
             </div>
           </div>
 
-          <div class="w3-third project-card" data-lang="java javafx" data-type="desktop">
+          <div class="w3-third project-card" data-lang="java javafx" data-type="desktop" data-project-type="academique">
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/wordle.png" alt="Card image" style="width: 100%" />
               <div class="card-body parallax">
@@ -452,7 +464,7 @@
             </div>
           </div>
 
-          <div class="w3-third project-card" data-lang="html css js php plsql pgsql sql" data-type="web">
+          <div class="w3-third project-card" data-lang="html css js php plsql pgsql sql" data-type="web" data-project-type="academique">
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/cericar.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
@@ -464,18 +476,18 @@
             </div>
           </div>
 
-          <div class="w3-third project-card" data-lang="java android" data-type="mobile">
+          <div class="w3-third project-card" data-lang="java android" data-type="mobile" data-project-type="academique">
             <div class="card">
                 <img class="card-img-top" src="img/GridProjects/meteoApp.webp" alt="Card image" style="width: 100%" />
                 <div class="card-body parallax">
                     <h4 class="card-title">Application Météo</h4>
                     <p class="card-text w3-text-black">Android, Java</p>
-                    <a href="pages/meteoApp.html" class="btn btn-primary w3-black">Bientôt disponible ...</a>
+                    <a href="pages/meteoApp.html" class="btn btn-primary w3-black">Voir</a>
                 </div>
             </div>
           </div>
 
-          <div class="w3-third project-card" data-lang="python" data-type="console">
+          <div class="w3-third project-card" data-lang="python" data-type="console" data-project-type="academique">
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/parser.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
@@ -486,7 +498,7 @@
             </div>
           </div>
 
-          <div class="w3-third project-card" data-lang="java javafx" data-type="desktop">
+          <div class="w3-third project-card" data-lang="java javafx" data-type="desktop" data-project-type="academique">
             <div class="card">
               <img class="card-img-top" src="img/GridProjects/tictactoev2.png" alt="Card image" style="width: 100%" />
               <div class="card-body parallax">
@@ -497,7 +509,7 @@
             </div>
           </div>
 
-          <div class="w3-third project-card" data-lang="java android" data-type="mobile">
+          <div class="w3-third project-card" data-lang="java android" data-type="mobile" data-project-type="academique">
             <div class="card">
                 <img class="card-img-top" src="img/GridProjects/rappelProduitApp.webp" alt="Card image" style="width: 100%" />
                 <div class="card-body parallax">
@@ -635,22 +647,26 @@
       function filterProjects() {
         const languageDropdown = document.getElementById('languageDropdown');
         const typeDropdown = document.getElementById('typeDropdown');
+        const projectTypeDropdown = document.getElementById('projectTypeDropdown');
+
         const languageFilter = languageDropdown.value.toLowerCase();
         const typeFilter = typeDropdown.value.toLowerCase();
+        const projectTypeFilter = projectTypeDropdown.value.toLowerCase();
+
         const projectContainer = document.getElementById('projectContainer');
 
-        // Réinitialiser le conteneur de projets
         projectContainer.innerHTML = '';
 
-        // Filtrer les cartes en fonction de la sélection
         const filteredCards = allProjectCards.filter(card => {
           const languages = card.getAttribute('data-lang').toLowerCase();
           const type = card.getAttribute('data-type').toLowerCase();
+          const projectType = card.getAttribute('data-project-type').toLowerCase();
+
           return (!languageFilter || languages.includes(languageFilter)) &&
-                (!typeFilter || type.includes(typeFilter));
+            (!typeFilter || type.includes(typeFilter)) &&
+            (!projectTypeFilter || projectType.includes(projectTypeFilter));
         });
 
-        // Ajouter les cartes filtrées au conteneur de projets
         filteredCards.forEach(card => {
           projectContainer.appendChild(card);
           card.style.display = 'block';
@@ -660,6 +676,7 @@
       function resetFilters() {
         document.getElementById('languageDropdown').value = '';
         document.getElementById('typeDropdown').value = '';
+        document.getElementById('projectTypeDropdown').value = '';
         filterProjects();
       }
 

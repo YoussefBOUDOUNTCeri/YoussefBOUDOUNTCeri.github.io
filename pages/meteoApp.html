@@ -16,7 +16,7 @@
                 <div class="w3-third w3-container"></div>
 
                 <div class="w3-third w3-container w3-center">
-                    <a href="https://github.com/youssefb14/Application-Meteo" target="_blank" class="button-link">
+                    <a href="https://github.com/youssefb14/meteoApp" target="_blank" class="button-link">
                         <div class="button-icon">
                             <div class="icon">
                                 <svg viewBox="0 0 24 24">
@@ -53,36 +53,34 @@
             <p>En cas de problèmes de réseau ou d'autres erreurs lors de la récupération des données, l'application affiche des messages d'erreur appropriés pour informer l'utilisateur.</p>
 
             <h3 class="project-title">Galerie d'Images</h3>
-            <div class="image-gallery w3-row">
-                <div class="w3-half w3-container">
-                    <h3>Détails Météorologiques<br> </h3>
+            <div class="image-gallery">
+                <div class="image-container">
                     <a href="#img1">
                         <img src="../img/pages/meteoApp/details_meteo.PNG">
                     </a>
+                    <h3>Détails Météorologiques</h3>
                 </div>
-                <div class="w3-half w3-container">
-                    <h3>Visualisation Météo<br> </h3>
+                <div class="image-container">
                     <a href="#img2">
                         <img src="../img/pages/meteoApp/visualisation_meteo.PNG">
                     </a>
+                    <h3>Visualisation Météo</h3>
                 </div>
-            </div>
-
-            <div class="image-gallery w3-row">
-                <div class="w3-half w3-container">
-                    <h3>Gestion des États de Chargement<br> </h3>
+                <div class="image-container">
                     <a href="#img3">
                         <img src="../img/pages/meteoApp/chargement.PNG">
                     </a>
+                    <h3>Gestion des États de Chargement</h3>
                 </div>
-
-                <div class="w3-half w3-container">
-                    <h3>Traitement des Erreurs<br> </h3>
+                <div class="image-container">
                     <a href="#img4">
                         <img src="../img/pages/meteoApp/erreurs.PNG">
                     </a>
+                    <h3>Traitement des Erreurs</h3>
                 </div>
             </div>
+
+
 
             <a href="../index.html" class="btn-back">Retour</a>
 
@@ -127,6 +125,17 @@
                     if (newTargetId) {
                         window.location = '#' + newTargetId;
                     }
+                });
+
+                document.querySelectorAll('.close').forEach(closeBtn => {
+                    closeBtn.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        const lightbox = this.closest('.lightbox');
+                        if (lightbox) {
+                            lightbox.style.display = 'none';
+                            history.pushState("", document.title, window.location.pathname + window.location.search);
+                        }
+                    });
                 });
             </script>
 
@@ -280,4 +289,30 @@
         color: white;
         cursor: pointer;
     }
+
+    .image-gallery {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .image-container {
+        flex: 1 1 22%;
+        margin: 10px;
+        text-align: center;
+    }
+
+    .image-container img {
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .image-container h3 {
+        margin-top: 10px;
+        font-size: 1em;
+        color: #333;
+    }
+
 </style>
