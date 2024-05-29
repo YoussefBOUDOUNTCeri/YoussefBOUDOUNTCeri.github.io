@@ -23,6 +23,25 @@ body {
   background: #222;
 }
 
+.w3-sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mode-switch {
+  position: absolute;
+  bottom: 10px; /* Ajustez cette valeur selon vos besoins */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  /* marge gauche pour centrer le bouton */
+  margin-left: 30px;
+}
+
+
 #main {
   margin-left: 120px;
   background-color: black; /* ajout pour changer le fond de #main */
@@ -719,4 +738,61 @@ Button mode sombre
 .dark-mode .w3-sidebar .faicons,
 .dark-mode .w3-bar .faicons {
   color: white;
+}
+
+/* Style for buttons in dark mode */
+button.btn-primary {
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+}
+
+/* Style for buttons in light mode */
+.light-mode button.btn-primary {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+/* Style for buttons in dark mode */
+.btn-primary {
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+}
+
+/* Style for buttons in light mode */
+.light-mode .btn-primary {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+
+/* Style for buttons in dark mode */
+button.btn-primary {
+  border: 1px solid white !important;
+  background-color: black !important;
+  color: white !important;
+}
+
+/* Style for buttons in light mode */
+.light-mode button.btn-primary {
+  border: 1px solid black !important;
+  background-color: white !important;
+  color: black !important;
+}
+
+/* Style for buttons in dark mode */
+.btn-primary {
+  border: 1px solid white !important;
+  background-color: black !important;
+  color: white !important;
+}
+
+/* Style for buttons in light mode */
+.light-mode .btn-primary {
+  border: 1px solid black !important;
+  background-color: white !important;
+  color: black !important;
 }
