@@ -25,6 +25,7 @@ body {
 
 #main {
   margin-left: 120px;
+  background-color: black; /* ajout pour changer le fond de #main */
 }
 
 @media only screen and (max-width: 600px) {
@@ -575,13 +576,48 @@ Button mode sombre
 /****************************************************
  *  Light Mode
  ****************************************************/
- .light-mode {
+.light-mode {
   background-color: white;
   color: black;
 }
 
-.light-mode .w3-bar, .light-mode .w3-sidebar {
+.light-mode body, .light-mode #main {
+  background-color: white;
+  color: black;
+}
+
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode h4,
+.light-mode h5,
+.light-mode h6,
+.light-mode p,
+.light-mode span {
+  color: black;
+}
+
+.light-mode .w3-bar,
+.light-mode .w3-sidebar {
   background: #f1f1f1;
+}
+
+.light-mode .w3-bar .fa,
+.light-mode .w3-sidebar .fa,
+.light-mode .w3-bar .faicons,
+.light-mode .w3-sidebar .faicons {
+  color: black;
+}
+
+.light-mode .w3-bar .faicons,
+.light-mode .w3-sidebar .faicons {
+  color: white;
+}
+
+.light-mode .w3-bar .w3-bar-item.w3-black,
+.light-mode .w3-sidebar .w3-bar-item.w3-black {
+  background-color: black;
+  color: white;
 }
 
 .light-mode .progress-bar {
@@ -622,4 +658,65 @@ Button mode sombre
   background-color: black;
 }
 
-/* ------------------------------*/
+.light-mode .card {
+  border: 1px solid black;
+}
+
+.light-mode .card-body {
+  background-color: #f9f9f9;
+  color: black;
+}
+
+.light-mode .project-card .card-title,
+.light-mode .project-card .card-text,
+.light-mode .w3-container .w3-quarter span {
+  color: black;
+}
+
+.light-mode .w3-row.w3-black {
+  background-color: white;
+  color: black;
+}
+
+.light-mode header.w3-container.w3-black {
+  background-color: white;
+}
+
+.light-mode .w3-content {
+  background-color: white;
+}
+
+.light-mode .w3-section {
+  color: black;
+}
+
+.light-mode .fa-map-marker,
+.light-mode .fa-phone,
+.light-mode .fa-envelope {
+  color: black;
+}
+
+
+.light-mode .w3-sidebar,
+.light-mode .w3-bar {
+  background: #f1f1f1;
+}
+
+.light-mode .w3-sidebar .fa,
+.light-mode .w3-bar .fa,
+.light-mode .w3-sidebar .faicons,
+.light-mode .w3-bar .faicons {
+  color: black;
+}
+
+.dark-mode .w3-sidebar,
+.dark-mode .w3-bar {
+  background: #222;
+}
+
+.dark-mode .w3-sidebar .fa,
+.dark-mode .w3-bar .fa,
+.dark-mode .w3-sidebar .faicons,
+.dark-mode .w3-bar .faicons {
+  color: white;
+}
