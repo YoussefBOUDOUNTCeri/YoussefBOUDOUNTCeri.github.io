@@ -487,17 +487,17 @@ button:hover::after  {
   gap: 16px;
 }
 .project-card {
-  width: calc(33.333% - 16px); /* Ajustez la largeur de chaque carte pour qu'elle prenne un tiers de la ligne */
+  width: calc(33.333% - 16px);
   box-sizing: border-box;
 }
 @media (max-width: 768px) {
   .project-card {
-    width: calc(50% - 16px); /* Ajustez la largeur de chaque carte pour qu'elle prenne la moitié de la ligne sur les petits écrans */
+    width: calc(50% - 16px); 
   }
 }
 @media (max-width: 480px) {
   .project-card {
-    width: 100%; /* Ajustez la largeur de chaque carte pour qu'elle prenne toute la ligne sur les très petits écrans */
+    width: 100%; 
   }
 }
 
@@ -508,9 +508,9 @@ button:hover::after  {
   padding: 8px 16px;
   border: white 1px solid;
   border-radius: 4px;
-  width: 100%; /* Ajustez ce pourcentage selon vos besoins */
-  display: inline-block; /* Pour qu'ils s'affichent côte à côte */
-  margin-right: 9px; /* Pour un peu d'espace entre les deux éléments */
+  width: 100%; 
+  display: inline-block; 
+  margin-right: 9px;
 }
 
 .renButton {
@@ -519,28 +519,27 @@ button:hover::after  {
   padding: 8px 16px;
   border: white 1px solid;
   border-radius: 4px;
-  width: 100%; /* Ajustez ce pourcentage selon vos besoins */
-  display: inline-block; /* Pour qu'ils s'affichent côte à côte */
-  margin-right: 9px; /* Pour un peu d'espace entre les deux éléments */
+  width: 100%; 
+  display: inline-block; 
+  margin-right: 9px;
 }
 
 
 #noProjectsMessage {
-  display: none; /* This is correct, it will be shown by JavaScript */
+  display: none; 
   margin-top: 20px;
-  color: white; /* Change this to white for visibility */
+  color: white; 
   text-align: center;
-  font-size: 1.2em; /* Agrandit le texte pour une meilleure lisibilité */
-  padding: 10px; /* Ajoute du padding autour du texte */
-  background-color: rgba(0, 0, 0, 0.8); /* Ajoute un fond noir légèrement transparent */
-  border-radius: 5px; /* Ajoute des coins arrondis */
+  font-size: 1.2em; 
+  padding: 10px; 
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px; 
 }
 
 
 /* ------------------------------
 Button mode sombre
 ------------------------------ */
-/* The switch - the box around the slider */
 .switch {
   font-size: 17px;
   position: relative;
@@ -549,14 +548,12 @@ Button mode sombre
   height: 2em;
 }
 
-/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -740,59 +737,185 @@ Button mode sombre
   color: white;
 }
 
-/* Style for buttons in dark mode */
 button.btn-primary {
   border: 1px solid white;
   background-color: black;
   color: white;
 }
 
-/* Style for buttons in light mode */
 .light-mode button.btn-primary {
   border: 1px solid black;
   background-color: white;
   color: black;
 }
 
-/* Style for buttons in dark mode */
 .btn-primary {
   border: 1px solid white;
   background-color: black;
   color: white;
 }
 
-/* Style for buttons in light mode */
 .light-mode .btn-primary {
   border: 1px solid black;
   background-color: white;
   color: black;
 }
 
-
-/* Style for buttons in dark mode */
 button.btn-primary {
   border: 1px solid white !important;
   background-color: black !important;
   color: white !important;
 }
 
-/* Style for buttons in light mode */
 .light-mode button.btn-primary {
   border: 1px solid black !important;
   background-color: white !important;
   color: black !important;
 }
 
-/* Style for buttons in dark mode */
 .btn-primary {
   border: 1px solid white !important;
   background-color: black !important;
   color: white !important;
 }
 
-/* Style for buttons in light mode */
 .light-mode .btn-primary {
   border: 1px solid black !important;
   background-color: white !important;
   color: black !important;
+}
+
+
+/* Styles communs pour les cards */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid white; /* Contour blanc par défaut */
+  background-color: black; /* Fond noir par défaut */
+  color: white; /* Texte blanc par défaut */
+}
+
+/* Styles pour le mode jour */
+.light-mode .card {
+  border: 1px solid black; /* Contour noir en mode jour */
+  background-color: white; /* Fond blanc en mode jour */
+  color: black; /* Texte noir en mode jour */
+}
+
+/* Animation pour les cards */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+}
+
+/* Styles pour le corps des cards */
+.card-body {
+  background-color: black; /* Fond noir par défaut */
+  color: white; /* Texte blanc par défaut */
+}
+
+/* Styles pour le corps des cards en mode jour */
+.light-mode .card-body {
+  background-color: white; /* Fond blanc en mode jour */
+  color: black; /* Texte noir en mode jour */
+}
+
+/* Styles pour les titres et paragraphes des cartes */
+.card-body h4.card-title,
+.card-body p.card-text,
+.card-body p {
+  color: white; /* Texte blanc par défaut */
+}
+
+/* Styles pour les titres et paragraphes des cartes en mode jour */
+.light-mode .card-body h4.card-title,
+.light-mode .card-body p.card-text,
+.light-mode .card-body p {
+  color: black; /* Texte noir en mode jour */
+}
+
+/* Styles pour les boutons */
+.btn-primary {
+  border: 1px solid white; /* Contour blanc par défaut */
+  background-color: black; /* Fond noir par défaut */
+  color: white; /* Texte blanc par défaut */
+}
+
+/* Styles pour les boutons en mode jour */
+.light-mode .btn-primary {
+  border: 1px solid black; /* Contour noir en mode jour */
+  background-color: white; /* Fond blanc en mode jour */
+  color: black; /* Texte noir en mode jour */
+}
+
+
+/* Styles communs pour les cards */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid white; /* Contour blanc par défaut */
+  background-color: black; /* Fond noir par défaut */
+  color: white; /* Texte blanc par défaut */
+}
+
+/* Styles pour le mode jour */
+.light-mode .card {
+  border: 1px solid black; /* Contour noir en mode jour */
+  background-color: white; /* Fond blanc en mode jour */
+  color: black; /* Texte noir en mode jour */
+}
+
+/* Animation pour les cards */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+}
+
+/* Styles pour le corps des cards */
+.card-body {
+  background-color: black; /* Fond noir par défaut */
+  color: white; /* Texte blanc par défaut */
+}
+
+/* Styles pour le corps des cards en mode jour */
+.light-mode .card-body {
+  background-color: white; /* Fond blanc en mode jour */
+  color: black; /* Texte noir en mode jour */
+}
+
+/* Styles pour les titres et paragraphes des cartes */
+.card-body h4.card-title,
+.card-body p.card-text,
+.card-body p,
+.card-body a.btn-primary {
+  color: white !important; /* Texte blanc par défaut */
+}
+
+/* Styles pour les titres et paragraphes des cartes en mode jour */
+.light-mode .card-body h4.card-title,
+.light-mode .card-body p.card-text,
+.light-mode .card-body p,
+.light-mode .card-body a.btn-primary {
+  color: black !important; /* Texte noir en mode jour */
+}
+
+/* Supprimer les classes de couleur de texte ajoutées dynamiquement */
+.card-body .w3-text-black {
+  color: white !important; /* Texte blanc par défaut en mode nuit */
+}
+
+.light-mode .card-body .w3-text-black {
+  color: black !important; /* Texte noir en mode jour */
+}
+
+/* Styles pour les boutons */
+.btn-primary {
+  border: 1px solid white; /* Contour blanc par défaut */
+  background-color: black; /* Fond noir par défaut */
+  color: white; /* Texte blanc par défaut */
+}
+
+/* Styles pour les boutons en mode jour */
+.light-mode .btn-primary {
+  border: 1px solid black; /* Contour noir en mode jour */
+  background-color: white; /* Fond blanc en mode jour */
+  color: black; /* Texte noir en mode jour */
 }
