@@ -68,6 +68,7 @@
     TODO : Faire le rapport du projet Wordle
     TODO : Supprimer ancien rapport dans le depot
   -->
+
   <body class=" ">
     <!-- Google Tag Manager (noscript) -->
     <noscript
@@ -84,75 +85,88 @@
       <!-- Avatar image in top left corner -->
       <img src="img/profile-pic.png" style="width: 100%" />
       <a href="#" class="w3-bar-item w3-button w3-padding-large">
-        <i class="fa fa-home w3-xxlarge"></i>
-        <p>HOME</p>
+          <i class="fa fa-home w3-xxlarge"></i>
+          <p>HOME</p>
       </a>
-      <a
-        href="#about"
-        class="w3-bar-item w3-button w3-padding-large "
-      >
-        <i class="fa fa-user w3-xxlarge"></i>
-        <p>ABOUT</p>
+      <a href="#about" class="w3-bar-item w3-button w3-padding-large">
+          <i class="fa fa-user w3-xxlarge"></i>
+          <p>ABOUT</p>
       </a>
-      <a
-        href="#photos"
-        class="w3-bar-item w3-button w3-padding-large "
-      >
-        <i class="fa fa-eye w3-xxlarge"></i>
-        <p>PROJETS</p>
+      <a href="#photos" class="w3-bar-item w3-button w3-padding-large">
+          <i class="fa fa-eye w3-xxlarge"></i>
+          <p>PROJETS</p>
       </a>
-
-      <a
-        href="#contact"
-        class="w3-bar-item w3-button w3-padding-large "
-      >
-        <i class="fa fa-envelope w3-xxlarge"></i>
-        <p>CONTACT</p>
+      <a href="#contact" class="w3-bar-item w3-button w3-padding-large">
+          <i class="fa fa-envelope w3-xxlarge"></i>
+          <p>CONTACT</p>
       </a>
-      <a
-        href="pages/CV.html"
-        class="w3-bar-item w3-button w3-padding-large "
-      >
-        <i class="fa fa-address-card w3-xxlarge"></i>
-        <p>CV</p>
+      <a href="pages/CV.html" class="w3-bar-item w3-button w3-padding-large">
+          <i class="fa fa-address-card w3-xxlarge"></i>
+          <p>CV</p>
       </a>
-
-      <label class="switch mode-switch">
-        <input type="checkbox" />
-        <span class="slider"></span>
-      </label>
+  
+      <!-- Switches Container -->
+      <div class="switches-container">
+          <!-- Existing Dark/Light Mode Switch -->
+          <label class="switch mode-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+          </label>
+  
+          <!-- New Language Switch -->
+          <div class="language-switch-container">
+              <input hidden="" id="check" name="check" type="checkbox">
+              <label class="toggle" for="check">
+                  <div class="toggle__circle"></div>
+              </label>
+              <div class="toggle-text">
+                  <span>FR</span>
+                  <br />
+                  <span>EN</span>
+              </div>
+          </div>
+      </div>
     </nav>
+  
 
     <!-- Navbar on small screens (Hidden on medium and large screens) -->
     <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
       <div
         class="w3-bar w3-opacity w3-hover-opacity-off w3-center w3-small"
       >
-        <a href="#" class="w3-bar-item w3-button" style="width: 20% !important"
+        <a 
+          href="#" 
+          class="w3-bar-item w3-button" 
+          style="width: 20% !important"
+          data-translate="home"
           >HOME</a
         >
         <a
           href="#about"
-          class="w3-bar-item w3-button"
+          class="w3-bar-item w3-button "
           style="width: 20% !important"
+          data-translate="about"
           >ABOUT</a
         >
         <a
           href="#photos"
-          class="w3-bar-item w3-button"
+          class="w3-bar-item w3-button" 
           style="width: 20% !important"
+          data-translate="projects"
           >PROJETS</a
         >
         <a
           href="#contact"
           class="w3-bar-item w3-button"
           style="width: 20% !important"
+          data-translate="contact"
           >CONTACT</a
         >
         <a
           href="pages/CV.html"
           class="w3-bar-item w3-button"
           style="width: 20% !important"
+          data-translate="cv"
           >CV</a
         >
       </div>
@@ -192,18 +206,19 @@
       </header>
 
       <!-- About Section -->
-      <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+      <div class="w3-content w3-justify w3-text-grey" id="about">
         <div>
           <!--Preentation  -->
-          <h2 class="">Qui suis-je ?</h2>
+          <h2 class="section-title" data-translate="whoAmI">Qui suis-je ?</h2>
           <hr style="width: 100%" class="w3-opacity w3-center" />
-          <p>
+
+          <p data-translate="welcomeMessage">
             Bienvenue sur mon portfolio ! Actuellement en troiseme année de
             Licence Informatique, je suis un jeune passionné de technologie et
             de programmation, fort d'une curiosité insatiable depuis mon
             enfance.
           </p>
-          <p>
+          <p data-translate="wathIsThis">
             Ce site est une vitrine de mes compétences diversifiées, des
             initiatives de développement que j'ai pilotées, et des services sur
             mesure que je peux offrir. Mon adaptabilité et ma soif
@@ -213,7 +228,7 @@
             ouvert à toute opportunité et invite chaleureusement les
             propositions.
           </p>
-          <p>
+          <p data-translate="contactMe">
             Contactez-moi et ensemble, transformons les idées en réalités
             tangibles.
           </p>
@@ -221,7 +236,7 @@
 
         <div>
           <br />
-          <h3 class="w3-padding-16 w3-center">Mes Skills</h3>
+          <h3 class="w3-padding-16 w3-center section-title" data-translate="mySkills" >Mes Skills</h3>
           <hr style="width: 100%" class="w3-opacity w3-center" />
           <br />
         </div>
@@ -321,45 +336,43 @@
             </div>
           </div>
         </div>
-        <br />
-        <br />
+        <br /><br />
 
         <div>
-          <br />
-          <h3 class="w3-padding-16  w3-center">Mes Stats</h3>
+          <h3 class="w3-padding-16 section-title w3-center" data-translate="myStats">Mes Stats</h3>
           <hr style="width: 100%" class="w3-opacity w3-center" />
         </div>
 
         <div class="w3-row w3-center w3-padding-16 w3-section ">
-          <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">2+</span><br />
-            Stages
+          <div class="w3-quarter w3-section" >
+            <span class="w3-xlarge" >2+</span><br />
+            <div data-translate="stages" >Stages</div>
           </div>
           <div class="w3-quarter w3-section">
             <span class="w3-xlarge">20+</span><br />
-            Projets Réalisés
+            <div data-translate="projectsDone" >Projets Réalisés</div>
           </div>
           <div class="w3-quarter w3-section">
             <span class="w3-xlarge">1+</span><br />
-            Concours Gagnés
+            <div data-translate="contestsWon" >Concours Gagnés</div>
           </div>
           <div class="w3-quarter w3-section">
             <span class="w3-xlarge">3+</span><br />
-            Ateliers
+            <div data-translate="workshops" >Ateliers</div>
           </div>
         </div>
       </div>
 
       <!-- Projects Section -->
-      <div class="w3-padding-64 w3-content" id="photos">
-        <h3 class="w3-padding-16  w3-center">Mes Projets</h3>
+      <div class="w3-content" id="photos">
+        <h3 class="w3-padding-16 section-title w3-center" data-translate="projectsTitle" >Mes Projets</h3>
         <hr style="width: 100%" class="w3-opacity w3-center" />
 
         <!-- Dropdown Menu -->
         <div class="w3-row">
           <div class="w3-third w3-container">
             <select id="languageDropdown" class="w3-input w3-margin-bottom filter-dropdown" onchange="filterProjects()">
-              <option value="">Tous les langages</option>
+              <option value="" data-translate="allLanguages" >Tous les langages</option>
               <option value="java">Java</option>
               <option value="cpp">C++</option>
               <option value="python">Python</option>
@@ -398,13 +411,15 @@
           </div>
         </div>
 
+        <br />
+
         <div id="projectContainer" class="project-container">
 
           <div class="w3-third project-card" data-lang="cpp" data-type="console" data-project-type="personnel">
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/tictactoe.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
-                <h4 class="card-title">Tic Tac Toe</h4>
+                <h4 class="card-title" data-translate="tictactoe">Tic Tac Toe</h4>
                 <p class="card-text w3-text-black">C++</p>
                 <a href="pages/tictactoe.html" class="btn btn-primary ">Voir</a>
               </div>
@@ -415,7 +430,7 @@
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/snake.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
-                <h4 class="card-title">Snake Game</h4>
+                <h4 class="card-title" data-translate="projectSnakeGame">Snake Game</h4>
                 <p class="card-text w3-text-black">Python</p>
                 <a href="pages/snake.html" class="btn btn-primary  ">Voir</a>
               </div>
@@ -426,7 +441,7 @@
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/monitoringbash.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
-                <h4 class="card-title"> Monitoring Serv Linux</h4>
+                <h4 class="card-title" data-translate="projectMonitoringServLinux">Monitoring Serv Linux</h4>
                 <p class="card-text w3-text-black">Bash</p>
                 <a href="pages/monitoring.html" class="btn btn-primary  ">Bientôt disponible ...</a>
               </div>
@@ -437,7 +452,7 @@
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/llk.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
-                <h4 class="card-title">LL(k) to x86_64</h4>
+                <h4 class="card-title" data-translate="projectLLK">LL(k) to x86_64</h4>
                 <p class="card-text w3-text-black">C++</p>
                 <a href="pages/llk.html" class="btn btn-primary  ">Bientôt disponible ...</a>
               </div>
@@ -448,7 +463,7 @@
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/pierre.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
-                <h4 class="card-title">PIERRES'YOUSSS</h4>
+                <h4 class="card-title" data-translate="projectPierresYousss">PIERRES'YOUSSS</h4>
                 <p class="card-text w3-text-black">(Commerce de Pierres Précieuses)</p>
                 <p class="card-text w3-text-black">HTML/CSS/PHP</p>
                 <a href="pages/pierre.html" class="btn btn-primary  ">Voir</a>
@@ -471,7 +486,7 @@
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/cericar.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
-                <h4 class="card-title">CERICar</h4>
+                <h4 class="card-title" data-translate="projectCERICar">CERICar</h4>
                 <p class="card-text w3-text-black">(Re-conception BlaBlaCar)</p>
                 <p class="card-text w3-text-black">HTML/CSS/PHP/JS/SQL</p>
                 <a href="pages/cericar.html" class="btn btn-primary  ">Voir</a>
@@ -483,7 +498,7 @@
             <div class="card">
                 <img class="card-img-top" src="img/GridProjects/meteoApp.webp" alt="Card image" style="width: 100%" />
                 <div class="card-body parallax">
-                    <h4 class="card-title">Application Météo</h4>
+                    <h4 class="card-title" data-translate="projectMeteoApp">Application Météo</h4>
                     <p class="card-text w3-text-black">Android, Java</p>
                     <a href="pages/meteoApp.html" class="btn btn-primary  ">Voir</a>
                 </div>
@@ -494,7 +509,7 @@
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/parser.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
-                <h4 class="card-title">Parser d'articles</h4>
+                <h4 class="card-title" data-translate="projectParser" >Parseur d'articles</h4>
                 <p class="card-text w3-text-black">Python</p>
                 <a href="pages/parser.html" class="btn btn-primary  ">Voir</a>
               </div>
@@ -505,7 +520,7 @@
             <div class="card">
               <img class="card-img-top" src="img/GridProjects/tictactoev2.png" alt="Card image" style="width: 100%" />
               <div class="card-body parallax">
-                <h4 class="card-title">Tic Tac Toe (v2)</h4>
+                <h4 class="card-title" data-translate="projectTicTacToeV2">Tic Tac Toe (v2)</h4>
                 <p class="card-text w3-text-black">Java FX</p>
                 <a href="pages/tictactoev2.html" class="btn btn-primary  ">Voir</a>
               </div>
@@ -516,7 +531,7 @@
             <div class="card">
                 <img class="card-img-top" src="img/GridProjects/rappelProduitApp.webp" alt="Card image" style="width: 100%" />
                 <div class="card-body parallax">
-                    <h4 class="card-title">Application Produits</h4>
+                    <h4 class="card-title" data-translate="projectRappelProduitApp">Application Produits</h4>
                     <p class="card-text w3-text-black">Android, Java</p>
                     <a href="pages/rappelProduitApp.html" class="btn btn-primary  ">Voir</a>
                 </div>
@@ -526,24 +541,24 @@
       </div>
 
       <!-- Contact Section -->
-      <div class="w3-padding-64 w3-content" id="contact">
-        <h2 class="">Contact</h2>
+      <div class="w3-padding-32 w3-content" id="contact">
+        <h2 class="section-title" data-translate="contactTitle" >Contact</h2>
         <hr style="width: 100%" class="w3-opacity w3-center" />
 
         <div class="w3-section">
-          <p>
+          <p data-translate="location">
             <i
               class="fa fa-map-marker fa-fw  w3-xxlarge w3-margin-right"
             ></i>
             Avignon, France
           </p>
-          <p>
+          <p data-translate="phone">
             <i
               class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"
             ></i>
             Téléphone : +33 6 95 78 50 92
           </p>
-          <p>
+          <p data-translate="email">
             <i
               class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"
             >
@@ -552,7 +567,7 @@
           </p>
         </div>
         <br />
-        <p>Laissez moi un message.</p>
+        <p data-translate="contestsWon">Laissez moi un message.</p>
 
         <form
           action="https://formspree.io/f/xaygkwvk"
@@ -600,14 +615,14 @@
               class="w3-button w3-light-grey w3-padding-large"
               type="submit"
             >
-              <i class="fa fa-paper-plane"></i> EVOYER MESSAGE
+              <i class="fa fa-paper-plane" data-translate="sendMessage" ></i> EVOYER MESSAGE
             </button>
           </p>
         </form>
       </div>
 
       <!-- Footer -->
-      <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+      <footer class="w3-content  w3-text-grey w3-xlarge">
         <hr style="width: 100%" class="w3-opacity w3-center" />
         <p class="w3-medium">
           Réalisé par
@@ -711,6 +726,173 @@
             document.body.classList.add('dark-mode');
             localStorage.setItem('theme', 'dark-mode');
           }
+        });
+      });
+
+
+      /************************
+       * Language Switch
+      *************************/
+      const translations = {
+        en: {
+          home: "HOME",
+          about: "ABOUT",
+          projects: "PROJECTS",
+          contact: "CONTACT",
+          cv: "CV",
+          whoAmI: "Who am I?",
+          welcomeMessage: "Welcome to my portfolio! Currently in the third year of a Computer Science degree, I am a young technology and programming enthusiast with an insatiable curiosity since childhood.",
+          wathIsThis: "This site is a showcase of my diversified skills, development initiatives I have led, and custom services I can offer. My adaptability and thirst for learning allow me to immerse myself in various projects with enthusiasm. Whether you are looking for a collaboration for an innovative project or expertise in development, I am open to any opportunity and warmly invite proposals.",
+          contactMe: "Contact me and together, let's turn ideas into tangible realities.",
+          mySkills: "My Skills",
+          myStats: "My Stats",
+          projectsTitle: "My Projects",
+          contactTitle: "Contact",
+          sendMessage: "SEND MESSAGE",
+          stages: "Internships",
+          projectsDone: "Projects Done",
+          contestsWon: "Contests Won",
+          workshops: "Workshops",
+          leaveMessage: "Leave me a message.",
+          tictactoe: "Tic Tac Toe",
+          cplusplus: "C++",
+          snakeGame: "Snake Game",
+          python: "Python",
+          monitoringServLinux: "Monitoring Serv Linux",
+          bash: "Bash",
+          llk: "LL(k) to x86_64",
+          pierresYouss: "PIERRES'YOUSSS",
+          preciousStones: "(Precious Stones Trade)",
+          htmlCssPhp: "HTML/CSS/PHP",
+          wordle: "Wordle",
+          cericar: "CERICar",
+          reconceptionBlablacar: "(BlaBlaCar Redesign)",
+          htmlCssPhpJsSql: "HTML/CSS/PHP/JS/SQL",
+          weatherApp: "Weather App",
+          androidJava: "Android, Java",
+          articleParser: "Article Parser",
+          tictactoeV2: "Tic Tac Toe (v2)",
+          javaFx: "Java FX",
+          productApp: "Product App",
+          phone: "Phone",
+          email: "Email",
+          address: "Avignon, France",
+          projectsSoon: "Coming soon...",
+          view: "View",
+          filterLanguage: "All languages",
+          filterType: "All types",
+          filterProjectType: "All projects",
+          resetFilters: "Reset Filters",
+          java: "Java",
+          cpp: "C++",
+          htmlCssJs: "HTML/CSS/JS",
+          php: "PHP",
+          javaFx: "Java/JavaFX",
+          sql: "SQL",
+          pgsql: "PostgreSQL",
+          plsql: "PL/SQL",
+          bash: "Bash",
+          assembly: "Assembly",
+          pascal: "Pascal",
+          web: "Web",
+          desktop: "Desktop",
+          terminal: "Terminal",
+          mobile: "Mobile",
+          personal: "Personal",
+          academic: "Academic"
+        },
+        fr: {
+          home: "ACCUEIL",
+          about: "À PROPOS",
+          projects: "PROJETS",
+          contact: "CONTACT",
+          cv: "CV",
+          whoAmI: "Qui suis-je ?",
+          welcomeMessage: "Bienvenue sur mon portfolio ! Actuellement en troisième année de Licence Informatique, je suis un jeune passionné de technologie et de programmation, fort d'une curiosité insatiable depuis mon enfance.",
+          wathIsThis: "Ce site est une vitrine de mes compétences diversifiées, des initiatives de développement que j'ai pilotées, et des services sur mesure que je peux offrir. Mon adaptabilité et ma soif d'apprentissage me permettent de m'immerger dans des projets variés avec enthousiasme. Que vous soyez à la recherche d'une collaboration pour un projet innovant ou d'une expertise en développement, je suis ouvert à toute opportunité et invite chaleureusement les propositions.",
+          contactMe: "Contactez-moi et ensemble, transformons les idées en réalités tangibles.",
+          mySkills: "Mes Skills",
+          myStats: "Mes Stats",
+          projectsTitle: "Mes Projets",
+          contactTitle: "Contact",
+          sendMessage: "ENVOYER MESSAGE",
+          stages: "Stages",
+          projectsDone: "Projets Réalisés",
+          contestsWon: "Concours Gagnés",
+          workshops: "Ateliers",
+          leaveMessage: "Laissez moi un message.",
+          tictactoe: "Tic Tac Toe",
+          cplusplus: "C++",
+          snakeGame: "Snake Game",
+          python: "Python",
+          monitoringServLinux: "Monitoring Serv Linux",
+          bash: "Bash",
+          llk: "LL(k) to x86_64",
+          pierresYouss: "PIERRES'YOUSSS",
+          preciousStones: "(Commerce de Pierres Précieuses)",
+          htmlCssPhp: "HTML/CSS/PHP",
+          wordle: "Wordle",
+          cericar: "CERICar",
+          reconceptionBlablacar: "(Re-conception BlaBlaCar)",
+          htmlCssPhpJsSql: "HTML/CSS/PHP/JS/SQL",
+          weatherApp: "Application Météo",
+          androidJava: "Android, Java",
+          articleParser: "Parser d'articles",
+          tictactoeV2: "Tic Tac Toe (v2)",
+          javaFx: "Java FX",
+          productApp: "Application Produits",
+          phone: "Téléphone",
+          email: "Email",
+          address: "Avignon, France",
+          projectsSoon: "Bientôt disponible...",
+          view: "Voir",
+          filterLanguage: "Tous les langages",
+          filterType: "Tous les types",
+          filterProjectType: "Tous les projets",
+          resetFilters: "Réinitialiser les filtres",
+          java: "Java",
+          cpp: "C++",
+          htmlCssJs: "HTML/CSS/JS",
+          php: "PHP",
+          javaFx: "Java/JavaFX",
+          sql: "SQL",
+          pgsql: "PostgreSQL",
+          plsql: "PL/SQL",
+          bash: "Bash",
+          assembly: "Assembly",
+          pascal: "Pascal",
+          web: "Web",
+          desktop: "Desktop",
+          terminal: "Terminal",
+          mobile: "Mobile",
+          personal: "Personnel",
+          academic: "Académique"
+        }
+      };
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const langSwitch = document.querySelector('#check');
+        const currentLang = localStorage.getItem('language') || 'en';
+
+        // Function to translate the page
+        function translatePage(language) {
+          document.querySelectorAll('[data-translate]').forEach(el => {
+            const key = el.getAttribute('data-translate');
+            if (translations[language][key]) {
+              el.innerText = translations[language][key];
+            }
+          });
+        }
+
+        // Set initial language
+        translatePage(currentLang);
+        langSwitch.checked = currentLang === 'fr';
+
+        // Add event listener to switch
+        langSwitch.addEventListener('change', function() {
+          const language = this.checked ? 'fr' : 'en';
+          localStorage.setItem('language', language);
+          translatePage(language);
         });
       });
     </script>

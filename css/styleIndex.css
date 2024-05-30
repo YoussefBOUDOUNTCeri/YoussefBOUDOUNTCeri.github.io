@@ -23,13 +23,6 @@ body {
   background: #222;
 }
 
-.w3-sidebar {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .mode-switch {
   position: absolute;
   bottom: 10px; /* Ajustez cette valeur selon vos besoins */
@@ -40,7 +33,6 @@ body {
   /* marge gauche pour centrer le bouton */
   margin-left: 30px;
 }
-
 
 #main {
   margin-left: 120px;
@@ -918,4 +910,288 @@ button.btn-primary {
   border: 1px solid black; /* Contour noir en mode jour */
   background-color: white; /* Fond blanc en mode jour */
   color: black; /* Texte noir en mode jour */
+}
+
+/* Styles pour les lignes hr */
+hr {
+  border: none;
+  height: 1px;
+  background-color: white; /* Blanc par défaut pour le mode nuit */
+}
+
+/* Styles pour les lignes hr en mode jour */
+.light-mode hr {
+  background-color: black; /* Noir en mode jour */
+}
+
+/* Styles pour les titres des sections */
+h2.section-title,
+h3.section-title {
+  color: white; /* Blanc par défaut pour le mode nuit */
+}
+
+/* Styles pour les titres des sections en mode jour */
+.light-mode h2.section-title,
+.light-mode h3.section-title {
+  color: black; /* Noir en mode jour */
+}
+
+/* Supprimer les classes de couleur de texte ajoutées dynamiquement */
+.card-body .w3-text-black {
+  color: white !important; /* Texte blanc par défaut en mode nuit */
+}
+
+.light-mode .card-body .w3-text-black {
+  color: black !important; /* Texte noir en mode jour */
+}
+
+/* Styles pour les boutons */
+.btn-primary {
+  border: 1px solid white; /* Contour blanc par défaut */
+  background-color: black; /* Fond noir par défaut */
+  color: white; /* Texte blanc par défaut */
+}
+
+/* Styles pour les boutons en mode jour */
+.light-mode .btn-primary {
+  border: 1px solid black; /* Contour noir en mode jour */
+  background-color: white; /* Fond blanc en mode jour */
+  color: black; /* Texte noir en mode jour */
+}
+
+/* Styles communs pour les cards */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid white; /* Contour blanc par défaut */
+  background-color: black; /* Fond noir par défaut */
+  color: white; /* Texte blanc par défaut */
+}
+
+/* Styles pour le mode jour */
+.light-mode .card {
+  border: 1px solid black; /* Contour noir en mode jour */
+  background-color: white; /* Fond blanc en mode jour */
+  color: black; /* Texte noir en mode jour */
+}
+
+/* Animation pour les cards */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+}
+
+/* Styles pour le corps des cards */
+.card-body {
+  background-color: black; /* Fond noir par défaut */
+  color: white; /* Texte blanc par défaut */
+}
+
+/* Styles pour le corps des cards en mode jour */
+.light-mode .card-body {
+  background-color: white; /* Fond blanc en mode jour */
+  color: black; /* Texte noir en mode jour */
+}
+
+/* Styles pour les titres et paragraphes des cartes */
+.card-body h4.card-title,
+.card-body p.card-text,
+.card-body p,
+.card-body a.btn-primary {
+  color: white !important; /* Texte blanc par défaut */
+}
+
+/* Styles pour les titres et paragraphes des cartes en mode jour */
+.light-mode .card-body h4.card-title,
+.light-mode .card-body p.card-text,
+.light-mode .card-body p,
+.light-mode .card-body a.btn-primary {
+  color: black !important; /* Texte noir en mode jour */
+}
+
+
+/* Styles pour les inputs du formulaire de contact en mode nuit */
+.w3-input {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 8px; /* Bordures arrondies */
+}
+
+/* Styles pour les inputs du formulaire de contact en mode jour */
+.light-mode .w3-input {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  border-radius: 8px; /* Bordures arrondies */
+}
+
+
+/* Styles pour les inputs du formulaire de contact en mode nuit */
+.w3-input {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 8px; /* Bordures arrondies */
+}
+
+/* Styles pour les inputs du formulaire de contact en mode jour */
+.light-mode .w3-input {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  border-radius: 8px; /* Bordures arrondies */
+}
+
+/* Styles pour le bouton en mode nuit */
+.w3-button.w3-light-grey {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 8px; /* Bordures arrondies */
+}
+
+/* Styles pour le bouton en mode jour */
+.light-mode .w3-button.w3-light-grey {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  border-radius: 8px; /* Bordures arrondies */
+}
+
+/**********************************************************/
+/* Switches Container */
+.switches-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 10px; /* Positionne les switches en bas */
+  width: 100%; /* Centre horizontalement les switches */
+}
+
+
+/* Existing Mode Switch Styles */
+.switch {
+  font-size: 17px;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+  margin-bottom: 20px; /* Space between the two switches */
+  display: flex;
+  justify-content: center;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(75, 73, 74);
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: black;
+  box-shadow: inset 8px -4px 0 0 white;
+  transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+  background-color: #2196f3;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+  background-color: yellow;
+  box-shadow: none;
+}
+
+/* New Language Switch Styles */
+.language-switch-container  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Ensure the switch is centered */
+}
+
+.switch
+{
+  align-items: center;
+  justify-content: center;
+  margin-right: 40px; /* Space between the two switches */
+}
+
+.toggle {
+  width: 30px;
+  height: 60px;
+  background-color: hsl(0, 0%, 80%);
+  border-radius: 1.7rem;
+  padding: .25rem 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition: background-color 300ms 300ms;
+  margin-right: 10px; /* Space between toggle and text */
+}
+
+.toggle__circle {
+  width: 20px;
+  height: 20px;
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 50%;
+  margin-top: calc(60px - (.25rem * 2) - 20px);
+  transition: margin 500ms ease-in-out;
+}
+
+.toggle-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+#check:checked + .toggle > .toggle__circle {
+  margin-top: 0;
+}
+
+#check:checked + .toggle {
+  background-color: #41a63c;
+}
+
+/* Adjust the sidebar to make space for the switches */
+.w3-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensure the sidebar takes the full height */
+  padding-bottom: 100px; /* Add space at the bottom to avoid overlap with switches */
+}
+
+/* Ensure the sidebar content does not overlap with the switches */
+.w3-bar-block {
+  flex-grow: 1; /* Permet aux éléments de prendre l'espace disponible */
+  overflow-y: auto; /* Active le défilement si le contenu est trop long */
+  padding-bottom: 100px; /* Espace en bas pour éviter le chevauchement avec les switches */
+}
+
+
+/* Ensure sidebar items are properly spaced and do not shrink */
+.w3-bar-item {
+  margin-bottom: 70px; /* Réduit l'espace vertical entre les éléments */
+  padding: 8px 16px; /* Ajuste le padding pour réduire la taille des éléments */
 }
