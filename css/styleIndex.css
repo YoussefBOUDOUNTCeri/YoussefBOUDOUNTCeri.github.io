@@ -777,111 +777,93 @@ button.btn-primary {
   color: black !important;
 }
 
-
-/* Styles communs pour les cards */
 .card {
   transition: transform 0.3s, box-shadow 0.3s;
-  border: 1px solid white; /* Contour blanc par défaut */
-  background-color: black; /* Fond noir par défaut */
-  color: white; /* Texte blanc par défaut */
+  border: 1px solid white; 
+  background-color: black; 
+  color: white; 
 }
 
-/* Styles pour le mode jour */
 .light-mode .card {
-  border: 1px solid black; /* Contour noir en mode jour */
-  background-color: white; /* Fond blanc en mode jour */
-  color: black; /* Texte noir en mode jour */
+  border: 1px solid black;
+  background-color: white;
+  color: black; 
 }
 
-/* Animation pour les cards */
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
 }
 
-/* Styles pour le corps des cards */
 .card-body {
-  background-color: black; /* Fond noir par défaut */
-  color: white; /* Texte blanc par défaut */
+  background-color: black;
+  color: white;
 }
 
-/* Styles pour le corps des cards en mode jour */
 .light-mode .card-body {
-  background-color: white; /* Fond blanc en mode jour */
-  color: black; /* Texte noir en mode jour */
+  background-color: white;
+  color: black; 
 }
 
-/* Styles pour les titres et paragraphes des cartes */
 .card-body h4.card-title,
 .card-body p.card-text,
 .card-body p {
-  color: white; /* Texte blanc par défaut */
+  color: white;
 }
 
-/* Styles pour les titres et paragraphes des cartes en mode jour */
 .light-mode .card-body h4.card-title,
 .light-mode .card-body p.card-text,
 .light-mode .card-body p {
-  color: black; /* Texte noir en mode jour */
+  color: black;
 }
 
-/* Styles pour les boutons */
 .btn-primary {
-  border: 1px solid white; /* Contour blanc par défaut */
-  background-color: black; /* Fond noir par défaut */
-  color: white; /* Texte blanc par défaut */
+  border: 1px solid white;
+  background-color: black;
+  color: white;
 }
 
-/* Styles pour les boutons en mode jour */
 .light-mode .btn-primary {
-  border: 1px solid black; /* Contour noir en mode jour */
-  background-color: white; /* Fond blanc en mode jour */
-  color: black; /* Texte noir en mode jour */
+  border: 1px solid black;
+  background-color: white;
+  color: black;
 }
 
-
-/* Styles communs pour les cards */
 .card {
   transition: transform 0.3s, box-shadow 0.3s;
-  border: 1px solid white; /* Contour blanc par défaut */
-  background-color: black; /* Fond noir par défaut */
-  color: white; /* Texte blanc par défaut */
+  border: 1px solid white;
+  background-color: black;
+  color: white;
 }
 
-/* Styles pour le mode jour */
 .light-mode .card {
-  border: 1px solid black; /* Contour noir en mode jour */
-  background-color: white; /* Fond blanc en mode jour */
-  color: black; /* Texte noir en mode jour */
+  border: 1px solid black;
+  background-color: white;
+  color: black; 
 }
 
-/* Animation pour les cards */
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
 }
 
-/* Styles pour le corps des cards */
 .card-body {
-  background-color: black; /* Fond noir par défaut */
-  color: white; /* Texte blanc par défaut */
+  background-color: black; 
+  color: white;
 }
 
-/* Styles pour le corps des cards en mode jour */
 .light-mode .card-body {
-  background-color: white; /* Fond blanc en mode jour */
-  color: black; /* Texte noir en mode jour */
+  background-color: white; 
+  color: black;
 }
 
-/* Styles pour les titres et paragraphes des cartes */
 .card-body h4.card-title,
 .card-body p.card-text,
 .card-body p,
 .card-body a.btn-primary {
-  color: white !important; /* Texte blanc par défaut */
+  color: white !important;
 }
 
-/* Styles pour les titres et paragraphes des cartes en mode jour */
 .light-mode .card-body h4.card-title,
 .light-mode .card-body p.card-text,
 .light-mode .card-body p,
@@ -889,194 +871,168 @@ button.btn-primary {
   color: black !important; /* Texte noir en mode jour */
 }
 
-/* Supprimer les classes de couleur de texte ajoutées dynamiquement */
 .card-body .w3-text-black {
-  color: white !important; /* Texte blanc par défaut en mode nuit */
+  color: white !important; 
 }
 
 .light-mode .card-body .w3-text-black {
-  color: black !important; /* Texte noir en mode jour */
+  color: black !important; 
 }
 
-/* Styles pour les boutons */
 .btn-primary {
-  border: 1px solid white; /* Contour blanc par défaut */
-  background-color: black; /* Fond noir par défaut */
-  color: white; /* Texte blanc par défaut */
+  border: 1px solid white; 
+  background-color: black; 
+  color: white; 
 }
 
-/* Styles pour les boutons en mode jour */
 .light-mode .btn-primary {
-  border: 1px solid black; /* Contour noir en mode jour */
-  background-color: white; /* Fond blanc en mode jour */
-  color: black; /* Texte noir en mode jour */
+  border: 1px solid black;
+  background-color: white;
+  color: black;
 }
 
-/* Styles pour les lignes hr */
 hr {
   border: none;
   height: 1px;
-  background-color: white; /* Blanc par défaut pour le mode nuit */
+  background-color: white;
 }
 
-/* Styles pour les lignes hr en mode jour */
 .light-mode hr {
-  background-color: black; /* Noir en mode jour */
+  background-color: black;
 }
 
-/* Styles pour les titres des sections */
 h2.section-title,
 h3.section-title {
-  color: white; /* Blanc par défaut pour le mode nuit */
+  color: white; 
 }
 
-/* Styles pour les titres des sections en mode jour */
 .light-mode h2.section-title,
 .light-mode h3.section-title {
-  color: black; /* Noir en mode jour */
+  color: black;
 }
 
-/* Supprimer les classes de couleur de texte ajoutées dynamiquement */
 .card-body .w3-text-black {
-  color: white !important; /* Texte blanc par défaut en mode nuit */
+  color: white !important; 
 }
 
 .light-mode .card-body .w3-text-black {
-  color: black !important; /* Texte noir en mode jour */
+  color: black !important;
 }
 
-/* Styles pour les boutons */
 .btn-primary {
-  border: 1px solid white; /* Contour blanc par défaut */
-  background-color: black; /* Fond noir par défaut */
-  color: white; /* Texte blanc par défaut */
+  border: 1px solid white;
+  background-color: black;
+  color: white;
 }
 
-/* Styles pour les boutons en mode jour */
 .light-mode .btn-primary {
-  border: 1px solid black; /* Contour noir en mode jour */
-  background-color: white; /* Fond blanc en mode jour */
-  color: black; /* Texte noir en mode jour */
+  border: 1px solid black; 
+  background-color: white; 
+  color: black;
 }
 
-/* Styles communs pour les cards */
 .card {
   transition: transform 0.3s, box-shadow 0.3s;
-  border: 1px solid white; /* Contour blanc par défaut */
-  background-color: black; /* Fond noir par défaut */
-  color: white; /* Texte blanc par défaut */
+  border: 1px solid white; 
+  background-color: black; 
+  color: white; 
 }
 
-/* Styles pour le mode jour */
 .light-mode .card {
-  border: 1px solid black; /* Contour noir en mode jour */
-  background-color: white; /* Fond blanc en mode jour */
-  color: black; /* Texte noir en mode jour */
+  border: 1px solid black; 
+  background-color: white;
+  color: black;
 }
 
-/* Animation pour les cards */
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
 }
 
-/* Styles pour le corps des cards */
 .card-body {
-  background-color: black; /* Fond noir par défaut */
-  color: white; /* Texte blanc par défaut */
+  background-color: black;
+  color: white; 
 }
 
-/* Styles pour le corps des cards en mode jour */
 .light-mode .card-body {
-  background-color: white; /* Fond blanc en mode jour */
-  color: black; /* Texte noir en mode jour */
+  background-color: white;
+  color: black; 
 }
 
-/* Styles pour les titres et paragraphes des cartes */
 .card-body h4.card-title,
 .card-body p.card-text,
 .card-body p,
 .card-body a.btn-primary {
-  color: white !important; /* Texte blanc par défaut */
+  color: white !important; 
 }
 
-/* Styles pour les titres et paragraphes des cartes en mode jour */
 .light-mode .card-body h4.card-title,
 .light-mode .card-body p.card-text,
 .light-mode .card-body p,
 .light-mode .card-body a.btn-primary {
-  color: black !important; /* Texte noir en mode jour */
+  color: black !important;
 }
 
-
-/* Styles pour les inputs du formulaire de contact en mode nuit */
 .w3-input {
   background-color: black;
   border: 1px solid white;
   color: white;
-  border-radius: 8px; /* Bordures arrondies */
+  border-radius: 8px;
 }
 
-/* Styles pour les inputs du formulaire de contact en mode jour */
 .light-mode .w3-input {
   background-color: white;
   border: 1px solid black;
   color: black;
-  border-radius: 8px; /* Bordures arrondies */
+  border-radius: 8px;
 }
 
-
-/* Styles pour les inputs du formulaire de contact en mode nuit */
 .w3-input {
   background-color: black;
   border: 1px solid white;
   color: white;
-  border-radius: 8px; /* Bordures arrondies */
+  border-radius: 8px;
 }
 
-/* Styles pour les inputs du formulaire de contact en mode jour */
 .light-mode .w3-input {
   background-color: white;
   border: 1px solid black;
   color: black;
-  border-radius: 8px; /* Bordures arrondies */
+  border-radius: 8px; 
 }
 
-/* Styles pour le bouton en mode nuit */
 .w3-button.w3-light-grey {
   background-color: black;
   border: 1px solid white;
   color: white;
-  border-radius: 8px; /* Bordures arrondies */
+  border-radius: 8px;
 }
 
-/* Styles pour le bouton en mode jour */
 .light-mode .w3-button.w3-light-grey {
   background-color: white;
   border: 1px solid black;
   color: black;
-  border-radius: 8px; /* Bordures arrondies */
+  border-radius: 8px; 
 }
 
-/**********************************************************/
-/* Switches Container */
+/*********************************************************
+  Switches Container 
+*********************************************************/
 .switches-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
-  bottom: 10px; /* Positionne les switches en bas */
-  width: 100%; /* Centre horizontalement les switches */
+  bottom: 10px; 
+  width: 100%; 
 }
 
-
-/* Existing Mode Switch Styles */
 .switch {
   font-size: 17px;
   display: inline-block;
   width: 3.5em;
   height: 2em;
-  margin-bottom: 20px; /* Space between the two switches */
+  margin-bottom: 20px; 
   display: flex;
   justify-content: center;
 }
@@ -1122,7 +1078,6 @@ h3.section-title {
   box-shadow: none;
 }
 
-/* New Language Switch Styles */
 .language-switch-container  {
   display: flex;
   align-items: center;
@@ -1163,8 +1118,8 @@ h3.section-title {
   display: flex;
   flex-direction: column;
   line-height: 1.2;
-  font-weight: bold; /* Ajouter cette ligne pour mettre le texte en gras */
-  font-size: 1.2em; /* Ajouter cette ligne pour augmenter légèrement la taille de la police */
+  font-weight: bold; 
+  font-size: 1.2em; 
 }
 
 #check:checked + .toggle > .toggle__circle {
@@ -1175,46 +1130,42 @@ h3.section-title {
   background-color: #41a63c;
 }
 
-/* Adjust the sidebar to make space for the switches */
 .w3-sidebar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%; /* Ensure the sidebar takes the full height */
-  padding-bottom: 100px; /* Add space at the bottom to avoid overlap with switches */
+  height: 100%;
+  padding-bottom: 100px; 
 }
 
-/* Ensure the sidebar content does not overlap with the switches */
 .w3-bar-block {
-  flex-grow: 1; /* Permet aux éléments de prendre l'espace disponible */
-  overflow-y: auto; /* Active le défilement si le contenu est trop long */
-  padding-bottom: 100px; /* Espace en bas pour éviter le chevauchement avec les switches */
+  flex-grow: 1; 
+  overflow-y: auto; 
+  padding-bottom: 100px;
 }
 
-
-/* Ensure sidebar items are properly spaced and do not shrink */
 .w3-bar-item {
-  margin-bottom: 70px; /* Réduit l'espace vertical entre les éléments */
-  padding: 8px 16px; /* Ajuste le padding pour réduire la taille des éléments */
+  margin-bottom: 70px;
+  padding: 8px 16px; 
 }
 
 /****************************************************
  *  Navigation petit écran
  ****************************************************/
  .hamburger {
-  font-size: 36px; /* Augmente la taille de la police pour agrandir le bouton */
-  font-weight: bold; /* Rend le bouton plus épais */
+  font-size: 36px; 
+  font-weight: bold; 
   color: white;
-  display: inline-block; /* Assure que la bordure entoure seulement le bouton */
-  margin: 10px; /* Ajuste la marge pour que le bouton ne touche pas les bords */
-  text-align: left; /* Aligne le texte à gauche */
+  display: inline-block; 
+  margin: 10px; 
+  text-align: left; 
 }
 
 .hamburger-menu {
-  display: none; /* Ensure the menu is hidden by default */
+  display: none; 
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center items vertically */
+  justify-content: center; 
   position: fixed;
   top: 0;
   left: 0;
@@ -1225,7 +1176,7 @@ h3.section-title {
 }
 
 .hamburger-menu.active {
-  display: flex; /* Show the menu when active */
+  display: flex; 
 }
 
 .hamburger-menu .switches-container {
@@ -1233,8 +1184,8 @@ h3.section-title {
   bottom: 20px;
   width: 100%;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  gap: 20px; /* Space between the switches */
+  justify-content: center; 
+  gap: 20px; 
 }
 
 .hamburger-menu a {
@@ -1243,12 +1194,12 @@ h3.section-title {
   margin: 15px 0;
   text-align: center;
   display: flex;
-  align-items: center; /* Center icons vertically */
-  gap: 10px; /* Space between icon and text */
+  align-items: center;
+  gap: 10px; 
 }
 
 .hamburger-menu .close-btn {
-  font-size: 36px; /* Augmente la taille de la croix pour la rendre plus visible */
+  font-size: 36px; 
   color: white;
   position: absolute;
   top: 20px;
@@ -1257,7 +1208,7 @@ h3.section-title {
 }
 
 .light-mode .hamburger-menu .close-btn {
-  color: black; /* Change la couleur de la croix en noir pour le mode clair */
+  color: black; 
 }
 
 @media (max-width: 768px) {
@@ -1270,7 +1221,7 @@ h3.section-title {
   }
 
   #main {
-    margin-left: 0; /* Remove the left margin for small screens */
+    margin-left: 0;
   }
 }
 
@@ -1284,35 +1235,43 @@ h3.section-title {
   color: black;
 }
 
-/* Styles pour le menu hamburger en mode sombre */
 .hamburger-menu {
-  background-color: black; /* Fond noir pour le mode sombre */
+  background-color: black; 
 }
 
 .light-mode .hamburger-menu {
   align-items: center;
-  background-color: white; /* Fond blanc pour le mode clair */
+  background-color: white;
 }
 
 .hamburger-menu a {
-  color: white; /* Couleur du texte en mode sombre */
+  color: white; 
 }
 
 .light-mode .hamburger-menu a {
-  color: black; /* Couleur du texte en mode clair */
+  color: black;
 }
 
-/* Styles pour la barre horizontale contenant le menu hamburger */
 .hamburger-bar {
   background-color: black;
   color: white;
-  text-align: right; /* Assure que le bouton hamburger est à droite */
-  padding: 10px; /* Ajoute du padding pour un meilleur espacement */
+  text-align: right; 
+  padding: 10px; 
 }
 
 .light-mode .hamburger-bar {
   background-color: white;
   color: black;
-  text-align: right; /* Assure que le bouton hamburger est à droite */
-  padding: 10px; /* Ajoute du padding pour un meilleur espacement */
+  text-align: right;
+  padding: 10px; 
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
 }
