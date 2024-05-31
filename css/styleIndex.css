@@ -1195,3 +1195,122 @@ h3.section-title {
   margin-bottom: 70px; /* Réduit l'espace vertical entre les éléments */
   padding: 8px 16px; /* Ajuste le padding pour réduire la taille des éléments */
 }
+
+/****************************************************
+ *  Navigation petit écran
+ ****************************************************/
+ .hamburger {
+  font-size: 36px; /* Augmente la taille de la police pour agrandir le bouton */
+  font-weight: bold; /* Rend le bouton plus épais */
+  color: white;
+  display: inline-block; /* Assure que la bordure entoure seulement le bouton */
+  margin: 10px; /* Ajuste la marge pour que le bouton ne touche pas les bords */
+  text-align: left; /* Aligne le texte à gauche */
+}
+
+.hamburger-menu {
+  display: none; /* Ensure the menu is hidden by default */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center items vertically */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+}
+
+.hamburger-menu.active {
+  display: flex; /* Show the menu when active */
+}
+
+.hamburger-menu .switches-container {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  gap: 20px; /* Space between the switches */
+}
+
+.hamburger-menu a {
+  font-size: 24px;
+  color: white;
+  margin: 15px 0;
+  text-align: center;
+  display: flex;
+  align-items: center; /* Center icons vertically */
+  gap: 10px; /* Space between icon and text */
+}
+
+.hamburger-menu .close-btn {
+  font-size: 36px; /* Augmente la taille de la croix pour la rendre plus visible */
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.light-mode .hamburger-menu .close-btn {
+  color: black; /* Change la couleur de la croix en noir pour le mode clair */
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .w3-sidebar, .w3-top {
+    display: none;
+  }
+
+  #main {
+    margin-left: 0; /* Remove the left margin for small screens */
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger-menu {
+    display: none;
+  }
+}
+
+.light-mode .hamburger {
+  color: black;
+}
+
+/* Styles pour le menu hamburger en mode sombre */
+.hamburger-menu {
+  background-color: black; /* Fond noir pour le mode sombre */
+}
+
+.light-mode .hamburger-menu {
+  align-items: center;
+  background-color: white; /* Fond blanc pour le mode clair */
+}
+
+.hamburger-menu a {
+  color: white; /* Couleur du texte en mode sombre */
+}
+
+.light-mode .hamburger-menu a {
+  color: black; /* Couleur du texte en mode clair */
+}
+
+/* Styles pour la barre horizontale contenant le menu hamburger */
+.hamburger-bar {
+  background-color: black;
+  color: white;
+  text-align: right; /* Assure que le bouton hamburger est à droite */
+  padding: 10px; /* Ajoute du padding pour un meilleur espacement */
+}
+
+.light-mode .hamburger-bar {
+  background-color: white;
+  color: black;
+  text-align: right; /* Assure que le bouton hamburger est à droite */
+  padding: 10px; /* Ajoute du padding pour un meilleur espacement */
+}

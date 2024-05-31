@@ -84,25 +84,27 @@
     <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
       <!-- Avatar image in top left corner -->
       <img src="img/profile-pic.png" style="width: 100%" />
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">
+
+      <a href="#" class="w3-bar-item w3-button w3-padding-large" >
           <i class="fa fa-home w3-xxlarge"></i>
-          <p>HOME</p>
+          <p data-translate="home">HOME</p>
       </a>
+
       <a href="#about" class="w3-bar-item w3-button w3-padding-large">
           <i class="fa fa-user w3-xxlarge"></i>
-          <p>ABOUT</p>
+          <p data-translate="about">ABOUT</p>
       </a>
       <a href="#photos" class="w3-bar-item w3-button w3-padding-large">
           <i class="fa fa-eye w3-xxlarge"></i>
-          <p>PROJETS</p>
+          <p data-translate="projects">PROJETS</p>
       </a>
       <a href="#contact" class="w3-bar-item w3-button w3-padding-large">
           <i class="fa fa-envelope w3-xxlarge"></i>
-          <p>CONTACT</p>
+          <p data-translate="contact">CONTACT</p>
       </a>
       <a href="pages/CV.html" class="w3-bar-item w3-button w3-padding-large">
           <i class="fa fa-address-card w3-xxlarge"></i>
-          <p>CV</p>
+          <p data-translate="cv">CV</p>
       </a>
   
       <!-- Switches Container -->
@@ -127,50 +129,48 @@
           </div>
       </div>
     </nav>
-  
 
-    <!-- Navbar on small screens (Hidden on medium and large screens) -->
-    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-      <div
-        class="w3-bar w3-opacity w3-hover-opacity-off w3-center w3-small"
-      >
-        <a 
-          href="#" 
-          class="w3-bar-item w3-button" 
-          style="width: 20% !important"
-          data-translate="home"
-          >HOME</a
-        >
-        <a
-          href="#about"
-          class="w3-bar-item w3-button "
-          style="width: 20% !important"
-          data-translate="about"
-          >ABOUT</a
-        >
-        <a
-          href="#photos"
-          class="w3-bar-item w3-button" 
-          style="width: 20% !important"
-          data-translate="projects"
-          >PROJETS</a
-        >
-        <a
-          href="#contact"
-          class="w3-bar-item w3-button"
-          style="width: 20% !important"
-          data-translate="contact"
-          >CONTACT</a
-        >
-        <a
-          href="pages/CV.html"
-          class="w3-bar-item w3-button"
-          style="width: 20% !important"
-          data-translate="cv"
-          >CV</a
-        >
+    <div class="hamburger-bar">
+      <div class="hamburger" onclick="toggleHamburgerMenu()">☰</div>
+    </div>
+
+    <div id="hamburgerMenu" class="hamburger-menu">
+      <span class="close-btn" onclick="toggleHamburgerMenu()">×</span>
+      <a href="#" data-translate="home">
+        <i class="fa fa-home"></i> HOME
+      </a>
+      <a href="#about" data-translate="about">
+        <i class="fa fa-user"></i> ABOUT
+      </a>
+      <a href="#photos" data-translate="projects">
+        <i class="fa fa-eye"></i> PROJETS
+      </a>
+      <a href="#contact" data-translate="contact">
+        <i class="fa fa-envelope"></i> CONTACT
+      </a>
+      <a href="pages/CV.html" data-translate="cv">
+        <i class="fa fa-address-card"></i> CV
+      </a>
+      <div class="switches-container">
+        <label class="switch mode-switch">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+        <div class="language-switch-container">
+          <input hidden="" id="check" name="check" type="checkbox">
+          <label class="toggle" for="check">
+            <div class="toggle__circle"></div>
+          </label>
+          <div class="toggle-text">
+            <span>FR</span>
+            <br />
+            <span>EN</span>
+          </div>
+        </div>
       </div>
     </div>
+    
+    
 
     <!-- Page Content -->
     <div class="w3-padding-large" id="main">
@@ -179,7 +179,7 @@
         <h1 class="w3-jumbo">
           <span class="text-animate">BOUDOUNT</span> <span class="text-animate">Youssef</span>
         </h1> <br /> <br />
-        <p>Etudiant en informatique</p>
+        <p data-translate="subtitle">Etudiant en informatique</p>
 
         <hr style="width: 100%" class="w3-opacity w3-center" />
         <div>
@@ -369,50 +369,48 @@
         <hr style="width: 100%" class="w3-opacity w3-center" />
 
         <!-- Dropdown Menu -->
-        <div class="w3-row">
+        <div class="w3-row w3-center w3-padding-16">
           <div class="w3-third w3-container">
             <select id="languageDropdown" class="w3-input w3-margin-bottom filter-dropdown" onchange="filterProjects()">
-              <option value="" data-translate="allLanguages" >Tous les langages</option>
-              <option value="java">Java</option>
-              <option value="cpp">C++</option>
-              <option value="python">Python</option>
-              <option value="html css js">HTML/CSS/JS</option>
-              <option value="php">PHP</option>
-              <option value="java javafx">Java/JavaFX</option>
-              <option value="sql">SQL</option>
-              <option value="pgsql">PostgreSQL</option>
-              <option value="plsql">PL/SQL</option>
-              <option value="bash">Bash</option>
-              <option value="assembly">Assembly</option>
-              <option value="pascal">Pascal</option>
+              <option value="" data-translate="filterLanguage">Tous les langages</option>
+              <option value="java" data-translate="java">Java</option>
+              <option value="cpp" data-translate="cpp">C++</option>
+              <option value="python" data-translate="python">Python</option>
+              <option value="html css js" data-translate="htmlCssJs">HTML/CSS/JS</option>
+              <option value="php" data-translate="php">PHP</option>
+              <option value="java javafx" data-translate="javaFx">Java/JavaFX</option>
+              <option value="sql" data-translate="sql">SQL</option>
+              <option value="pgsql" data-translate="pgsql">PostgreSQL</option>
+              <option value="plsql" data-translate="plsql">PL/SQL</option>
+              <option value="bash" data-translate="bash">Bash</option>
+              <option value="assembly" data-translate="assembly">Assembly</option>
+              <option value="pascal" data-translate="pascal">Pascal</option>
             </select>
           </div>
 
           <div class="w3-third w3-container">
             <select id="typeDropdown" class="w3-input w3-margin-bottom filter-dropdown" onchange="filterProjects()">
-              <option value="">Tous les types</option>
-              <option value="web">Web</option>
-              <option value="desktop">Desktop</option>
-              <option value="console">Terminal</option>
-              <option value="mobile">Mobile</option>
+              <option value="" data-translate="filterType">Tous les types</option>
+              <option value="web" data-translate="web">Web</option>
+              <option value="desktop" data-translate="desktop">Desktop</option>
+              <option value="console" data-translate="terminal">Terminal</option>
+              <option value="mobile" data-translate="mobile">Mobile</option>
             </select>
           </div>
 
           <div class="w3-third w3-container">
             <select id="projectTypeDropdown" class="w3-input w3-margin-bottom filter-dropdown" onchange="filterProjects()">
-              <option value="">Tous les projets</option>
-              <option value="personnel">Personnel</option>
-              <option value="academique">Academique</option>
+              <option value="" data-translate="filterProjectType">Tous les projets</option>
+              <option value="personnel" data-translate="personal">Personnel</option>
+              <option value="academique" data-translate="academic">Académique</option>
             </select>
           </div>
 
           <div class="w3-third w3-container">
-            <button onclick="resetFilters()" class="renButton">Réinitialiser les filtres</button>
+            <button onclick="resetFilters()" class="renButton" data-translate="resetFilters">Réinitialiser les filtres</button>
           </div>
         </div>
-
         <br />
-
         <div id="projectContainer" class="project-container">
 
           <div class="w3-third project-card" data-lang="cpp" data-type="console" data-project-type="personnel">
@@ -420,8 +418,8 @@
               <img class="card-img-top parallax" src="img/GridProjects/tictactoe.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
                 <h4 class="card-title" data-translate="tictactoe">Tic Tac Toe</h4>
-                <p class="card-text w3-text-black">C++</p>
-                <a href="pages/tictactoe.html" class="btn btn-primary ">Voir</a>
+                <p class="card-text w3-text-black" data-translate="cplusplus">C++</p>
+                <a href="pages/tictactoe.html" class="btn btn-primary" data-translate="view">Voir</a>
               </div>
             </div>
           </div>
@@ -430,9 +428,9 @@
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/snake.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
-                <h4 class="card-title" data-translate="projectSnakeGame">Snake Game</h4>
-                <p class="card-text w3-text-black">Python</p>
-                <a href="pages/snake.html" class="btn btn-primary  ">Voir</a>
+                <h4 class="card-title" data-translate="snakeGame">Snake Game</h4>
+                <p class="card-text w3-text-black" data-translate="python">Python</p>
+                <a href="pages/snake.html" class="btn btn-primary" data-translate="view">Voir</a>
               </div>
             </div>
           </div>
@@ -441,9 +439,9 @@
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/monitoringbash.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
-                <h4 class="card-title" data-translate="projectMonitoringServLinux">Monitoring Serv Linux</h4>
-                <p class="card-text w3-text-black">Bash</p>
-                <a href="pages/monitoring.html" class="btn btn-primary  ">Bientôt disponible ...</a>
+                <h4 class="card-title" data-translate="monitoringServLinux">Monitoring Serv Linux</h4>
+                <p class="card-text w3-text-black" data-translate="bash">Bash</p>
+                <a href="pages/monitoring.html" class="btn btn-primary" data-translate="projectsSoon">Bientôt disponible...</a>
               </div>
             </div>
           </div>
@@ -452,9 +450,9 @@
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/llk.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
-                <h4 class="card-title" data-translate="projectLLK">LL(k) to x86_64</h4>
-                <p class="card-text w3-text-black">C++</p>
-                <a href="pages/llk.html" class="btn btn-primary  ">Bientôt disponible ...</a>
+                <h4 class="card-title" data-translate="llk">LL(k) to x86_64</h4>
+                <p class="card-text w3-text-black" data-translate="cplusplus">C++</p>
+                <a href="pages/llk.html" class="btn btn-primary" data-translate="projectsSoon">Bientôt disponible...</a>
               </div>
             </div>
           </div>
@@ -463,10 +461,10 @@
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/pierre.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
-                <h4 class="card-title" data-translate="projectPierresYousss">PIERRES'YOUSSS</h4>
-                <p class="card-text w3-text-black">(Commerce de Pierres Précieuses)</p>
-                <p class="card-text w3-text-black">HTML/CSS/PHP</p>
-                <a href="pages/pierre.html" class="btn btn-primary  ">Voir</a>
+                <h4 class="card-title" data-translate="pierresYouss">PIERRES'YOUSSS</h4>
+                <p class="card-text w3-text-black" data-translate="preciousStones">(Commerce de Pierres Précieuses)</p>
+                <p class="card-text w3-text-black" data-translate="htmlCssPhp">HTML/CSS/PHP</p>
+                <a href="pages/pierre.html" class="btn btn-primary" data-translate="view">Voir</a>
               </div>
             </div>
           </div>
@@ -474,10 +472,10 @@
           <div class="w3-third project-card" data-lang="java javafx" data-type="desktop" data-project-type="academique">
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/wordle.png" alt="Card image" style="width: 100%" />
-              <div class="card-body parallax">
-                <h4 class="card-title">Wordle</h4>
-                <p class="card-text w3-text-black">Java/JavaFX</p>
-                <a href="pages/wordle.html" class="btn btn-primary  ">Voir</a>
+              <div class="card-body">
+                <h4 class="card-title" data-translate="wordle">Wordle</h4>
+                <p class="card-text w3-text-black" data-translate="javaFx">Java/JavaFX</p>
+                <a href="pages/wordle.html" class="btn btn-primary" data-translate="view">Voir</a>
               </div>
             </div>
           </div>
@@ -486,22 +484,22 @@
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/cericar.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
-                <h4 class="card-title" data-translate="projectCERICar">CERICar</h4>
-                <p class="card-text w3-text-black">(Re-conception BlaBlaCar)</p>
-                <p class="card-text w3-text-black">HTML/CSS/PHP/JS/SQL</p>
-                <a href="pages/cericar.html" class="btn btn-primary  ">Voir</a>
+                <h4 class="card-title" data-translate="cericar">CERICar</h4>
+                <p class="card-text w3-text-black" data-translate="reconceptionBlablacar">(Re-conception BlaBlaCar)</p>
+                <p class="card-text w3-text-black" data-translate="htmlCssPhpJsSql">HTML/CSS/PHP/JS/SQL</p>
+                <a href="pages/cericar.html" class="btn btn-primary" data-translate="view">Voir</a>
               </div>
             </div>
           </div>
 
           <div class="w3-third project-card" data-lang="java android" data-type="mobile" data-project-type="academique">
             <div class="card">
-                <img class="card-img-top" src="img/GridProjects/meteoApp.webp" alt="Card image" style="width: 100%" />
-                <div class="card-body parallax">
-                    <h4 class="card-title" data-translate="projectMeteoApp">Application Météo</h4>
-                    <p class="card-text w3-text-black">Android, Java</p>
-                    <a href="pages/meteoApp.html" class="btn btn-primary  ">Voir</a>
-                </div>
+              <img class="card-img-top" src="img/GridProjects/meteoApp.webp" alt="Card image" style="width: 100%" />
+              <div class="card-body">
+                <h4 class="card-title" data-translate="weatherApp">Application Météo</h4>
+                <p class="card-text w3-text-black" data-translate="androidJava">Android, Java</p>
+                <a href="pages/meteoApp.html" class="btn btn-primary" data-translate="view">Voir</a>
+              </div>
             </div>
           </div>
 
@@ -509,9 +507,9 @@
             <div class="card">
               <img class="card-img-top parallax" src="img/GridProjects/parser.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
-                <h4 class="card-title" data-translate="projectParser" >Parseur d'articles</h4>
-                <p class="card-text w3-text-black">Python</p>
-                <a href="pages/parser.html" class="btn btn-primary  ">Voir</a>
+                <h4 class="card-title" data-translate="articleParser">Parseur d'articles</h4>
+                <p class="card-text w3-text-black" data-translate="python">Python</p>
+                <a href="pages/parser.html" class="btn btn-primary" data-translate="view">Voir</a>
               </div>
             </div>
           </div>
@@ -519,22 +517,22 @@
           <div class="w3-third project-card" data-lang="java javafx" data-type="desktop" data-project-type="academique">
             <div class="card">
               <img class="card-img-top" src="img/GridProjects/tictactoev2.png" alt="Card image" style="width: 100%" />
-              <div class="card-body parallax">
-                <h4 class="card-title" data-translate="projectTicTacToeV2">Tic Tac Toe (v2)</h4>
-                <p class="card-text w3-text-black">Java FX</p>
-                <a href="pages/tictactoev2.html" class="btn btn-primary  ">Voir</a>
+              <div class="card-body">
+                <h4 class="card-title" data-translate="tictactoeV2">Tic Tac Toe (v2)</h4>
+                <p class="card-text w3-text-black" data-translate="javaFx">Java FX</p>
+                <a href="pages/tictactoev2.html" class="btn btn-primary" data-translate="view">Voir</a>
               </div>
             </div>
           </div>
 
           <div class="w3-third project-card" data-lang="java android" data-type="mobile" data-project-type="academique">
             <div class="card">
-                <img class="card-img-top" src="img/GridProjects/rappelProduitApp.webp" alt="Card image" style="width: 100%" />
-                <div class="card-body parallax">
-                    <h4 class="card-title" data-translate="projectRappelProduitApp">Application Produits</h4>
-                    <p class="card-text w3-text-black">Android, Java</p>
-                    <a href="pages/rappelProduitApp.html" class="btn btn-primary  ">Voir</a>
-                </div>
+              <img class="card-img-top" src="img/GridProjects/rappelProduitApp.webp" alt="Card image" style="width: 100%" />
+              <div class="card-body">
+                <h4 class="card-title" data-translate="productApp">Application Produits</h4>
+                <p class="card-text w3-text-black" data-translate="androidJava">Android, Java</p>
+                <a href="pages/rappelProduitApp.html" class="btn btn-primary" data-translate="view">Voir</a>
+              </div>
             </div>
           </div>
         </div>
@@ -546,92 +544,53 @@
         <hr style="width: 100%" class="w3-opacity w3-center" />
 
         <div class="w3-section">
-          <p data-translate="location">
-            <i
-              class="fa fa-map-marker fa-fw  w3-xxlarge w3-margin-right"
-            ></i>
-            Avignon, France
+          <p>
+            <i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>
+            <span data-translate="address">Avignon, France</span>
           </p>
-          <p data-translate="phone">
-            <i
-              class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"
-            ></i>
-            Téléphone : +33 6 95 78 50 92
+          <p>
+            <i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i>
+            <span data-translate="phoneLabel">Phone:</span>
+            <span >+33 6 95 78 50 92</span>
           </p>
-          <p data-translate="email">
-            <i
-              class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"
-            >
-            </i>
-            Email: yboudount84@gmail.com
+          <p>
+            <i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i>
+            <span data-translate="emailLabel">Email:</span>
+            <span >yboudount84@gmail.com</span>
           </p>
         </div>
-        <br />
-        <p data-translate="contestsWon">Laissez moi un message.</p>
 
-        <form
-          action="https://formspree.io/f/xaygkwvk"
-          method="POST"
-          target="_blank"
-        >
+        <br />
+        <p data-translate="leaveMessage">Laissez moi un message.</p>
+
+        <form action="https://formspree.io/f/xaygkwvk" method="POST" target="_blank">
           <p>
-            <input
-              class="w3-input w3-padding-16"
-              type="text"
-              placeholder="Nom"
-              required
-              name="Name"
-            />
+            <input class="w3-input w3-padding-16" type="text" placeholder="Nom" required name="Name" data-translate-placeholder="namePlaceholder"/>
           </p>
           <p>
-            <input
-              class="w3-input w3-padding-16"
-              type="text"
-              placeholder="Email"
-              required
-              name="Email"
-            />
+            <input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email" data-translate-placeholder="emailPlaceholder"/>
           </p>
           <p>
-            <input
-              class="w3-input w3-padding-16"
-              type="text"
-              placeholder="Object"
-              required
-              name="Subject"
-            />
+            <input class="w3-input w3-padding-16" type="text" placeholder="Object" required name="Subject" data-translate-placeholder="subjectPlaceholder"/>
           </p>
           <p>
-            <input
-              class="w3-input w3-padding-16"
-              type="text"
-              placeholder="Message"
-              required
-              name="Message"
-            />
+            <input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message" data-translate-placeholder="messagePlaceholder"/>
           </p>
           <p>
-            <button
-              class="w3-button w3-light-grey w3-padding-large"
-              type="submit"
-            >
-              <i class="fa fa-paper-plane" data-translate="sendMessage" ></i> EVOYER MESSAGE
+            <button class="w3-button w3-light-grey w3-padding-large" type="submit" data-translate="sendMessage">
+              <i class="fa fa-paper-plane"></i> ENVOYER MESSAGE
             </button>
           </p>
         </form>
+        
       </div>
 
       <!-- Footer -->
       <footer class="w3-content  w3-text-grey w3-xlarge">
         <hr style="width: 100%" class="w3-opacity w3-center" />
         <p class="w3-medium">
-          Réalisé par
-          <a
-            href="https://github.com/YoussefBOUDOUNTCeri"
-            target="_blank"
-            class="w3-hover-text-green"
-            >Youssef Boudount</a
-          >
+          <span data-translate="credit">Réalisé par</span>
+          <a href="https://github.com/YoussefBOUDOUNTCeri" target="_blank" class="w3-hover-text-green">Youssef Boudount</a>
         </p>
         <hr style="width: 100%" class="w3-opacity w3-center" />
       </footer>
@@ -639,6 +598,14 @@
     </div>
 
     <script>
+      /************************
+       * Hamburger Menu
+      *************************/
+      function toggleHamburgerMenu() {
+        const menu = document.getElementById('hamburgerMenu');
+        menu.classList.toggle('active');
+      }
+
       /************************
        * Progress Bar Animation
       *************************/
@@ -704,7 +671,7 @@
       /************************
        * Light/Dark Mode
       *************************/
-      document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener('DOMContentLoaded', function() {
         const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
         const currentTheme = localStorage.getItem('theme');
 
@@ -716,7 +683,7 @@
           }
         }
 
-        toggleSwitch.addEventListener('change', function (e) {
+        toggleSwitch.addEventListener('change', function(e) {
           if (e.target.checked) {
             document.body.classList.add('light-mode');
             document.body.classList.remove('dark-mode');
@@ -727,6 +694,25 @@
             localStorage.setItem('theme', 'dark-mode');
           }
         });
+
+        const hamburgerToggleSwitch = document.querySelector('.hamburger-menu .switch input[type="checkbox"]');
+        if (hamburgerToggleSwitch) {
+          hamburgerToggleSwitch.addEventListener('change', function(e) {
+            if (e.target.checked) {
+              document.body.classList.add('light-mode');
+              document.body.classList.remove('dark-mode');
+              localStorage.setItem('theme', 'light-mode');
+            } else {
+              document.body.classList.remove('light-mode');
+              document.body.classList.add('dark-mode');
+              localStorage.setItem('theme', 'dark-mode');
+            }
+          });
+
+          if (currentTheme === 'light-mode') {
+            hamburgerToggleSwitch.checked = true;
+          }
+        }
       });
 
 
@@ -740,6 +726,7 @@
           projects: "PROJECTS",
           contact: "CONTACT",
           cv: "CV",
+          subtitle: "Student in Computer Science",
           whoAmI: "Who am I?",
           welcomeMessage: "Welcome to my portfolio! Currently in the third year of a Computer Science degree, I am a young technology and programming enthusiast with an insatiable curiosity since childhood.",
           wathIsThis: "This site is a showcase of my diversified skills, development initiatives I have led, and custom services I can offer. My adaptability and thirst for learning allow me to immerse myself in various projects with enthusiasm. Whether you are looking for a collaboration for an innovative project or expertise in development, I am open to any opportunity and warmly invite proposals.",
@@ -799,7 +786,14 @@
           terminal: "Terminal",
           mobile: "Mobile",
           personal: "Personal",
-          academic: "Academic"
+          academic: "Academic",
+          namePlaceholder: "Name",
+          emailPlaceholder: "Email",
+          subjectPlaceholder: "Subject",
+          messagePlaceholder: "Message",
+          phoneLabel: "Phone:",
+          emailLabel: "Email:",
+          credit: "Made by "
         },
         fr: {
           home: "ACCUEIL",
@@ -807,6 +801,7 @@
           projects: "PROJETS",
           contact: "CONTACT",
           cv: "CV",
+          subtitle: "Etudiant en Informatique",
           whoAmI: "Qui suis-je ?",
           welcomeMessage: "Bienvenue sur mon portfolio ! Actuellement en troisième année de Licence Informatique, je suis un jeune passionné de technologie et de programmation, fort d'une curiosité insatiable depuis mon enfance.",
           wathIsThis: "Ce site est une vitrine de mes compétences diversifiées, des initiatives de développement que j'ai pilotées, et des services sur mesure que je peux offrir. Mon adaptabilité et ma soif d'apprentissage me permettent de m'immerger dans des projets variés avec enthousiasme. Que vous soyez à la recherche d'une collaboration pour un projet innovant ou d'une expertise en développement, je suis ouvert à toute opportunité et invite chaleureusement les propositions.",
@@ -821,11 +816,11 @@
           contestsWon: "Concours Gagnés",
           workshops: "Ateliers",
           leaveMessage: "Laissez moi un message.",
-          tictactoe: "Tic Tac Toe",
+          tictactoe: "Morpion",
           cplusplus: "C++",
-          snakeGame: "Snake Game",
+          snakeGame: "Jeu du Serpent",
           python: "Python",
-          monitoringServLinux: "Monitoring Serv Linux",
+          monitoringServLinux: "Gestionnaire de Serveurs Linux",
           bash: "Bash",
           llk: "LL(k) to x86_64",
           pierresYouss: "PIERRES'YOUSSS",
@@ -838,7 +833,7 @@
           weatherApp: "Application Météo",
           androidJava: "Android, Java",
           articleParser: "Parser d'articles",
-          tictactoeV2: "Tic Tac Toe (v2)",
+          tictactoeV2: "Morpion (v2)",
           javaFx: "Java FX",
           productApp: "Application Produits",
           phone: "Téléphone",
@@ -866,9 +861,17 @@
           terminal: "Terminal",
           mobile: "Mobile",
           personal: "Personnel",
-          academic: "Académique"
+          academic: "Académique",
+          namePlaceholder: "Nom",
+          emailPlaceholder: "Email",
+          subjectPlaceholder: "Object",
+          messagePlaceholder: "Message",
+          phoneLabel: "Téléphone :",
+          emailLabel: "Email:",
+          credit: "Réalisé par "
         }
       };
+
 
       document.addEventListener('DOMContentLoaded', function() {
         const langSwitch = document.querySelector('#check');
@@ -880,6 +883,22 @@
             const key = el.getAttribute('data-translate');
             if (translations[language][key]) {
               el.innerText = translations[language][key];
+            }
+          });
+
+          // Translate placeholders
+          document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-translate-placeholder');
+            if (translations[language][key]) {
+              el.setAttribute('placeholder', translations[language][key]);
+            }
+          });
+
+          // Translate options
+          document.querySelectorAll('option[data-translate]').forEach(option => {
+            const key = option.getAttribute('data-translate');
+            if (translations[language][key]) {
+              option.innerText = translations[language][key];
             }
           });
         }
@@ -895,6 +914,7 @@
           translatePage(language);
         });
       });
+
     </script>
 
   </body>
