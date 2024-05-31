@@ -136,19 +136,19 @@
 
     <div id="hamburgerMenu" class="hamburger-menu">
       <span class="close-btn" onclick="toggleHamburgerMenu()">×</span>
-      <a href="#" data-translate="home">
+      <a href="#" id="homeLink" data-translate="home">
         <i class="fa fa-home"></i> HOME
       </a>
-      <a href="#about" data-translate="about">
+      <a href="#about" id="aboutLink" data-translate="about">
         <i class="fa fa-user"></i> ABOUT
       </a>
-      <a href="#photos" data-translate="projects">
+      <a href="#photos" id="projectsLink" data-translate="projects">
         <i class="fa fa-eye"></i> PROJETS
       </a>
-      <a href="#contact" data-translate="contact">
+      <a href="#contact" id="contactLink" data-translate="contact">
         <i class="fa fa-envelope"></i> CONTACT
       </a>
-      <a href="pages/CV.html" data-translate="cv">
+      <a href="pages/CV.html" id="cvLink" data-translate="cv">
         <i class="fa fa-address-card"></i> CV
       </a>
       <div class="switches-container">
@@ -169,8 +169,6 @@
         </div>
       </div>
     </div>
-    
-    
 
     <!-- Page Content -->
     <div class="w3-padding-large" id="main">
@@ -605,6 +603,18 @@
         const menu = document.getElementById('hamburgerMenu');
         menu.classList.toggle('active');
       }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const menu = document.getElementById('hamburgerMenu');
+        const links = menu.querySelectorAll('a');
+
+        links.forEach(link => {
+          link.addEventListener('click', function() {
+            menu.classList.remove('active');
+          });
+        });
+      });
+
 
       /************************
        * Progress Bar Animation

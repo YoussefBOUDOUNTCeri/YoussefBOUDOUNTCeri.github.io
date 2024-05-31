@@ -1163,6 +1163,8 @@ h3.section-title {
   display: flex;
   flex-direction: column;
   line-height: 1.2;
+  font-weight: bold; /* Ajouter cette ligne pour mettre le texte en gras */
+  font-size: 1.2em; /* Ajouter cette ligne pour augmenter légèrement la taille de la police */
 }
 
 #check:checked + .toggle > .toggle__circle {
