@@ -114,3 +114,10 @@ body.light-mode .w3-teal {
 body.light-mode .w3-text-grey {
   color: #555 !important;
 }
+
+.w3-display-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: none;
+}
