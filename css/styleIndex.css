@@ -64,230 +64,6 @@ span {
   color: white;
 }
 
-/*******************************************************
-Circle Progress Bar
-*******************************************************/
-.circles {
-  display: flex;
-  justify-content: space-between; /* ou space-around */
-  width: 90%; /* ajustez selon vos besoins */
-  margin: 0 auto; /* centre le conteneur sur la page */
-}
-
-@property --progress-value {
-  syntax: "<integer>";
-  inherits: false;
-  initial-value: 0;
-}
-
-@keyframes html-progress {
-  to {
-    --progress-value: 99;
-  }
-}
-
-@keyframes css-progress {
-  to {
-    --progress-value: 95;
-  }
-}
-
-@keyframes js-progress {
-  to {
-    --progress-value: 90;
-  }
-}
-
-@keyframes php-progress {
-  to {
-    --progress-value: 75;
-  }
-}
-
-@keyframes sql-progress {
-  to {
-    --progress-value: 45;
-  }
-}
-
-@keyframes python-progress {
-  to {
-    --progress-value: 90;
-  }
-}
-
-@keyframes java-progress {
-  to {
-    --progress-value: 79;
-  }
-}
-
-@keyframes cpp-progress {
-  to {
-    --progress-value: 70;
-  }
-}
-
-@keyframes c-progress {
-  to {
-    --progress-value: 50;
-  }
-}
-
-.progress-bar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-
-  /* to center the percentage value */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.progress-bar::before {
-  counter-reset: percentage var(--progress-value);
-  content: counter(percentage) "%";
-  color: white;
-}
-
-.html {
-  background: radial-gradient(
-      closest-side,
-      black 79%,
-      transparent 80% 100%,
-      black 0
-    ),
-    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
-  animation: html-progress 2s 1 forwards;
-}
-
-.html::before {
-  animation: html-progress 2s 1 forwards;
-}
-
-.css {
-  background: radial-gradient(
-      closest-side,
-      black 79%,
-      transparent 80% 100%,
-      black 0
-    ),
-    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
-  animation: css-progress 2s 1 forwards;
-}
-
-.css::before {
-  animation: css-progress 2s 1 forwards;
-}
-
-.js {
-  background: radial-gradient(
-      closest-side,
-      black 79%,
-      transparent 80% 100%,
-      black 0
-    ),
-    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
-  animation: js-progress 2s 1 forwards;
-}
-
-.js::before {
-  animation: js-progress 2s 1 forwards;
-}
-
-.php {
-  background: radial-gradient(
-      closest-side,
-      black 79%,
-      transparent 80% 100%,
-      black 0
-    ),
-    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
-  animation: php-progress 2s 1 forwards;
-}
-
-.php::before {
-  animation: php-progress 2s 1 forwards;
-}
-
-.sql {
-  background: radial-gradient(
-      closest-side,
-      black 79%,
-      transparent 80% 100%,
-      black 0
-    ),
-    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
-  animation: sql-progress 2s 1 forwards;
-}
-
-.sql::before {
-  animation: sql-progress 2s 1 forwards;
-}
-
-.python {
-  background: radial-gradient(
-      closest-side,
-      black 79%,
-      transparent 80% 100%,
-      black 0
-    ),
-    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
-  animation: python-progress 2s 1 forwards;
-}
-
-.python::before {
-  animation: python-progress 2s 1 forwards;
-}
-
-.java {
-  background: radial-gradient(
-      closest-side,
-      black 79%,
-      transparent 80% 100%,
-      black 0
-    ),
-    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
-  animation: java-progress 2s 1 forwards;
-}
-
-.java::before {
-  animation: java-progress 2s 1 forwards;
-}
-
-.cpp {
-  background: radial-gradient(
-      closest-side,
-      black 79%,
-      transparent 80% 100%,
-      black 0
-    ),
-    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
-  animation: cpp-progress 2s 1 forwards;
-}
-
-.cpp::before {
-  animation: cpp-progress 2s 1 forwards;
-}
-
-.c {
-  background: radial-gradient(
-      closest-side,
-      black 79%,
-      transparent 80% 100%,
-      black 0
-    ),
-    conic-gradient(white calc(var(--progress-value) * 1%), black 0);
-  animation: c-progress 2s 1 forwards;
-}
-
-.c::before {
-  animation: c-progress 2s 1 forwards;
-}
-
-/* ------------------------------*/
-
 h2 {
   text-align: center;
 }
@@ -893,8 +669,9 @@ button.btn-primary {
 
 hr {
   border: none;
-  height: 1px;
   background-color: white;
+  width: 60px;
+  height: 4px;
 }
 
 .light-mode hr {
@@ -1275,3 +1052,316 @@ h3.section-title {
     display: none;
   }
 }
+
+
+
+
+
+
+
+/* Container général */
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 900px;
+  margin: auto;
+  padding-bottom: 24px;
+}
+
+/* Style d’un badge */
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 999px;
+  padding: 6px 14px; 
+  font-size: 1rem;
+  color: white;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+/* Logo dans le badge */
+.skill-tag img {
+  width: 1.3em;
+  height: 1.3em;
+  object-fit: contain;
+}
+
+/* Effet au survol */
+.skill-tag:hover {
+  background-color: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.4);
+}
+
+/* --- Overrides pour les badges Skills en mode sombre --- */
+.dark-mode .skills-tags .skill-tag {
+  color: white;                                  /* texte blanc */
+  border-color: rgba(255, 255, 255, 0.2);        /* contour pâle */
+  background-color: transparent;
+}
+.dark-mode .skills-tags .skill-tag:hover {
+  background-color: rgba(255, 255, 255, 0.15);   /* légère surbrillance */
+  border-color: rgba(255, 255, 255, 0.4);
+}
+/* Inversion des icônes SVG noires pour les rendre blanches */
+.dark-mode .skills-tags .skill-tag img {
+  filter: invert(1) brightness(1.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* — Thèmes pour la section Services — */
+:root {
+  --services-bg: #000;
+  --services-text: #fff;
+  --services-accent: #fff; /* ton orange */
+}
+.light-mode {
+  --services-bg: #fff;
+  --services-text: #222;
+  --services-accent: #222;
+}
+.dark-mode {
+  --services-bg: #000;
+  --services-text: #fff;
+  --services-accent: #fff;
+}
+
+/* — Styles appliqués à #about-services — */
+#about-services {
+  background-color: var(--services-bg);
+  color: var(--services-text);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+#about-services .section-title {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+
+/* underline custom sous le titre */
+#about-services .section-title + hr {
+  width: 60px;
+  height: 4px;
+  background-color: var(--services-accent);
+  margin: 0 auto 2.5rem;
+  border: none;
+}
+
+/* grille responsive */
+#about-services .services__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* chaque carte */
+#about-services .service-item {
+  flex: 0 1 calc((100% - 6rem) / 4);
+  max-width: calc((100% - 6rem) / 4);
+  box-sizing: border-box;
+}
+
+/* icône */
+#about-services .service-item__icon {
+  font-size: 3rem;
+  color: var(--services-accent);
+  margin-bottom: 1rem;
+  transition: transform .3s;
+}
+#about-services .service-item__icon:hover {
+  transform: translateY(-4px);
+}
+
+/* titre de la carte */
+#about-services .service-item__title {
+  font-size: 1.25rem;
+  margin-bottom: .75rem;
+}
+
+/* texte de la carte */
+#about-services .service-item__text {
+  line-height: 1.5;
+  font-size: .95rem;
+}
+
+/* 2) Centrer tout le contenu (icône / titre / texte) de chaque service-item */
+#about-services .service-item {
+  text-align: center;
+}
+
+
+/* mobile first */
+@media (max-width: 600px) {
+  #about-services .services__grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #about-services .service-item {
+    flex: 1 1 220px;  /* passe à 2 par ligne */
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  #about-services .service-item {
+    flex: 1 1 100%;   /* 1 par ligne */
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+/* logo discret sous "Années d'alternance" */
+.internship-logo {
+  margin-top: 0.5rem;
+  opacity: 0.6;             /* un peu transparent pour ne pas distraire */
+  text-align: center;       /* centrer l’image sous le texte */
+}
+.internship-logo img {
+  height: 1.2em;            /* taille discrète, s’adapte à la ligne */
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  filter: var(--icon-filter); /* pour suivre le dark/light switch */
+}
+
+/* Si tu veux inverser le logo noir en mode sombre (pour les SVG noirs) */
+:root {
+  --icon-filter: none;
+}
+.light-mode {
+  --icon-filter: none;
+}
+.dark-mode {
+  --icon-filter: invert(1) brightness(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Conteneur de la photo */
+.header-photo {
+  max-width: 400px;       /* ou la largeur que tu veux */
+  margin: 1.5rem auto;    /* centré avec un peu d’espace */
+  overflow: hidden;       /* coupe si besoin, pour le border-radius */
+  border-radius: 8px;     /* angle arrondi */
+}
+
+/* photo responsive */
+.header-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* versions claire / sombre */
+.profile-light {
+  display: block;
+}
+.profile-dark {
+  display: none;
+}
+
+/* 1) On cache par défaut toutes les images */
+.header-photo img {
+  display: none;
+}
+
+/* 2) En mode clair, on n’affiche que la version claire */
+body.light-mode .header-photo .profile-light {
+  display: block !important;
+}
+
+/* 3) En mode sombre, on n’affiche que la version sombre */
+body.dark-mode .header-photo .profile-dark {
+  display: block !important;
+}
+
+
+
+
+
+
+
+/* 1) Prépare #home pour un fond en absolute */
+#home {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 2) Crée le pseudo‐élément */
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: -1;
+}
+
+/* 3) Les bonnes URLs */
+body.light-mode  #home::before { background-image: url("/img/b.png"); }
+body.dark-mode   #home::before { background-image: url("/img/n.png"); }
+
+/* 4) Masque l’élément <div class="header-photo"> */
+.header-photo { display: none !important; }

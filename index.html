@@ -47,7 +47,6 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/styleIndex.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -62,6 +61,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="css/styleIndex.css" />
   </head>
 
   <!-- 
@@ -82,19 +82,17 @@
 
     <!-- Icon Bar -->
     <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-      <!-- Avatar image in top left corner -->
-      <img src="img/profile-pic.png" style="width: 100%" />
 
       <a href="#" class="w3-bar-item w3-button w3-padding-large" >
           <i class="fa fa-home w3-xxlarge"></i>
           <p data-translate="home">HOME</p>
       </a>
 
-      <a href="#about" class="w3-bar-item w3-button w3-padding-large">
+      <a href="#about-skills" class="w3-bar-item w3-button w3-padding-large">
           <i class="fa fa-user w3-xxlarge"></i>
           <p data-translate="about">ABOUT</p>
       </a>
-      <a href="#photos" class="w3-bar-item w3-button w3-padding-large">
+      <a href="#projects" class="w3-bar-item w3-button w3-padding-large">
           <i class="fa fa-eye w3-xxlarge"></i>
           <p data-translate="projects">PROJETS</p>
       </a>
@@ -106,7 +104,7 @@
           <i class="fa fa-address-card w3-xxlarge"></i>
           <p data-translate="cv">CV</p>
       </a>
-  
+
       <!-- Switches Container -->
       <div class="switches-container">
           <!-- Existing Dark/Light Mode Switch -->
@@ -136,13 +134,13 @@
 
     <div id="hamburgerMenu" class="hamburger-menu">
       <span class="close-btn" onclick="toggleHamburgerMenu()">×</span>
-      <a href="#" id="homeLink" data-translate="home">
+      <a href="#" id="main" data-translate="home">
         <i class="fa fa-home"></i> HOME
       </a>
-      <a href="#about" id="aboutLink" data-translate="about">
+      <a href="#about-skills" id="aboutLink" data-translate="about">
         <i class="fa fa-user"></i> ABOUT
       </a>
-      <a href="#photos" id="projectsLink" data-translate="projects">
+      <a href="#projects" id="projectsLink" data-translate="projects">
         <i class="fa fa-eye"></i> PROJETS
       </a>
       <a href="#contact" id="contactLink" data-translate="contact">
@@ -190,23 +188,13 @@
           <a href="https://discord.com/users/youssefb14" target="_blank"
             ><i class="fab fa-discord fabicons animate__animated animate__bounce"></i
           ></a>
-          <a href="https://www.facebook.com/YoussefBOUDOUNTCeri" target="_blank"
-            ><i class="fa fa-facebook faicons w3-hover-opacity animate__animated animate__bounce"></i
-          ></a>
-          <a href="https://www.instagram.com/you2sb" target="_blank"
-            ><i class="fa fa-instagram faicons w3-hover-opacity animate__animated animate__bounce"></i
-          ></a>
-          <a href="https://twitter.com/you2sefb14" target="_blank"
-            ><i class="fa fa-twitter faicons w3-hover-opacity animate__animated animate__bounce"></i
-          ></a>
         </div>
         <hr style="width: 100%" class="w3-opacity w3-center" />
-      </header>
+      </header><br><br>
 
-      <!-- About Section -->
-      <div class="w3-content w3-justify w3-text-grey" id="about">
-        <div>
-          <!--Preentation  -->
+      <!-- Section Présentation -->
+      <div class="w3-content w3-justify w3-text-grey" id="about-presentation">
+
           <h2 class="section-title" data-translate="whoAmI">Qui suis-je ?</h2>
           <hr style="width: 100%" class="w3-opacity w3-center" />
 
@@ -230,112 +218,115 @@
             Contactez-moi et ensemble, transformons les idées en réalités
             tangibles.
           </p>
+      </div><br /><br />
+
+      <!-- Section Compétences -->
+      <div class="w3-content w3-justify w3-text-grey" id="about-skills">
+
+        <h3 class="section-title w3-center" data-translate="mySkills">Mes Compétences</h3>
+        <hr style="width: 100%" class="w3-opacity w3-center" /> <br /> 
+
+        <div class="skills-tags">
+            <!-- Langages de programmation -->
+            <div class="skill-row">
+              <span class="skill-tag">
+                <img src="img/icons/svg/java.svg"      alt="Java"> Java
+              </span>
+              <span class="skill-tag">
+                <img src="img/icons/svg/cplusplus.svg" alt="C++"> C++
+              </span>
+              <span class="skill-tag">
+                <img src="img/icons/svg/python.svg"    alt="Python"> Python
+              </span>
+              <span class="skill-tag">
+                <img src="img/icons/svg/rust.svg"      alt="Rust"> Rust
+              </span>
+              <span class="skill-tag">
+                <img src="img/icons/svg/pascal.svg"    alt="Pascal"> Pascal
+              </span>
+              <span class="skill-tag">
+                <img src="img/icons/svg/gnubash.svg"      alt="Bash"> Bash
+              </span>
+              <span class="skill-tag">
+                <img src="img/icons/svg/powershell.svg" alt="PowerShell"> PowerShell
+              </span>
+            </div>
+
+            <!-- Langages web & scripting -->
+            <div class="skill-row">
+              <span class="skill-tag">
+                <img src="img/icons/svg/html5.svg"     alt="HTML5"> HTML
+              </span>
+              <span class="skill-tag">
+                <img src="img/icons/svg/css3.svg"      alt="CSS3"> CSS
+              </span>
+              <span class="skill-tag">
+                <img src="img/icons/svg/javascript.svg" alt="JavaScript"> JavaScript
+              </span>
+              <span class="skill-tag">
+                <img src="img/icons/svg/php.svg"       alt="PHP"> PHP
+              </span>
+            </div>
+
+            <!-- Frameworks & bibliothèques -->
+            <div class="skill-row">
+              <span class="skill-tag">
+                <img src="img/icons/svg/angular.svg"   alt="Angular"> Angular
+              </span>
+              <span class="skill-tag">
+                <img src="img/icons/svg/nodedotjs.svg"    alt="Node.js"> Node.js
+              </span>
+              <span class="skill-tag">
+                <img src="img/icons/svg/express.svg" alt="Express.js"> Express.js
+              </span>
+            </div>
+
+            <!-- Bases de données -->
+            <div class="skill-row">
+              <span class="skill-tag">
+                <img src="img/icons/svg/mysql.svg"       alt="SQL"> SQL
+              </span>
+              <span class="skill-tag">
+                <img src="img/icons/svg/postgresql.svg" alt="PostgreSQL"> PostgreSQL
+              </span>
+              <span class="skill-tag">
+                <img src="img/icons/svg/mongodb.svg"   alt="MongoDB"> MongoDB
+              </span>
+              <span class="skill-tag">
+                <img src="img/icons/svg/postman.svg" alt="Postman"> Postman
+              </span>
+            </div>
+
+            <!-- No-Code / Low-Code / IA -->
+            <div class="skill-row">
+              <span class="skill-tag">
+                <img src="img/icons/svg/git.svg"       alt="Git"> Git
+              </span>
+              <span class="skill-tag">
+                <img src="img/icons/svg/github.svg"    alt="GitHub"> GitHub
+              </span>
+            </div>
+
+            <!-- Systemes d'exploitation -->
+            <div class="skill-row">
+              <span class="skill-tag">
+                <img src="img/icons/svg/linux.svg"     alt="Linux"> Linux
+              </span>
+              <span class="skill-tag">
+                <img src="img/icons/svg/windows.svg"   alt="Windows"> Windows
+              </span>
+              <span class="skill-tag">
+                <img src="img/icons/svg/android.svg"   alt="Android"> Android
+              </span>
+              <span class="skill-tag">
+                <img src="img/icons/svg/ios.svg"       alt="iOS"> iOS
+              </span>
+          </div>
         </div>
+      </div><br>
 
-        <div>
-          <br />
-          <h3 class="w3-padding-16 w3-center section-title" data-translate="mySkills" >Mes Skills</h3>
-          <hr style="width: 100%" class="w3-opacity w3-center" />
-          <br />
-        </div>
-
-        <div class="circles w3-center">
-          <!-- HTML Progress Bar -->
-          <div class="progress-bar-container w3-center">
-            <h2 class="skill-label">
-              <label for="html">HTML</label>
-            </h2>
-            <div class="progress-bar html">
-              <progress id="html" min="0" max="100" value="100"></progress>
-            </div>
-          </div>
-
-          <!-- CSS Progress Bar -->
-          <div class="progress-bar-container w3-center">
-            <h2 class="skill-label">
-              <label for="css">CSS</label>
-            </h2>
-            <div class="progress-bar css">
-              <progress id="css" min="0" max="100" value="100"></progress>
-            </div>
-          </div>
-
-          <!-- JSS Progress Bar -->
-          <div class="progress-bar-container w3-center">
-            <h2 class="skill-label w3-center">
-              <label for="js">JS</label>
-            </h2>
-            <div class="progress-bar js w3-center">
-              <progress id="js" min="0" max="100" value="100"></progress>
-            </div>
-          </div>
-        </div>
-        <br />
-        <div class="circles w3-center">
-          <!-- PHP Progress Bar -->
-          <div class="progress-bar-container w3-center">
-            <h2 class="skill-label">
-              <label for="php">PHP</label>
-            </h2>
-            <div class="progress-bar php">
-              <progress id="php" min="0" max="100" value="100"></progress>
-            </div>
-          </div>
-
-          <!-- SQL Progress Bar -->
-          <div class="progress-bar-container w3-center">
-            <h2 class="skill-label">
-              <label for="sql">SQL</label>
-            </h2>
-            <div class="progress-bar sql">
-              <progress id="sql" min="0" max="100" value="100"></progress>
-            </div>
-          </div>
-
-          <!-- Python Progress Bar -->
-          <div class="progress-bar-container w3-center">
-            <h2 class="skill-label">
-              <label for="python">Python</label>
-            </h2>
-            <div class="progress-bar python">
-              <progress id="python" min="0" max="100" value="100"></progress>
-            </div>
-          </div>
-        </div>
-        <br />
-        <div class="circles w3-center">
-          <!-- Java Progress Bar -->
-          <div class="progress-bar-container">
-            <h2 class="skill-label">
-              <label for="java">Java</label>
-            </h2>
-            <div class="progress-bar java">
-              <progress id="java" min="0" max="100" value="100"></progress>
-            </div>
-          </div>
-
-          <!-- CPP Progress Bar -->
-          <div class="progress-bar-container">
-            <h2 class="skill-label">
-              <label for="cpp">C++</label>
-            </h2>
-            <div class="progress-bar cpp">
-              <progress id="cpp" min="0" max="100" value="100"></progress>
-            </div>
-          </div>
-
-          <!-- C Progress Bar -->
-          <div class="progress-bar-container">
-            <h2 class="skill-label">
-              <label for="c">C</label>
-            </h2>
-            <div class="progress-bar c">
-              <progress id="c" min="0" max="100" value="100"></progress>
-            </div>
-          </div>
-        </div>
-        <br /><br />
-
+      <!-- Section Statistiques -->
+      <div class="w3-content w3-justify w3-text-grey" id="about-stats">
         <div>
           <h3 class="w3-padding-16 section-title w3-center" data-translate="myStats">Mes Stats</h3>
           <hr style="width: 100%" class="w3-opacity w3-center" />
@@ -352,17 +343,60 @@
           </div>
           <div class="w3-quarter w3-section">
             <span class="w3-xlarge">1+</span><br />
-            <div data-translate="contestsWon" >Concours Gagnés</div>
+            <div data-translate="internships">Années d'alternance</div>
+             <div class="internship-logo">
+              <img src="img/icons/fdj.svg"  alt="FDJ" />
+            </div>
           </div>
           <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">3+</span><br />
-            <div data-translate="workshops" >Ateliers</div>
+            <span class="w3-xlarge">1+</span><br />
+            <div data-translate="workshops">Ateliers</div>
           </div>
         </div>
-      </div>
+      </div><br>
+
+      <!-- Section Services -->
+      <div class="w3-content w3-justify w3-text-grey" id="about-services">
+        <h3 class="w3-padding-16 section-title w3-center" data-translate="myservice">À votre service !</h3>
+        <hr style="width: 100%" class="w3-opacity w3-center" />
+
+        <div class="services__grid">
+          <div class="service-item">
+            <i class="fas fa-gem service-item__icon"></i>
+            <h3 class="service-item__title data-translate="frameworksTitle">Frameworks</h3>
+            <p class="service-item__text" data-translate="frameworksText">
+              Bonne expérience avec les frameworks suivants (Symfony, Angular, Ionic…)
+            </p>
+          </div>
+
+          <div class="service-item">
+            <i class="fas fa-eye service-item__icon"></i>
+            <h3 class="service-item__title" data-translate="veilleTechno">Veille Technologique</h3>
+            <p class="service-item__text" data-translate="veilleTechnoText">
+              Toujours à l’affût des nouvelles technologies.
+            </p>
+          </div>
+
+          <div class="service-item">
+            <i class="fas fa-users service-item__icon"></i>
+            <h3 class="service-item__title" data-translate="ergonomie">Ergonomie</h3>
+            <p class="service-item__text" data-translate="ergonomieText">
+              Soucieux de l’expérience utilisateur.
+            </p>
+          </div>
+
+          <div class="service-item">
+            <i class="fas fa-heart service-item__icon"></i>
+            <h3 class="service-item__title" data-translate="passion">Passion</h3>
+            <p class="service-item__text" data-translate="passionText">
+              Beaucoup de cœur à l’ouvrage pour chaque projet.
+            </p>
+          </div>
+        </div>
+      </div><br><br>
 
       <!-- Projects Section -->
-      <div class="w3-content" id="photos">
+      <div class="w3-content w3-justify w3-text-grey" id="projects">
         <h3 class="w3-padding-16 section-title w3-center" data-translate="projectsTitle" >Mes Projets</h3>
         <hr style="width: 100%" class="w3-opacity w3-center" />
 
@@ -370,19 +404,32 @@
         <div class="w3-row w3-center w3-padding-16">
           <div class="w3-third w3-container">
             <select id="languageDropdown" class="w3-input w3-margin-bottom filter-dropdown" onchange="filterProjects()">
-              <option value="" data-translate="filterLanguage">Tous les langages</option>
+              <option value="" data-translate="filterLanguage">Tous les langages et frameworks</option>
               <option value="java" data-translate="java">Java</option>
               <option value="cpp" data-translate="cpp">C++</option>
               <option value="python" data-translate="python">Python</option>
+              <option value="rust" data-translate="rust">Rust</option>
+              <option value="pascal" data-translate="pascal">Pascal</option>
+
               <option value="html css js" data-translate="htmlCssJs">HTML/CSS/JS</option>
               <option value="php" data-translate="php">PHP</option>
-              <option value="java javafx" data-translate="javaFx">Java/JavaFX</option>
+
               <option value="sql" data-translate="sql">SQL</option>
               <option value="pgsql" data-translate="pgsql">PostgreSQL</option>
+              <option value="mongo" data-translate="mongo">MongoDB</option>
               <option value="plsql" data-translate="plsql">PL/SQL</option>
+
               <option value="bash" data-translate="bash">Bash</option>
               <option value="assembly" data-translate="assembly">Assembly</option>
-              <option value="pascal" data-translate="pascal">Pascal</option>
+
+              <option value="java javafx" data-translate="javaFx">JavaFX</option>
+              <option value="angular" data-translate="angular">Angular</option>
+              <option value="node" data-translate="node">Node.js</option>
+
+              <option value="noCode" data-translate="noCode">No Code</option>
+              <option value="lowCode" data-translate="lowCode">Low Code</option>
+
+              <option value="ia" data-translate="ia">IA</option>
             </select>
           </div>
 
@@ -407,8 +454,8 @@
           <div class="w3-third w3-container">
             <button onclick="resetFilters()" class="renButton" data-translate="resetFilters">Réinitialiser les filtres</button>
           </div>
-        </div>
-        <br />
+        </div> <br />
+
         <div id="projectContainer" class="project-container">
 
           <div class="w3-third project-card" data-lang="cpp" data-type="console" data-project-type="personnel">
@@ -472,7 +519,7 @@
               <img class="card-img-top parallax" src="img/GridProjects/wordle.png" alt="Card image" style="width: 100%" />
               <div class="card-body">
                 <h4 class="card-title" data-translate="wordle">Wordle</h4>
-                <p class="card-text w3-text-black" data-translate="javaFx">Java/JavaFX</p>
+                <p class="card-text w3-text-black" data-translate="javaFx">Java, JavaFX</p>
                 <a href="pages/wordle.html" class="btn btn-primary" data-translate="view">Voir</a>
               </div>
             </div>
@@ -533,11 +580,67 @@
               </div>
             </div>
           </div>
+
+          <div class="w3-third project-card" data-lang="html css js pgsql mongo sql angular node" data-type="web" data-project-type="academique">
+            <div class="card">
+              <img class="card-img-top parallax" src="img/GridProjects/cerisonet.png" alt="CERISoNet" style="width:100%">
+              <div class="card-body">
+                <h4 class="card-title">CERISoNet</h4>
+                <p class="card-text w3-text-black">Stack MEAN</p>
+                <a href="pages/cerisonet.html" class="btn btn-primary" data-translate="projectsSoon">Bientôt disponible...</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="w3-third project-card" data-lang="noCode lowCode" data-type="mobile" data-project-type="academique">
+            <div class="card">
+              <img class="card-img-top parallax" src="img/GridProjects/flutterflow_recettes.png" alt="App Recettes" style="width:100%">
+              <div class="card-body">
+                <h4 class="card-title data-translate="recipesApp">Recettes App</h4>
+                <p class="card-text w3-text-black" data-translate="recipesAppText">No Code / Low Code</p>
+                <a href="pages/flutterflow_recettes.html" class="btn btn-primary" data-translate="projectsSoon">Bientôt disponible...</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="w3-third project-card" data-lang="noCode lowCode" data-type="web" data-project-type="academique">
+            <div class="card">
+              <img class="card-img-top parallax" src="img/GridProjects/bubble_assoc.png" alt="App Association" style="width:100%">
+              <div class="card-body">
+                <h4 class="card-title" data-translate="assocAppel">Association App</h4>
+                <p class="card-text w3-text-black" data-translate="assocAppelText">No Code / Low Code</p>
+                <a href="pages/bubble_assoc.html" class="btn btn-primary" data-translate="projectsSoon">Bientôt disponible...</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="w3-third project-card" data-lang="html css js ia" data-type="web" data-project-type="academique">
+            <div class="card">
+              <img class="card-img-top parallax" src="img/GridProjects/password_generator.png" alt="Générateur de mots de passe" style="width:100%">
+              <div class="card-body">
+                <h4 class="card-title" data-translate="passwordGenerator">Générateur de mots de passe</h4>
+                <p class="card-text w3-text-black" data-translate="passwordGeneratorText">Html/Css/Js/IA</p>
+                <a href="pages/password_generator.html" class="btn btn-primary" data-translate="projectsSoon">Bientôt disponible...</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="w3-third project-card" data-lang="rust" data-type="console" data-project-type="academique">
+            <div class="card">
+              <img class="card-img-top parallax" src="img/GridProjects/rust_rpg.png" alt="RPG Rust" style="width:100%">
+              <div class="card-body">
+                <h4 class="card-title">Zero To Hero (RPG)</h4>
+                <p class="card-text w3-text-black">Rust</p>
+                <a href="pages/rust_rpg.html" class="btn btn-primary" data-translate="projectsSoon">Bientôt disponible...</a>
+              </div>
+            </div>
+          </div>
+
         </div>
-      </div>
+      </div><br><br><br>
 
       <!-- Contact Section -->
-      <div class="w3-padding-32 w3-content" id="contact">
+      <div class="w3-content w3-justify w3-text-grey" id="contact">
         <h2 class="section-title" data-translate="contactTitle" >Contact</h2>
         <hr style="width: 100%" class="w3-opacity w3-center" />
 
@@ -580,118 +683,123 @@
             </button>
           </p>
         </form>
-        
-      </div>
+
+      </div><br>
 
       <!-- Footer -->
-      <footer class="w3-content  w3-text-grey w3-xlarge">
+      <footer class="w3-content w3-justify w3-text-grey">
         <hr style="width: 100%" class="w3-opacity w3-center" />
         <p class="w3-medium">
           <span data-translate="credit">Réalisé par</span>
           <a href="https://github.com/YoussefBOUDOUNTCeri" target="_blank" class="w3-hover-text-green">Youssef Boudount</a>
         </p>
+        <span data-translate="lastUpdate">Dernière mise à jour</span>
+        <span id="lastUpdate"></span>
         <hr style="width: 100%" class="w3-opacity w3-center" />
+        <p class="w3-medium">
+
       </footer>
 
     </div>
 
     <script>
+
       /************************
        * Hamburger Menu
-      *************************/
+       ************************/
       function toggleHamburgerMenu() {
-        const menu = document.getElementById('hamburgerMenu');
-        menu.classList.toggle('active');
+          const menu = document.getElementById('hamburgerMenu');
+          menu.classList.toggle('active');
       }
 
       document.addEventListener('DOMContentLoaded', function() {
-        const menu = document.getElementById('hamburgerMenu');
-        const links = menu.querySelectorAll('a');
+          const menu = document.getElementById('hamburgerMenu');
+          const links = menu.querySelectorAll('a');
 
-        links.forEach(link => {
-          link.addEventListener('click', function() {
-            menu.classList.remove('active');
+          links.forEach(link => {
+              link.addEventListener('click', function() {
+              menu.classList.remove('active');
+              });
           });
-        });
       });
-
 
       /************************
        * Progress Bar Animation
-      *************************/
+       *************************/
       document.addEventListener('DOMContentLoaded', function() {
-        const progressBars = document.querySelectorAll('.w3-light-grey .w3-container');
+          const progressBars = document.querySelectorAll('.w3-light-grey .w3-container');
 
-        progressBars.forEach((bar, index) => {
-          const width = bar.style.width;
-          bar.style.width = '0';
-          setTimeout(() => {
-            bar.style.transition = 'width 1.5s ease-in-out';
-            bar.style.width = width;
-          }, index * 200); // Delay each bar by 200ms
-        });
+          progressBars.forEach((bar, index) => {
+              const width = bar.style.width;
+              bar.style.width = '0';
+              setTimeout(() => {
+              bar.style.transition = 'width 1.5s ease-in-out';
+              bar.style.width = width;
+              }, index * 200); // Delay each bar by 200ms
+          });
       });
 
       /************************
        * Filter Projects
-      *************************/
+       *************************/
       let allProjectCards = [];
 
       document.addEventListener('DOMContentLoaded', function() {
-        const projectCards = document.querySelectorAll('.project-card');
-        allProjectCards = Array.from(projectCards);
+          const projectCards = document.querySelectorAll('.project-card');
+          allProjectCards = Array.from(projectCards);
       });
 
       function filterProjects() {
-        const languageDropdown = document.getElementById('languageDropdown');
-        const typeDropdown = document.getElementById('typeDropdown');
-        const projectTypeDropdown = document.getElementById('projectTypeDropdown');
+          const languageDropdown = document.getElementById('languageDropdown');
+          const typeDropdown = document.getElementById('typeDropdown');
+          const projectTypeDropdown = document.getElementById('projectTypeDropdown');
 
-        const languageFilter = languageDropdown.value.toLowerCase();
-        const typeFilter = typeDropdown.value.toLowerCase();
-        const projectTypeFilter = projectTypeDropdown.value.toLowerCase();
+          const languageFilter = languageDropdown.value.toLowerCase();
+          const typeFilter = typeDropdown.value.toLowerCase();
+          const projectTypeFilter = projectTypeDropdown.value.toLowerCase();
 
-        const projectContainer = document.getElementById('projectContainer');
+          const projectContainer = document.getElementById('projectContainer');
 
-        projectContainer.innerHTML = '';
+          projectContainer.innerHTML = '';
 
-        const filteredCards = allProjectCards.filter(card => {
-          const languages = card.getAttribute('data-lang').toLowerCase();
-          const type = card.getAttribute('data-type').toLowerCase();
-          const projectType = card.getAttribute('data-project-type').toLowerCase();
+          const filteredCards = allProjectCards.filter(card => {
+              const languages = card.getAttribute('data-lang').toLowerCase();
+              const type = card.getAttribute('data-type').toLowerCase();
+              const projectType = card.getAttribute('data-project-type').toLowerCase();
 
-          return (!languageFilter || languages.includes(languageFilter)) &&
-            (!typeFilter || type.includes(typeFilter)) &&
-            (!projectTypeFilter || projectType.includes(projectTypeFilter));
-        });
+              return (!languageFilter || languages.includes(languageFilter)) &&
+              (!typeFilter || type.includes(typeFilter)) &&
+              (!projectTypeFilter || projectType.includes(projectTypeFilter));
+          });
 
-        filteredCards.forEach(card => {
-          projectContainer.appendChild(card);
-          card.style.display = 'block';
-        });
+          filteredCards.forEach(card => {
+              projectContainer.appendChild(card);
+              card.style.display = 'block';
+          });
       }
 
       function resetFilters() {
-        document.getElementById('languageDropdown').value = '';
-        document.getElementById('typeDropdown').value = '';
-        document.getElementById('projectTypeDropdown').value = '';
-        filterProjects();
+          document.getElementById('languageDropdown').value = '';
+          document.getElementById('typeDropdown').value = '';
+          document.getElementById('projectTypeDropdown').value = '';
+          filterProjects();
       }
 
       /************************
        * Light/Dark Mode
-      *************************/
+       *************************/
       document.addEventListener('DOMContentLoaded', function() {
         const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
-        const currentTheme = localStorage.getItem('theme');
-
-        if (currentTheme) {
-          document.body.classList.add(currentTheme);
-
-          if (currentTheme === 'light-mode') {
-            toggleSwitch.checked = true;
-          }
+        // On force light-mode par défaut
+        const storedTheme = localStorage.getItem('theme');
+        const currentTheme = storedTheme ? storedTheme : 'light-mode';
+        document.body.classList.add(currentTheme);
+        // Si pas de préférence stockée, on la crée
+        if (!storedTheme) {
+          localStorage.setItem('theme', 'light-mode');
         }
+        // Initialise l’état du switch en fonction du thème
+        toggleSwitch.checked = (currentTheme === 'light-mode');
 
         toggleSwitch.addEventListener('change', function(e) {
           if (e.target.checked) {
@@ -705,9 +813,11 @@
           }
         });
 
-        const hamburgerToggleSwitch = document.querySelector('.hamburger-menu .switch input[type="checkbox"]');
-        if (hamburgerToggleSwitch) {
-          hamburgerToggleSwitch.addEventListener('change', function(e) {
+        // Même chose pour le switch du menu mobile
+        const hamburgerToggle = document.querySelector('.hamburger-menu .switch input[type="checkbox"]');
+        if (hamburgerToggle) {
+          hamburgerToggle.checked = (currentTheme === 'light-mode');
+          hamburgerToggle.addEventListener('change', function(e) {
             if (e.target.checked) {
               document.body.classList.add('light-mode');
               document.body.classList.remove('dark-mode');
@@ -718,213 +828,314 @@
               localStorage.setItem('theme', 'dark-mode');
             }
           });
-
-          if (currentTheme === 'light-mode') {
-            hamburgerToggleSwitch.checked = true;
-          }
         }
       });
-
 
       /************************
        * Language Switch
-      *************************/
+       *************************/
       const translations = {
-        en: {
-          home: "HOME",
-          about: "ABOUT",
-          projects: "PROJECTS",
-          contact: "CONTACT",
-          cv: "CV",
-          subtitle: "Student in Computer Science",
-          whoAmI: "Who am I?",
-          welcomeMessage: "Welcome to my portfolio! Currently in the third year of a Computer Science degree, I am a young technology and programming enthusiast with an insatiable curiosity since childhood.",
-          wathIsThis: "This site is a showcase of my diversified skills, development initiatives I have led, and custom services I can offer. My adaptability and thirst for learning allow me to immerse myself in various projects with enthusiasm. Whether you are looking for a collaboration for an innovative project or expertise in development, I am open to any opportunity and warmly invite proposals.",
-          contactMe: "Contact me and together, let's turn ideas into tangible realities.",
-          mySkills: "My Skills",
-          myStats: "My Stats",
-          projectsTitle: "My Projects",
-          contactTitle: "Contact",
-          sendMessage: "SEND MESSAGE",
-          stages: "Internships",
-          projectsDone: "Projects Done",
-          contestsWon: "Contests Won",
-          workshops: "Workshops",
-          leaveMessage: "Leave me a message.",
-          tictactoe: "Tic Tac Toe",
-          cplusplus: "C++",
-          snakeGame: "Snake Game",
-          python: "Python",
-          monitoringServLinux: "Monitoring Serv Linux",
-          bash: "Bash",
-          llk: "LL(k) to x86_64",
-          pierresYouss: "PIERRES'YOUSSS",
-          preciousStones: "(Precious Stones Trade)",
-          htmlCssPhp: "HTML/CSS/PHP",
-          wordle: "Wordle",
-          cericar: "CERICar",
-          reconceptionBlablacar: "(BlaBlaCar Redesign)",
-          htmlCssPhpJsSql: "HTML/CSS/PHP/JS/SQL",
-          weatherApp: "Weather App",
-          androidJava: "Android, Java",
-          articleParser: "Article Parser",
-          tictactoeV2: "Tic Tac Toe (v2)",
-          javaFx: "Java FX",
-          productApp: "Product App",
-          phone: "Phone",
-          email: "Email",
-          address: "Avignon, France",
-          projectsSoon: "Coming soon...",
-          view: "View",
-          filterLanguage: "All languages",
-          filterType: "All types",
-          filterProjectType: "All projects",
-          resetFilters: "Reset Filters",
-          java: "Java",
-          cpp: "C++",
-          htmlCssJs: "HTML/CSS/JS",
-          php: "PHP",
-          javaFx: "Java/JavaFX",
-          sql: "SQL",
-          pgsql: "PostgreSQL",
-          plsql: "PL/SQL",
-          bash: "Bash",
-          assembly: "Assembly",
-          pascal: "Pascal",
-          web: "Web",
-          desktop: "Desktop",
-          terminal: "Terminal",
-          mobile: "Mobile",
-          personal: "Personal",
-          academic: "Academic",
-          namePlaceholder: "Name",
-          emailPlaceholder: "Email",
-          subjectPlaceholder: "Subject",
-          messagePlaceholder: "Message",
-          phoneLabel: "Phone:",
-          emailLabel: "Email:",
-          credit: "Made by "
-        },
-        fr: {
-          home: "ACCUEIL",
-          about: "À PROPOS",
-          projects: "PROJETS",
-          contact: "CONTACT",
-          cv: "CV",
-          subtitle: "Etudiant en Informatique",
-          whoAmI: "Qui suis-je ?",
-          welcomeMessage: "Bienvenue sur mon portfolio ! Actuellement en troisième année de Licence Informatique, je suis un jeune passionné de technologie et de programmation, fort d'une curiosité insatiable depuis mon enfance.",
-          wathIsThis: "Ce site est une vitrine de mes compétences diversifiées, des initiatives de développement que j'ai pilotées, et des services sur mesure que je peux offrir. Mon adaptabilité et ma soif d'apprentissage me permettent de m'immerger dans des projets variés avec enthousiasme. Que vous soyez à la recherche d'une collaboration pour un projet innovant ou d'une expertise en développement, je suis ouvert à toute opportunité et invite chaleureusement les propositions.",
-          contactMe: "Contactez-moi et ensemble, transformons les idées en réalités tangibles.",
-          mySkills: "Mes Skills",
-          myStats: "Mes Stats",
-          projectsTitle: "Mes Projets",
-          contactTitle: "Contact",
-          sendMessage: "ENVOYER MESSAGE",
-          stages: "Stages",
-          projectsDone: "Projets Réalisés",
-          contestsWon: "Concours Gagnés",
-          workshops: "Ateliers",
-          leaveMessage: "Laissez moi un message.",
-          tictactoe: "Morpion",
-          cplusplus: "C++",
-          snakeGame: "Jeu du Serpent",
-          python: "Python",
-          monitoringServLinux: "Gestionnaire de Serveurs Linux",
-          bash: "Bash",
-          llk: "LL(k) to x86_64",
-          pierresYouss: "PIERRES'YOUSSS",
-          preciousStones: "(Commerce de Pierres Précieuses)",
-          htmlCssPhp: "HTML/CSS/PHP",
-          wordle: "Wordle",
-          cericar: "CERICar",
-          reconceptionBlablacar: "(Re-conception BlaBlaCar)",
-          htmlCssPhpJsSql: "HTML/CSS/PHP/JS/SQL",
-          weatherApp: "Application Météo",
-          androidJava: "Android, Java",
-          articleParser: "Parser d'articles",
-          tictactoeV2: "Morpion (v2)",
-          javaFx: "Java FX",
-          productApp: "Application Produits",
-          phone: "Téléphone",
-          email: "Email",
-          address: "Avignon, France",
-          projectsSoon: "Bientôt disponible...",
-          view: "Voir",
-          filterLanguage: "Tous les langages",
-          filterType: "Tous les types",
-          filterProjectType: "Tous les projets",
-          resetFilters: "Réinitialiser les filtres",
-          java: "Java",
-          cpp: "C++",
-          htmlCssJs: "HTML/CSS/JS",
-          php: "PHP",
-          javaFx: "Java/JavaFX",
-          sql: "SQL",
-          pgsql: "PostgreSQL",
-          plsql: "PL/SQL",
-          bash: "Bash",
-          assembly: "Assembly",
-          pascal: "Pascal",
-          web: "Web",
-          desktop: "Desktop",
-          terminal: "Terminal",
-          mobile: "Mobile",
-          personal: "Personnel",
-          academic: "Académique",
-          namePlaceholder: "Nom",
-          emailPlaceholder: "Email",
-          subjectPlaceholder: "Object",
-          messagePlaceholder: "Message",
-          phoneLabel: "Téléphone :",
-          emailLabel: "Email:",
-          credit: "Réalisé par "
-        }
+          en: {
+            // MENU 
+            home: "HOME",
+            about: "ABOUT",
+            projects: "PROJECTS",
+            contact: "CONTACT",
+            cv: "CV",
+
+            // HEADER
+            subtitle: "Master's Student in Software Engineering for the Digital Society and Application Operations Manager Apprentice at FDJ United",
+
+            // Section Présentation 
+            whoAmI: "Who am I?",
+            welcomeMessage: "Welcome to my portfolio! Currently in my first year of the Master's program in Software Engineering for the Digital Society (ILSEN), I'm a young technology and programming enthusiast with an insatiable curiosity since childhood.",
+            wathIsThis: "This site is a showcase of my diverse skills, the development initiatives I've led, and the bespoke services I can offer. My adaptability and thirst for learning allow me to immerse myself in varied projects with enthusiasm. Whether you're looking for collaboration on an innovative project or development expertise, I'm open to any opportunity and warmly welcome your proposals.",
+            contactMe: "Contact me and together we'll turn ideas into tangible realities.",
+
+            // Section Compétences
+            mySkills: "My Skills",
+
+            // Section Statistiques
+            myStats: "My Stats",
+            stages: "Internships",
+            projectsDone: "Projects Completed",
+            internships: "Years of Apprenticeship",
+            workshops: "Workshops",
+
+            // Section Services
+            myservice: "At your service!",
+            // Services
+            frameworks: "Frameworks",
+            frameworksText: "Good experience with frameworks (Angular ...)",
+            veilleTechno: "Tech Watch",
+            veilleTechnoText: "Always on the lookout for new technologies.",
+            ergonomie: "Ergonomics",
+            ergonomieText: "Mindful of the user experience.",
+            passion: "Passion",
+            passionText: "A lot of heart put into every project.",
+
+            // Section Projets
+            projectsTitle: "My Projects",
+              // Filtres
+              filterLanguage: "All languages and frameworks",
+              filterType: "All types",
+              web: "Web",
+              desktop: "Desktop",
+              terminal: "Terminal",
+              mobile: "Mobile",
+              filterProjectType: "All projects",
+              personal: "Personal",
+              academic: "Academic",
+
+            tictactoe: "Tic Tac Toe",
+            cplusplus: "C++",
+            snakeGame: "Snake Game",
+            python: "Python",
+            monitoringServLinux: "Linux Server Manager",
+            bash: "Bash",
+            llk: "LL(k) to x86_64",
+            pierresYouss: "PIERRES'YOUSSS",
+            preciousStones: "(Precious Stones Trade)",
+            htmlCssPhp: "HTML/CSS/PHP",
+            wordle: "Wordle",
+            cericar: "CERICar",
+            reconceptionBlablacar: "(BlaBlaCar Redesign)",
+            htmlCssPhpJsSql: "HTML/CSS/PHP/JS/SQL",
+            weatherApp: "Weather App",
+            androidJava: "Android, Java",
+            articleParser: "Article Parser",
+            tictactoeV2: "Tic Tac Toe (v2)",
+            javaFx: "JavaFX",
+            productApp: "Product App",
+            cerisonet: "CERISoNet",
+            cerisonetText: "MEAN Stack",
+            recipesApp: "Recipes App",
+            recipesAppText: "Low Code and No Code",
+            assocAppel: "AssocAppel",
+            assocAppelText: "No Code and Low Code",
+            passwordGenerator: "Password Generator",
+            passwordGeneratorText: "HTML/CSS/JS + AI",
+            rustRPG: "Zero To Hero (RPG)",
+            rustRPGText: "Rust",
+
+            projectsSoon: "Coming soon...",
+            view: "View",
+
+            // Filtres
+            resetFilters: "Reset Filters",
+            java: "Java",
+            cpp: "C++",
+            htmlCssJs: "HTML/CSS/JS",
+            php: "PHP",
+            javaFx: "JavaFX",
+            sql: "SQL",
+            pgsql: "PostgreSQL",
+            plsql: "PL/SQL",
+            bash: "Bash",
+            assembly: "Assembly",
+            pascal: "Pascal",
+
+            // Section Contact
+            contactTitle: "Contact",
+            address: "Avignon, France",
+            phone: "Phone",
+            email: "Email",
+
+            leaveMessage: "Leave me a message.",
+            namePlaceholder: "Name",
+            emailPlaceholder: "Email",
+            subjectPlaceholder: "Subject",
+            messagePlaceholder: "Message",
+            sendMessage: "SEND MESSAGE",
+            phoneLabel: "Phone:",
+            emailLabel: "Email:",
+            credit: "Made by "
+          },
+
+          fr: {
+            // MENU 
+            home: "ACCUEIL",
+            about: "À PROPOS",
+            projects: "PROJETS",
+            contact: "CONTACT",
+            cv: "CV",
+
+            // HEADER
+            subtitle: "Etudiant en Informatique en Master Ingénierie Logicielle pour la Société Numérique et Alternant Responsable Opérationne Applicatif chez FDJ United",
+
+            // Section Présentation 
+            whoAmI: "Qui suis-je ?",
+            welcomeMessage: "Bienvenue sur mon portfolio ! Actuellement en troisième année de Licence Informatique, je suis un jeune passionné de technologie et de programmation, fort d'une curiosité insatiable depuis mon enfance.",
+            wathIsThis: "Ce site est une vitrine de mes compétences diversifiées, des initiatives de développement que j'ai pilotées, et des services sur mesure que je peux offrir. Mon adaptabilité et ma soif d'apprentissage me permettent de m'immerger dans des projets variés avec enthousiasme. Que vous soyez à la recherche d'une collaboration pour un projet innovant ou d'une expertise en développement, je suis ouvert à toute opportunité et invite chaleureusement les propositions.",
+            contactMe: "Contactez-moi et ensemble, transformons les idées en réalités tangibles.",
+
+            // Section Compétences
+            mySkills: "Mes Skills",
+
+            // Section Statistiques
+            myStats: "Mes Stats",
+            stages: "Stages",
+            projectsDone: "Projets Réalisés",
+            internships: "Années d'alternance",
+            workshops: "Ateliers",
+
+            // Section Services
+            myservice: "À votre service !",
+            // Services
+            frameworks: "Frameworks",
+            frameworksText: "Bonne expérience avec les frameworks (Anuglar ...)",
+            veilleTechno: "Veille techno",
+            veilleTechnoText: "Toujours à l’affût des nouvelles technologies.",
+            ergonomie: "Ergonomie",
+            ergonomieText: "Soucieux de l’expérience utilisateur.",
+            passion: "Passion",
+            passionText: "Beaucoup de cœur à l’ouvrage pour chaque projet.",
+
+            // Section Projets
+            projectsTitle: "Mes Projets",
+              // Filtres
+              filterLanguage: "Tous les langages et frameworks",
+              filterType: "Tous les types",
+              web: "Web",
+              desktop: "Desktop",
+              terminal: "Terminal",
+              mobile: "Mobile",
+              filterProjectType: "Tous les projets",
+              personal: "Personnel",
+              academic: "Académique",
+
+            tictactoe: "Morpion",
+            cplusplus: "C++",
+            snakeGame: "Jeu du Serpent",
+            python: "Python",
+            monitoringServLinux: "Gestionnaire de Serveurs Linux",
+            bash: "Bash",
+            llk: "LL(k) vers x86_64",
+            pierresYouss: "PIERRES'YOUSSS",
+            preciousStones: "(Commerce de Pierres Précieuses)",
+            htmlCssPhp: "HTML/CSS/PHP",
+            wordle: "Wordle",
+            cericar: "CERICar",
+            reconceptionBlablacar: "(Re-conception BlaBlaCar)",
+            htmlCssPhpJsSql: "HTML/CSS/PHP/JS/SQL",
+            weatherApp: "Application Météo",
+            androidJava: "Android, Java",
+            articleParser: "Parseur d'articles",
+            tictactoeV2: "Morpion (v2)",
+            javaFx: "Java FX",
+            productApp: "Application Produits",
+            cerisonet: "CERISoNet",
+            cerisonetText: "Stack MEAN",
+            recipesApp: "Application Recettes",
+            recipesAppText: "Low Code et No Code",
+            assocAppel: "AssocAppel",
+            assocAppelText: "No Code et Low Code",
+            passwordGenerator: "Générateur de mots de passe",
+            passwordGeneratorText: "HTML/CSS/JS + IA",
+            rustRPG: "Zero To Hero (RPG)",
+            rustRPGText: "Rust",
+
+            projectsSoon: "Bientôt disponible...",
+            view: "Voir",
+
+            // Filtres
+            resetFilters: "Réinitialiser les filtres",
+            java: "Java",
+            cpp: "C++",
+            htmlCssJs: "HTML/CSS/JS",
+            php: "PHP",
+            javaFx: "JavaFX",
+            sql: "SQL",
+            pgsql: "PostgreSQL",
+            plsql: "PL/SQL",
+            bash: "Bash",
+            assembly: "Assembly",
+            pascal: "Pascal",
+
+            // Section Contact
+            contactTitle: "Contact",
+            address: "Avignon, France",
+            phone: "Téléphone",
+            email: "Email",
+
+
+            leaveMessage: "Laissez moi un message.",
+            namePlaceholder: "Nom",
+            emailPlaceholder: "Email",
+            subjectPlaceholder: "Object",
+            messagePlaceholder: "Message",
+            sendMessage: "ENVOYER MESSAGE",
+            phoneLabel: "Téléphone :",
+            emailLabel: "Email:",
+            credit: "Réalisé par "
+          }
       };
 
-
       document.addEventListener('DOMContentLoaded', function() {
-        const langSwitch = document.querySelector('#check');
-        const currentLang = localStorage.getItem('language') || 'en';
+          const langSwitch = document.querySelector('#check');
+          const currentLang = localStorage.getItem('language') || 'en';
 
-        // Function to translate the page
-        function translatePage(language) {
-          document.querySelectorAll('[data-translate]').forEach(el => {
-            const key = el.getAttribute('data-translate');
-            if (translations[language][key]) {
-              el.innerText = translations[language][key];
-            }
+          // Function to translate the page
+          function translatePage(language) {
+              document.querySelectorAll('[data-translate]').forEach(el => {
+                  const key = el.getAttribute('data-translate');
+                  if (translations[language][key]) {
+                      el.innerText = translations[language][key];
+                  }
+              });
+
+              // Translate placeholders
+              document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
+                  const key = el.getAttribute('data-translate-placeholder');
+                  if (translations[language][key]) {
+                      el.setAttribute('placeholder', translations[language][key]);
+                  }
+              });
+
+              // Translate options
+              document.querySelectorAll('option[data-translate]').forEach(option => {
+                  const key = option.getAttribute('data-translate');
+                  if (translations[language][key]) {
+                      option.innerText = translations[language][key];
+                  }
+              });
+          }
+
+          // Set initial language
+          translatePage(currentLang);
+          langSwitch.checked = currentLang === 'fr';
+
+          // Add event listener to switch
+          langSwitch.addEventListener('change', function() {
+              const language = this.checked ? 'fr' : 'en';
+              localStorage.setItem('language', language);
+              translatePage(language);
           });
-
-          // Translate placeholders
-          document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
-            const key = el.getAttribute('data-translate-placeholder');
-            if (translations[language][key]) {
-              el.setAttribute('placeholder', translations[language][key]);
-            }
-          });
-
-          // Translate options
-          document.querySelectorAll('option[data-translate]').forEach(option => {
-            const key = option.getAttribute('data-translate');
-            if (translations[language][key]) {
-              option.innerText = translations[language][key];
-            }
-          });
-        }
-
-        // Set initial language
-        translatePage(currentLang);
-        langSwitch.checked = currentLang === 'fr';
-
-        // Add event listener to switch
-        langSwitch.addEventListener('change', function() {
-          const language = this.checked ? 'fr' : 'en';
-          localStorage.setItem('language', language);
-          translatePage(language);
-        });
       });
 
+      /*************************
+       * Last Update
+       *************************/
+      document.addEventListener('DOMContentLoaded', function() {
+        const lastUpdateEl = document.getElementById('lastUpdate');
+        fetch('https://api.github.com/repos/YoussefBOUDOUNTCeri/YoussefBOUDOUNTCeri.github.io/commits?per_page=1')
+          .then(res => res.json())
+          .then(commits => {
+            if (commits && commits.length) {
+              const dateStr = commits[0].commit.author.date;
+              const date = new Date(dateStr);
+              // Format : jour mois année, ex. 21 May 2025
+              const options = { year: 'numeric', month: 'long', day: 'numeric' };
+              lastUpdateEl.textContent = date.toLocaleDateString(undefined, options);
+            } else {
+              lastUpdateEl.textContent = '—';
+            }
+          })
+          .catch(err => {
+            console.error('Échec de récupération du commit:', err);
+            lastUpdateEl.textContent = '—';
+          });
+      });
     </script>
 
   </body>
