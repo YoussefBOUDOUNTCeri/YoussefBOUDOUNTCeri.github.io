@@ -1,11 +1,4 @@
-html,
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+html, body, h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
 }
 
@@ -69,4 +62,85 @@ a:hover {
 
 html {
   scroll-behavior: smooth;
+}
+
+body.light-mode {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+body.dark-mode {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+body.dark-mode a,
+body.dark-mode .w3-container,
+body.dark-mode .w3-card {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+#themeToggle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+body.dark-mode {
+  background-color: #000;      /* page entière */
+  color: #fff;
+}
+
+body.dark-mode .w3-white {
+  background-color: #333 !important; /* ou #000 suivant ton goût */
+}
+
+body.dark-mode .w3-text-black {
+  color: #fff !important;
+}
+
+body.dark-mode .w3-button,
+body.dark-mode a.download-link button {
+  background-color: #444 !important;
+  color: #fff !important;
+}
+
+body.dark-mode .w3-border-white {
+  border-color: #555 !important;
+}
+
+body.light-mode .w3-border-white {
+  border-color: #000 !important;
+}
+
+body.light-mode .w3-teal {
+  background-color: teal !important;
+  color: #fff !important;
+}
+
+body.light-mode .w3-text-grey {
+  color: #555 !important;
+}
+
+body.light-mode .w3-black {
+  background-color: #fff !important;
+  color:            #000 !important;
+}
+
+body.light-mode .w3-text-white {
+  color: #000 !important;
+}
+
+body.light-mode .w3-border-white {
+  border-color: #000 !important;
+}
+
+body.light-mode .w3-white {
+  background-color: #fff !important;
+  color:            #000 !important;
+}
+
+body.light-mode .w3-text-grey {
+  color: #555 !important;
 }

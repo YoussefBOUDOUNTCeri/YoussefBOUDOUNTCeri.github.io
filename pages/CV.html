@@ -43,18 +43,22 @@
     </style>
   </head>
 
-  <body class="w3-black">
+  <body class="light-mode">
     <!-- En-tête -->
-    <div class="w3-container w3-black w3-center w3-margin-top w3-border w3-border-white">
-      <br>
-      <a href="../data/BOUDOUNTYoussefCV.pdf" download class="download-link">
-        <button class="w3-button w3-white w3-round-large w3-border w3-border-white">
-          <i class="fa fa-download w3-margin-right"></i>Télécharger CV PDF
+      <div class="w3-container w3-black w3-center w3-margin-top w3-border w3-border-white w3-display-container">
+        <!-- Toggle Jour/Nuit -->
+        <button id="themeToggle" class="w3-button w3-teal w3-round-large">
+          ☀️ / 🌙
         </button>
-      </a>
-      <br>
-      <br>
-    </div>
+
+        <br><br>
+        <a href="../data/BOUDOUNTYoussefCV.pdf" download class="download-link">
+          <button class="w3-button w3-white w3-round-large w3-border w3-border-white">
+            <i class="fa fa-download w3-margin-right"></i>Télécharger CV PDF
+          </button>
+        </a>
+        <br><br>
+      </div>
 
     <!-- Page Container -->
     <div class="w3-content w3-margin-top" style="max-width: 1400px">
@@ -76,7 +80,7 @@
               </p>
               <p class="w3-text-white">
                 <i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-white"></i>
-                6 Rue du Moulard, 84260 Sarrians
+                Avignon, France
               </p>
               <p class="w3-text-white">
                 <i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-white"></i>
@@ -111,10 +115,13 @@
               </div>
               <br />
               <hr />
-
               <p class="w3-large w3-text-white">
                 <b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>LANGUES</b>
               </p>
+              <p class="w3-text-white">Français</p>
+              <div class="w3-light-grey w3-round-xlarge">
+                <div class="w3-round-xlarge w3-teal" style="height: 24px; width: 100%"></div>
+              </div>
               <p class="w3-text-white">Espagnol / Catalan</p>
               <div class="w3-light-grey w3-round-xlarge">
                 <div class="w3-round-xlarge w3-teal" style="height: 24px; width: 100%"></div>
@@ -136,38 +143,62 @@
 
               <p class="w3-text-white"><strong>Java / JavaFX :</strong><br>
                 - Wordle : Jeu de vocabulaire multijoueur en français<br>
-                - Tic Tac Toe
+                - Tic Tac Toe (v2) : Version évoluée avec IA basique
+              </p>
+
+              <p class="w3-text-white"><strong>C++ / Pascal / Assembly :</strong><br>
+                - Tic Tac Toe : Morpion en C++<br>
+                - LL(k) → x86_64 : Générateur de code pour compilateur LL(k)<br>
               </p>
 
               <p class="w3-text-white"><strong>Python :</strong><br>
-                - Snake Game : Jeu de serpent classique<br>
-                - Parseur d’articles scientifiques (.txt / .xml)
+                - Snake Game : Jeu du serpent classique<br>
+                - Parseur d’articles scientifiques (pdf --> .txt / .xml)
               </p>
 
-              <p class="w3-text-white"><strong>HTML / CSS / JS / PHP :</strong><br>
+              <p class="w3-text-white"><strong>Web (HTML / CSS / JS / PHP / SQL) :</strong><br>
                 - CERICar : Re-conception de BlaBlaCar<br>
-                - PIERRES'YOUSSS : Site Vitrine pour un artisan<br>
-                - E-Commerce : Site de vente en ligne
+                - PIERRES'YOUSSS : Site vitrine pour un artisan<br>
+                - CeriSoNet : Reseau social pour étudiants<br>
               </p>
-              <br />
+
+              <p class="w3-text-white"><strong>Mobile (Android / Java) :</strong><br>
+                - Application Météo : Affichage des prévisions météo<br>
+                - Application Produits : Catalogue et rappel de produits
+              </p>
+
+              <p class="w3-text-white"><strong>No Code / Low Code :</strong><br>
+                - AssocAppel : Application de gestion associative (Bubble)<br>
+                - Recettes App : Application de recettes (FlutterFlow)
+              </p>
+
+              <p class="w3-text-white"><strong>Shell / DevOps :</strong><br>
+                - Monitoring Serv Linux : Gestionnaire de serveurs sous Bash<br>
+              </p>
+
+              <p class="w3-text-white"><strong>Rust :</strong><br>
+                - Zero To Hero (RPG) : Jeu de rôle en console
+              </p>
               <hr />
 
               <p class="w3-large w3-text-white">
                 <b><i class="fa fa-cogs fa-fw w3-margin-right w3-text-teal"></i>MAITRISES TECHNIQUES</b>
               </p>
-              <p class="w3-text-white"><strong>Connaissances de Frameworks :</strong> Angular, Symfony, Apache Cordova, NodeJs</p>
+              <p class="w3-text-white"><strong>Connaissances de Frameworks :</strong> Angular, NodeJs</p>
               <p class="w3-text-white"><strong>Méthodes Agiles :</strong> Expérience en DevOps, Scrum, et XP</p>
               <p class="w3-text-white"><strong>Architectures Logicielles :</strong> MVC, MVVM</p>
               <p class="w3-text-white"><strong>Communication :</strong> Rédaction de rapports, gestion de petites équipes, communication sociale</p>
-              <br />
+              <p class="w3-text-white"><strong>Gestion de Projets :</strong> Conception et développement d'applications, gestion de projets informatiques</p>
+              <p class="w3-text-white"><strong>Outils de Développement :</strong> Git, GitHub, Visual Studio Code, Eclipse</p>
               <hr />
 
               <p class="w3-large w3-text-white">
                 <b><i class="fa fa-code fa-fw w3-margin-right w3-text-teal"></i>CONNAISSANCES TECHNIQUES</b>
               </p>
-              <p class="w3-text-white"><strong>Connaissances de Frameworks :</strong> Angular, Symfony, Apache Cordova, NodeJs</p>
               <p class="w3-text-white"><strong>ITIL :</strong> Gestion des services informatiques</p>
               <p class="w3-text-white"><strong>COBIT :</strong> Gouvernance des systèmes d'information</p>
+              <p class="w3-text-white"><strong>PRINCE2 :</strong> Gestion de projet</p>
+              <p class="w3-text-white"><strong>RGPD :</strong> Règlement général sur la protection des données</p>
             </div>
           </div>
           <br />
@@ -183,12 +214,34 @@
               <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-white w3-text-teal section-header"></i>EXPÉRIENCES PROFESSIONNELES
             </h2>
 
+            <div class="w3-container w3-card w3-black w3-border w3-border-white w3-margin-bottom fade-in">
+              <h5 class="w3-text-white"><b>Responsable Opérationnel Applicatif · FDJ UNITED (Alternance)</b></h5>
+              <h6 class="w3-text-white">
+                <i class="fa fa-calendar fa-fw w3-margin-right"></i>Sept. 2024 — <span class="w3-tag w3-teal w3-round">Actuellement</span>
+              </h6>
+              <h6 class="w3-text-white">
+                <i class="fa fa-map-marker fa-fw w3-margin-right"></i>Vitrolles, Provence-Alpes-Côte d’Azur, France (Sur site)
+              </h6>
+              <p class="w3-text-white">
+                Dans le cadre de mon alternance chez FDJ, j’interviens sur l’ordonnancement des applications et l’optimisation des workflows. Mes principales missions incluent :
+              </p>
+              <ul class="w3-text-white w3-ul">
+                <li class="w3-li">Audit et gestion des applications : vérification et optimisation des workflows sous Control-M, en assurant leur bon paramétrage en préproduction et production.</li>
+                <li class="w3-li">Développement d’outils internes : conception d’une interface web d’analyse de jobs basée sur XML pour comparer environnements et identifier divergences.</li>
+                <li class="w3-li">Conception et évolution des chaînes d’ordonnancement : participation aux comités de développement pour créer, modifier ou décommissionner des chaînes.</li>
+                <li class="w3-li">Collaboration et innovation : participation à des projets internes et amélioration continue des processus métiers.</li>
+              </ul>
+              <hr>
+            </div>
+
             <div class="w3-container">
               <h5 class="w3-text-white"><b>Professeur pour cours particuliers</b></h5>
               <h6 class="w3-text-white">
                 <i class="fa fa-calendar fa-fw w3-margin-right w3-text-white"></i>Sept 2021 -
                 <span class="w3-tag w3-teal w3-round">Actuellement</span>
               </h6>
+              <h6 class="w3-text-white">
+                <i class="fa fa-map-marker fa-fw w3-margin-right"></i>Vaucluse, (Chez le Client)
               <p class="w3-text-white">
                 Je propose des cours particuliers réguliers ou ponctuels aux élèves du collège et du lycée principalement en mathématiques,
                 mais aussi en sciences de la vie et de la Terre (SVT) et physique-chimie.
@@ -206,6 +259,8 @@
               <h6 class="w3-text-white">
                 <i class="fa fa-calendar fa-fw w3-margin-right"></i>Mai 2023 - Sept 2023
               </h6>
+              <h6 class="w3-text-white">
+                <i class="fa fa-map-marker fa-fw w3-margin-right"></i>Sorgues, Provence-Alpes-Côte d’Azur, France (Sur site)
               <p>
                 - Assisté dans l'installation et la configuration de bornes de recharge pour véhicules électriques, garantissant la conformité technique et la fiabilité.
               </p>
@@ -234,6 +289,9 @@
               <h6 class="w3-text-white">
                 <i class="fa fa-calendar fa-fw w3-margin-right"></i>Mai 2022 - Juil 2022
               </h6>
+              <h6 class="w3-text-white">
+                <i class="fa fa-map-marker fa-fw w3-margin-right"></i>Avignon, Provence-Alpes-Côte d’Azur, France (Sur site)
+              </h6>
               <p>
                 Gestion de Base de Données : <br>
                   - Assuré la maintenance, la mise à jour et la sécurisation des bases de données. <br>
@@ -252,35 +310,6 @@
 
               <hr />
             </div>
-
-            <div class="w3-container">
-              <h5 class="w3-text-white"><b>Manutentionnaire / ETEX Group</b></h5>
-              <h6 class="w3-text-white">
-                <i class="fa fa-calendar fa-fw w3-margin-right"></i>Mai 2022 - Sept 2022
-              </h6>
-              <p>
-                - Démarrage de la ligne de production avec différents produits.
-              </p>
-              <p>
-                - Stockage, rangement et déplacement des marchandises et produits à l’intérieur d’un entrepôt.
-              </p>
-              <p>- Inventaire et opérations de tri.</p>
-              <p>- Contrôle de la qualité du plâtre.</p>
-
-              <hr />
-            </div>
-
-            <div class="w3-container">
-              <h5 class="w3-text-white"><b>Facteur / Le Groupe La Poste</b></h5>
-              <h6 class="w3-text-white">
-                <i class="fa fa-calendar fa-fw w3-margin-right"></i>Mars 2021 - Avril 2021
-              </h6>
-              <p>
-                Réaliser les travaux de préparation et la distribution du courrier et des colis d'une tournée.
-              </p>
-              <br />
-            </div>
-
           </div>
 
           <!-- FORMATIONS -->
@@ -288,10 +317,21 @@
             <h2 class="w3-text-white w3-padding-16">
               <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>FORMATIONS
             </h2>
+
+            <div class="w3-container">
+              <h5 class="w3-text-white"><b>Master, Ingénierie du Logiciel de la Société Numérique (ILSEN) · Avignon Université</b></h5>
+              <h6 class="w3-text-white">
+                <i class="fa fa-calendar fa-fw w3-margin-right"></i>Sept. 2023 — <span class="w3-tag w3-teal w3-round">Actuellement</span>
+              </h6>
+              <p class="w3-text-white">
+                Parcours axé sur la conception logicielle pour la société numérique : architecture, qualité logicielle, DevOps et gestion de projet agile.  
+              </p>
+              <hr>
+            </div>
             <div class="w3-container">
               <h5 class="w3-text-white"><b>Licence Informatique - Avignon Université</b></h5>
               <h6 class="w3-text-white">
-                <i class="fa fa-calendar fa-fw w3-margin-right"></i><span class="w3-tag w3-teal w3-round">Actuellement</span>
+                <i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - 2023
               </h6>
               <p>
                 Diplômé DEUG Informatique avec solide formation pratique.
@@ -318,20 +358,6 @@
             </div>
 
             <div class="w3-container">
-              <h5 class="w3-text-white"><b>Ecole Pratique - Marseille</b></h5>
-              <h6 class="w3-text-white">
-                <i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015
-              </h6>
-              <p>
-                Le BTS SIO m'a permis d'avoir une solide formation pratique en
-                informatique. Compétences en gestion systèmes, développement
-                d'applications, bases de données, support technique et sécurité
-                informatique.
-              </p>
-              <hr />
-            </div>
-
-            <div class="w3-container">
               <h5 class="w3-text-white"><b>Lycée Victor Hugo - Carpentras</b></h5>
               <h6 class="w3-text-white">
                 <i class="fa fa-calendar fa-fw w3-margin-right"></i>2016 - 2019
@@ -344,8 +370,6 @@
               <br />
             </div>
           </div>
-
-          <!-- End Right Column -->
         </div>
 
         <!-- End Grid -->
@@ -354,12 +378,13 @@
       <!-- End Page Container -->
     </div>
 
+    <<!-- Footer -->
     <footer class="w3-container w3-black w3-center w3-margin-top w3-border w3-border-white">
       <p>Pour toute demande d'information supplémentaire, n'hésitez pas à me contacter par e-mail.</p>
-      <a href="https://youssefboudountceri.github.io/#contact" class="w3-button w3-white w3-round-large w3-border w3-border-white">
+      <a href="https://youssefboudountceri.github.io/#footer" class="w3-button w3-white w3-round-large w3-border w3-border-white">
         <i class="fa fa-envelope w3-margin-right"></i>Contactez-moi
       </a>
-      <p>© 2023 - Tous droits réservés. Conçu et réalisé par BOUDOUNT Youssef.</p>
+      <p>© 2025 - Tous droits réservés. Conçu et réalisé par BOUDOUNT Youssef.</p>
     </footer>
 
     <script>
@@ -391,6 +416,22 @@
         });
       });
     </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const btn = document.getElementById('themeToggle');
+        const current = localStorage.getItem('theme') || 'light';
+        document.body.classList.replace('light-mode', current+'-mode');
+
+        btn.addEventListener('click', () => {
+          const isLight = document.body.classList.contains('light-mode');
+          document.body.classList.toggle('light-mode', !isLight);
+          document.body.classList.toggle('dark-mode', isLight);
+          localStorage.setItem('theme', isLight ? 'dark' : 'light');
+        });
+      });
+    </script>
+
 
   </body>
 </html>
