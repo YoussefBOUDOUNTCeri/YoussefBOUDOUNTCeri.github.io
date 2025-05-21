@@ -1110,6 +1110,16 @@ h3.section-title {
 .dark-mode .skills-tags .skill-tag img {
   filter: invert(1) brightness(1.5);
 }
+/* =============================
+   Fix taille des icônes Skills
+   ============================= */
+.skills-tags .skill-tag img {
+  width: 1.5em;       /* 1.5 fois la taille de la police */
+  height: auto;       /* conserve les proportions */
+  vertical-align: middle;
+  margin-right: 0.5em;/* un peu d’espace avant le texte */
+}
+
 
 
 
